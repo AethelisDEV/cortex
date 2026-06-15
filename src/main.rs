@@ -6,6 +6,7 @@ mod ingestion;
 mod synthesizer;
 mod morphology;
 mod pdf_ingestor;
+mod wiki_parser;
 
 use std::collections::HashMap;
 use std::io::{self, Write};
@@ -119,8 +120,9 @@ fn main() -> anyhow::Result<()> {
         println!("  [4] Rüya/Rölanti Modu Optimizasyonu (Budama & Otomatik Loblama)");
         println!("  [5] Grafik Durumunu ve RAM'deki Aktif Lobları Göster");
         println!("  [6] Çıkış (Exit)");
+        println!("  [7] Wikipedia Dump Dosyasını Toplu İşle ve Lobla");
         println!("========================================================");
-        print!("Seçiminiz [1-6]: ");
+        print!("Seçiminiz [1-7]: ");
         io::stdout().flush()?;
 
         let mut choice = String::new();
@@ -284,6 +286,41 @@ fn main() -> anyhow::Result<()> {
                 }
                 println!("Hoşça kalın!");
                 break;
+            }
+            "7" => {
+                println!("\n--- WIKIPEDIA DUMP INGESTOR MODU ---");
+                print!("Wikipedia XML/XML.BZ2 dosya yolunu girin: ");
+                io::stdout().flush()?;
+                let mut filepath = String::new();
+                io::stdin().read_line(&mut filepath)?;
+                let filepath = filepath.trim();
+                
+                if filepath.is_empty() {
+                    println!("[Hata] Dosya yolu boş olamaz!");
+                    continue;
+                }
+
+                let path = Path::new(filepath);
+                if !path.exists() {
+                    println!("[Hata] Belirtilen dosya bulunamadı: {:?}", path);
+                    continue;
+                }
+
+                println!("[WikiParser] İşlem başlatılıyor, tüm çekirdekler aktif...");
+                let start_time = std::time::Instant::now();
+                match wiki_parser::parse_and_ingest_dump(path, storage_dir) {
+                    Ok((processed, skipped)) => {
+                        let duration = start_time.elapsed();
+                        println!("\n[Başarılı] İşlem tamamlandı!");
+                        println!("Geçen Süre: {:?}", duration);
+                        println!("İşlenen Lobe: {}", processed);
+                        println!("Atlanan/Filtrelenen: {}", skipped);
+                    }
+                    Err(e) => {
+                        println!("[Hata] Wikipedia Dump işlenirken bir hata oluştu: {:?}", e);
+                    }
+                }
+                let _ = router.reload_mappings(storage_dir);
             }
             _ => {
                 println!("[Hata] Geçersiz seçim!");

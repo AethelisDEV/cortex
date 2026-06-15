@@ -13,5 +13,7 @@ anyhow = "1.0"
 rayon = "1.10"
 pdf-extract = "0.7"
 lopdf = "0.34"
+quick-xml = "0.36"
+bzip2 = "0.4"
 
 
