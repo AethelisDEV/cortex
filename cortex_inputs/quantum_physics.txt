@@ -1,4 +1,0 @@
-Kuantum mekaniği atom altı parçacıkların davranışını inceler.
-Dalga fonksiyonu Schrodinger denklemi ile hesaplanır.
-Parçacıklar süperpozisyon durumunda bulunabilir.
-Lineer cebir matris işlemleri bu denklemleri çözmede kullanılır.
