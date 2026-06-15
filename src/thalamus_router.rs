@@ -13,7 +13,7 @@ impl ThalamusRouter {
     }
 
     /// Geriye uyumluluk için arayüzde kalan ama artık bir işlev yapmayan fonksiyon.
-    pub fn reload_mappings(&mut self, _storage_dir: &std::path::Path) -> anyhow::Result<()> {
+    pub fn reload_mappings(&mut self, _db: &sled::Db) -> anyhow::Result<()> {
         Ok(())
     }
 
@@ -62,8 +62,8 @@ impl ThalamusRouter {
     }
 
     /// Sorgudan yola çıkarak yüklenmesi (diskten çekilmesi) gereken hedef hafıza loblarını belirler.
-    pub fn route_query_lobes(&self, text: &str, storage_dir: &std::path::Path) -> Vec<String> {
-        let matched = self.find_dynamic_matching_lobes(text, storage_dir);
+    pub fn route_query_lobes(&self, text: &str, db: &sled::Db) -> Vec<String> {
+        let matched = self.find_dynamic_matching_lobes(text, db);
         if !matched.is_empty() {
             return matched;
         }
@@ -74,8 +74,7 @@ impl ThalamusRouter {
 
     /// Dinamik olarak eşleşen tüm loblardaki proxy olmayan düğümleri 1.000 tam enerji seviyesine getirir.
     pub fn perform_lobe_wide_spiking(&self, cortex: &mut crate::cortex_graph::CortexGraph, query: &str) {
-        let storage_dir = &cortex.storage_dir;
-        let matched = self.find_dynamic_matching_lobes(query, storage_dir);
+        let matched = self.find_dynamic_matching_lobes(query, &cortex.db);
 
         if !matched.is_empty() {
             // Eşleşen tüm lobların düğümlerini 1.0 uyarım seviyesine getir
@@ -99,7 +98,7 @@ impl ThalamusRouter {
     }
 
     /// Sorgudaki kelimelerle mevcut lob isimlerini dinamik olarak karşılaştırıp eşleşen lob adlarını döner.
-    pub fn find_dynamic_matching_lobes(&self, query: &str, storage_dir: &std::path::Path) -> Vec<String> {
+    pub fn find_dynamic_matching_lobes(&self, query: &str, db: &sled::Db) -> Vec<String> {
         // Soru ve Bağlaç Filtresi (Stop-Words Exclusion)
         let stopwords = [
             "the", "a", "an", "and", "or", "but", "in", "on", "at", "to", "for", "with", "by", "from",
@@ -121,21 +120,13 @@ impl ThalamusRouter {
             return matched_lobes;
         }
 
-        // Mevcut tüm lob isimlerini diskten toplayalım
+        // Mevcut tüm lob isimlerini veritabanından toplayalım
         let mut all_lobes = std::collections::HashSet::new();
-        if storage_dir.exists() {
-            if let Ok(entries) = std::fs::read_dir(storage_dir) {
-                for entry in entries.flatten() {
-                    let path = entry.path();
-                    if path.is_file() {
-                        if let Some(filename) = path.file_name().and_then(|f| f.to_str()) {
-                            if filename.ends_with("_lobe.json") {
-                                let lobe_name = filename.trim_end_matches("_lobe.json").to_string();
-                                if lobe_name != "core_language" && lobe_name != "general" {
-                                    all_lobes.insert(lobe_name);
-                                }
-                            }
-                        }
+        for item in db.iter() {
+            if let Ok((key, _)) = item {
+                if let Ok(lobe_name) = std::str::from_utf8(&key) {
+                    if lobe_name != "core_language" && lobe_name != "general" && lobe_name != "__registry__" {
+                        all_lobes.insert(lobe_name.to_string());
                     }
                 }
             }

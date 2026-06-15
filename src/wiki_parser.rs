@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 use std::fs::File;
-use std::io::{BufReader, BufWriter, Read};
+use std::io::{BufReader, Read};
 use std::path::Path;
 use bzip2::read::BzDecoder;
 use quick_xml::events::Event;
@@ -19,7 +19,7 @@ pub struct WikiPage {
 }
 
 /// Wikipedia XML veya sıkıştırılmış XML.bz2 dump dosyasını okuyup nöral loblara dönüştürür.
-pub fn parse_and_ingest_dump(file_path: &Path, storage_dir: &Path) -> anyhow::Result<(usize, usize)> {
+pub fn parse_and_ingest_dump(file_path: &Path, db: &sled::Db) -> anyhow::Result<(usize, usize)> {
     let file = File::open(file_path)?;
     let decoder: Box<dyn Read + Send> = if file_path.extension().map_or(false, |ext| ext.to_string_lossy().to_lowercase() == "bz2") {
         Box::new(BzDecoder::new(file))
@@ -66,7 +66,7 @@ pub fn parse_and_ingest_dump(file_path: &Path, storage_dir: &Path) -> anyhow::Re
                         } else {
                             batch.push(WikiPage { title, text });
                             if batch.len() >= 1000 {
-                                let (p, s) = process_batch(&batch, storage_dir)?;
+                                let (p, s) = process_batch(&batch, db)?;
                                 processed_count += p;
                                 skipped_count += s;
                                 batch.clear();
@@ -99,7 +99,7 @@ pub fn parse_and_ingest_dump(file_path: &Path, storage_dir: &Path) -> anyhow::Re
 
     // Kalan son paketi işleme al
     if !batch.is_empty() {
-        let (p, s) = process_batch(&batch, storage_dir)?;
+        let (p, s) = process_batch(&batch, db)?;
         processed_count += p;
         skipped_count += s;
     }
@@ -109,7 +109,7 @@ pub fn parse_and_ingest_dump(file_path: &Path, storage_dir: &Path) -> anyhow::Re
 }
 
 /// Belirtilen paketi paralel olarak işler ve sırayla diske yazar.
-fn process_batch(batch: &[WikiPage], storage_dir: &Path) -> anyhow::Result<(usize, usize)> {
+fn process_batch(batch: &[WikiPage], db: &sled::Db) -> anyhow::Result<(usize, usize)> {
     // 1. Paralel Ingestion (CPU Yoğun Morfolojik Ayrıştırma)
     let results: Vec<(String, Option<SerializedLobe>)> = batch.par_iter().map(|page| {
         let lobe_name = derive_lobe_name_from_title(&page.title);
@@ -126,7 +126,7 @@ fn process_batch(batch: &[WikiPage], storage_dir: &Path) -> anyhow::Result<(usiz
         }
 
         // Bellek içi graf oluştur ve ingestion'ı gerçekleştir
-        match ingest_single_page_in_memory(storage_dir, &lobe_name, &cleaned_text) {
+        match ingest_single_page_in_memory(db.clone(), &lobe_name, &cleaned_text) {
             Ok(serialized_lobe) => (lobe_name, Some(serialized_lobe)),
             Err(e) => {
                 eprintln!("[Hata] Makale ingeste edilemedi ({}): {:?}", page.title, e);
@@ -138,37 +138,34 @@ fn process_batch(batch: &[WikiPage], storage_dir: &Path) -> anyhow::Result<(usiz
     let mut processed = 0;
     let mut skipped = 0;
 
-    // 2. Toplu Disk Yazma Optimizasyonu (Sıralı BufWriter)
+    // 2. Toplu Disk Yazma Optimizasyonu (sled::Batch)
+    let mut batch_write = sled::Batch::default();
     for (lobe_name, serialized_opt) in results {
         if let Some(serialized) = serialized_opt {
-            let path = storage_dir.join(format!("{}_lobe.json", lobe_name));
-            let temp_path = storage_dir.join(format!("{}_lobe.json.tmp", lobe_name));
-            
-            let write_res = || -> anyhow::Result<()> {
-                let file = File::create(&temp_path)?;
-                let writer = BufWriter::new(file);
-                serde_json::to_writer_pretty(writer, &serialized)?;
-                std::fs::rename(&temp_path, &path)?;
-                Ok(())
-            };
-
-            if let Err(e) = write_res() {
-                eprintln!("[Hata] Lobe diske yazılamadı ({}): {:?}", lobe_name, e);
-                skipped += 1;
-            } else {
-                processed += 1;
+            match serde_json::to_vec(&serialized) {
+                Ok(bytes) => {
+                    batch_write.insert(lobe_name.as_bytes(), bytes);
+                    processed += 1;
+                }
+                Err(e) => {
+                    eprintln!("[Hata] Lobe serileştirilemedi ({}): {:?}", lobe_name, e);
+                    skipped += 1;
+                }
             }
         } else {
             skipped += 1;
         }
     }
 
+    db.apply_batch(batch_write)?;
+    db.flush()?;
+
     Ok((processed, skipped))
 }
 
 /// Tek bir makaleyi bellek içinde işleyerek SerializedLobe yapısına çevirir.
-fn ingest_single_page_in_memory(storage_dir: &Path, lobe_name: &str, text: &str) -> anyhow::Result<SerializedLobe> {
-    let mut cortex = CortexGraph::new(storage_dir);
+fn ingest_single_page_in_memory(db: sled::Db, lobe_name: &str, text: &str) -> anyhow::Result<SerializedLobe> {
+    let mut cortex = CortexGraph::new(db);
     let chunker = SentenceChunker::default();
     let chunks = chunker.chunk(text);
 

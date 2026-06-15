@@ -98,7 +98,7 @@ impl<C: TextChunker> IngestionPipeline<C> {
             let target_lobe = if let Some(override_name) = lobe_name_override {
                 override_name.to_string()
             } else {
-                let routed_lobes = router.route_query_lobes(chunk, &cortex.storage_dir);
+                let routed_lobes = router.route_query_lobes(chunk, &cortex.db);
                 routed_lobes.first().cloned().unwrap_or_else(|| "general".to_string())
             };
             affected_lobes.insert(target_lobe.clone());
@@ -233,11 +233,10 @@ impl<C: TextChunker> IngestionPipeline<C> {
     ) -> anyhow::Result<()> {
         println!("[Ingestion] Klasör taranıyor: {:?}", dir_path);
 
-        // Kayıt defterini yükle (cortex_storage/ingested_files.json)
-        let registry_path = cortex.storage_dir.join("ingested_files.json");
-        let mut registry: HashMap<String, String> = if registry_path.exists() {
-            let file = std::fs::File::open(&registry_path)?;
-            serde_json::from_reader(file).unwrap_or_default()
+        // Kayıt defterini yükle (cortex.db üzerinden "__registry__" key'inden)
+        let registry_bytes = cortex.db.get("__registry__")?;
+        let mut registry: HashMap<String, String> = if let Some(bytes) = registry_bytes {
+            serde_json::from_slice(&bytes).unwrap_or_default()
         } else {
             HashMap::new()
         };
@@ -297,13 +296,9 @@ impl<C: TextChunker> IngestionPipeline<C> {
             registry.insert(relative_path, current_hash);
             processed += 1;
 
-            let temp_registry_path = registry_path.with_extension("json.tmp");
-            {
-                let file = std::fs::File::create(&temp_registry_path)?;
-                let writer = std::io::BufWriter::new(file);
-                serde_json::to_writer_pretty(writer, &registry)?;
-            }
-            std::fs::rename(&temp_registry_path, &registry_path)?;
+            let serialized_registry = serde_json::to_vec(&registry)?;
+            cortex.db.insert("__registry__", serialized_registry)?;
+            cortex.db.flush()?;
         }
 
         println!("\n[Ingestion] Klasör taraması bitti. İşlenen: {}, Atlanan: {}", processed, skipped);

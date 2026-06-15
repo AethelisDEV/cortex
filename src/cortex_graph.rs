@@ -1,6 +1,5 @@
 use std::collections::{HashMap, HashSet};
-use std::path::{Path, PathBuf};
-use std::fs::File;
+
 use petgraph::stable_graph::{StableDiGraph, NodeIndex};
 use petgraph::visit::{EdgeRef, IntoEdgeReferences};
 use petgraph::Direction;
@@ -66,18 +65,18 @@ pub struct CortexGraph {
     pub content_to_id: HashMap<String, usize>,
     pub loaded_lobes: HashSet<String>,
     pub locked_lobes: HashSet<String>,
-    pub storage_dir: PathBuf,
+    pub db: sled::Db,
 }
 
 impl CortexGraph {
-    pub fn new<P: AsRef<Path>>(storage_dir: P) -> Self {
+    pub fn new(db: sled::Db) -> Self {
         Self {
             graph: StableDiGraph::new(),
             id_to_index: HashMap::new(),
             content_to_id: HashMap::new(),
             loaded_lobes: HashSet::new(),
             locked_lobes: HashSet::new(),
-            storage_dir: storage_dir.as_ref().to_path_buf(),
+            db,
         }
     }
 
@@ -289,11 +288,8 @@ impl CortexGraph {
         }
     }
 
-    /// Belirtilen lobu diske kaydeder.
+    /// Belirtilen lobu veritabanına kaydeder.
     pub fn save_lobe(&self, lobe_name: &str) -> anyhow::Result<()> {
-        std::fs::create_dir_all(&self.storage_dir)?;
-        let path = self.storage_dir.join(format!("{}_lobe.json", lobe_name));
-
         let mut nodes_to_save = Vec::new();
         let mut node_ids = HashSet::new();
 
@@ -334,35 +330,30 @@ impl CortexGraph {
             edges: edges_to_save,
         };
 
-        let temp_path = self.storage_dir.join(format!("{}_lobe.json.tmp", lobe_name));
-
-        // Atomik yazma işlemi
-        {
-            let file = File::create(&temp_path)?;
-            let writer = std::io::BufWriter::new(file);
-            serde_json::to_writer_pretty(writer, &serialized)?;
-        }
-        std::fs::rename(&temp_path, &path)?;
+        // Serileştir ve veritabanına kaydet
+        let serialized_bytes = serde_json::to_vec(&serialized)?;
+        self.db.insert(lobe_name, serialized_bytes)?;
+        self.db.flush()?;
         Ok(())
     }
 
-    /// Belirtilen lobu diskten RAM'e yükler.
+    /// Belirtilen lobu veritabanından RAM'e yükler.
     pub fn load_lobe(&mut self, lobe_name: &str) -> anyhow::Result<()> {
         if self.loaded_lobes.contains(lobe_name) {
             return Ok(());
         }
 
-        let path = self.storage_dir.join(format!("{}_lobe.json", lobe_name));
-        if !path.exists() {
-            // Lob dosyası yoksa yüklemiş gibi kabul et
-            self.loaded_lobes.insert(lobe_name.to_string());
-            return Ok(());
-        }
+        let opt_bytes = self.db.get(lobe_name)?;
+        let serialized: SerializedLobe = match opt_bytes {
+            Some(bytes) => serde_json::from_slice(&bytes)?,
+            None => {
+                // Lob veritabanında yoksa yüklenmiş gibi kabul et
+                self.loaded_lobes.insert(lobe_name.to_string());
+                return Ok(());
+            }
+        };
 
-        println!("[LobeManager] Lob diskten RAM'e yükleniyor: {}", lobe_name);
-        let file = File::open(path)?;
-        let reader = std::io::BufReader::new(file);
-        let serialized: SerializedLobe = serde_json::from_reader(reader)?;
+        println!("[LobeManager] Lob veritabanından RAM'e yükleniyor: {}", lobe_name);
 
         // 1. Adım: Düğümleri yükle
         for loaded_node in serialized.nodes {
@@ -482,41 +473,29 @@ impl CortexGraph {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use std::fs;
     use crate::thalamus_router::ThalamusRouter;
 
     #[test]
     fn test_all_lobes_valid_json() {
-        let storage_dir = Path::new("cortex_storage");
-        if !storage_dir.exists() {
-            return;
-        }
-        for entry in fs::read_dir(storage_dir).unwrap() {
-            let entry = entry.unwrap();
-            let path = entry.path();
-            if path.is_file() && path.extension().map_or(false, |ext| ext == "json") {
-                // Skip very large files in basic validation to avoid hanging test
-                if fs::metadata(&path).unwrap().len() > 5_000_000 {
-                    println!("Skipping validation of large file: {:?}", path);
-                    continue;
+        let db_path = "cortex_storage/cortex.db";
+        let db_result = sled::open(db_path);
+        if let Ok(db) = db_result {
+            for item in db.iter() {
+                if let Ok((key, value)) = item {
+                    let lobe_name = String::from_utf8_lossy(&key);
+                    if lobe_name != "__registry__" {
+                        let res: serde_json::Result<SerializedLobe> = serde_json::from_slice(&value);
+                        assert!(res.is_ok(), "Failed to deserialize lobe '{}', error: {:?}", lobe_name, res.err());
+                    }
                 }
-                let file = File::open(&path).unwrap();
-                let reader = std::io::BufReader::new(file);
-                let res: serde_json::Result<serde_json::Value> = serde_json::from_reader(reader);
-                assert!(res.is_ok(), "Failed to parse json file: {:?}, error: {:?}", path, res.err());
             }
         }
     }
 
     #[test]
     fn test_lobe_locking_and_ownership_trigger() {
-        let path = Path::new("cortex_storage/temp_test_lock_ownership");
-        if path.exists() {
-            let _ = fs::remove_dir_all(path);
-        }
-        fs::create_dir_all(path).unwrap();
-        
-        let mut cortex = CortexGraph::new(path);
+        let db = sled::Config::new().temporary(true).open().unwrap();
+        let mut cortex = CortexGraph::new(db.clone());
         let mut router = ThalamusRouter::new();
         
         // 1. Create and save lobes
@@ -535,10 +514,10 @@ mod tests {
         cortex.unload_lobe("math_test").unwrap();
         
         // Reload router mappings
-        router.reload_mappings(path).unwrap();
+        router.reload_mappings(&db).unwrap();
         
         // 2. Test query routing
-        let target_lobes = router.route_query_lobes("what is ownership?", path);
+        let target_lobes = router.route_query_lobes("what is ownership?", &db);
         assert!(target_lobes.contains(&"ownership".to_string()));
         
         // 3. Test Lobe Locking
@@ -552,8 +531,6 @@ mod tests {
         cortex.locked_lobes.insert("ownership".to_string());
         
         // Run regulate_and_optimize with max_loaded_lobes = 1
-        // Active lobes count: ownership (locked), math_test (unlocked)
-        // It must unload math_test because ownership is locked!
         let glia = crate::glial_system::GlialSystem::new(1, 0.05);
         glia.regulate_and_optimize(&mut cortex).unwrap();
         
@@ -562,7 +539,6 @@ mod tests {
         
         // 4. Test Smart Ownership Trigger
         let rust_node_idx = *cortex.id_to_index.get(&0).unwrap();
-        // Since we loaded the lobe, the activation level is loaded as 0.0 or whatever was saved. Let's make sure it is 0.0 first.
         cortex.graph[rust_node_idx].activation_level = 0.0;
         
         // Run the trigger
@@ -570,9 +546,6 @@ mod tests {
         
         // Confirm activation level is 1.0
         assert_eq!(cortex.graph[rust_node_idx].activation_level, 1.0);
-        
-        // Clean up temp directory
-        let _ = fs::remove_dir_all(path);
     }
 
     #[test]

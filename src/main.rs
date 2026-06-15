@@ -23,22 +23,24 @@ fn main() -> anyhow::Result<()> {
     println!("     CORTEX ENGINE: SAF GRAFİK & BÖLÜMLENMİŞ BELLEK    ");
     println!("========================================================");
 
-    let storage_dir = Path::new("cortex_storage");
+    let db_path = "cortex_storage/cortex.db";
     let inputs_dir = Path::new("cortex_inputs");
 
-    std::fs::create_dir_all(storage_dir)?;
     std::fs::create_dir_all(inputs_dir)?;
 
-    println!("[Sistem] Bellek Deposu: {:?}", storage_dir);
+    println!("[Sistem] Bellek Deposu: {}", db_path);
     println!("[Sistem] Giriş Klasörü: {:?}", inputs_dir);
+
+    // Sled veritabanını başlat
+    let db = sled::open(db_path)?;
 
     // 1. Çekirdek Sistemlerin Başlatılması
     // Saf Grafik Motoru
-    let mut cortex = CortexGraph::new(storage_dir);
+    let mut cortex = CortexGraph::new(db.clone());
 
     // Talamus Kelime Yönlendiricisi
     let mut router = ThalamusRouter::new();
-    router.reload_mappings(storage_dir)?;
+    router.reload_mappings(&cortex.db)?;
 
     // Glia RAM Yöneticisi (Maksimum 18 harici lob yüklenir, sönümlenme oranı 0.05)
     let glia = GlialSystem::new(18, 0.05);
@@ -57,8 +59,7 @@ fn main() -> anyhow::Result<()> {
     // Başlangıç Kurulumu (Grafik boşsa)
     let mut empty = true;
     for l in &["rust", "quantum", "math", "brain"] {
-        let lobe_path = storage_dir.join(format!("{}_lobe.json", l));
-        if lobe_path.exists() {
+        if cortex.db.contains_key(l).unwrap_or(false) {
             empty = false;
             break;
         }
@@ -135,7 +136,7 @@ fn main() -> anyhow::Result<()> {
                 if let Err(e) = pipeline.ingest_directory(&mut cortex, &router, &glia, inputs_dir) {
                     println!("[Hata] Klasör işlenemedi: {:?}", e);
                 }
-                let _ = router.reload_mappings(storage_dir);
+                let _ = router.reload_mappings(&cortex.db);
             }
             "2" => {
                 println!("\n--- ELLE METIN GİRİŞ MODU ---");
@@ -155,7 +156,7 @@ fn main() -> anyhow::Result<()> {
                         println!("[Hata] Metin girişi başarısız: {:?}", e);
                     }
                 }
-                let _ = router.reload_mappings(storage_dir);
+                let _ = router.reload_mappings(&cortex.db);
             }
             "3" => {
                 println!("\n--- SORGU VE ANLAMLI METİN SENTEZİ MODU ---");
@@ -169,7 +170,7 @@ fn main() -> anyhow::Result<()> {
                 }
 
                 // A. Talamus sorguyu inceler ve yüklenmesi gereken lobları belirler
-                let target_lobes = router.route_query_lobes(query, storage_dir);
+                let target_lobes = router.route_query_lobes(query, &cortex.db);
                 println!("  -> Talamus Hedef Lobları Saptadı: {:?}", target_lobes);
 
                 // B. İlgili lobları diskten RAM'e çek ve kilitle (Lobe Locking)
@@ -233,12 +234,14 @@ fn main() -> anyhow::Result<()> {
                 if let Err(e) = dream_worker.run_sleep_cycle(&mut cortex) {
                     println!("[Hata] Uyku döngüsü hatası: {:?}", e);
                 }
-                let _ = router.reload_mappings(storage_dir);
+                let _ = router.reload_mappings(&cortex.db);
             }
             "5" => {
                 println!("\n--- GRAFİK DURUMU VE BELLEK ANALİZİ ---");
                 println!("Toplam Düğüm Sayısı (RAM'de): {}", cortex.graph.node_count());
                 println!("RAM'deki Yüklü Loblar: {:?}", cortex.loaded_lobes);
+                let db_lobe_count = cortex.db.len() - if cortex.db.contains_key("__registry__").unwrap_or(false) { 1 } else { 0 };
+                println!("Toplam Lob Sayısı (Veritabanında): {}", db_lobe_count);
                 
                 println!("\n[Aktif Çalışma Belleği Düğümleri]:");
                 let node_count = cortex.graph.node_count();
@@ -310,9 +313,9 @@ fn main() -> anyhow::Result<()> {
                     continue;
                 }
 
-                println!("[WikiParser] İşlem başlatılıyor, tüm çekirdekler aktif...");
+                println!("[WikiParser] İşlem başlatılıyor, tüm çekirdekler aktif... (Sled DB)");
                 let start_time = std::time::Instant::now();
-                match wiki_parser::parse_and_ingest_dump(path, storage_dir) {
+                match wiki_parser::parse_and_ingest_dump(path, &cortex.db) {
                     Ok((processed, skipped)) => {
                         let duration = start_time.elapsed();
                         println!("\n[Başarılı] İşlem tamamlandı!");
@@ -324,7 +327,7 @@ fn main() -> anyhow::Result<()> {
                         println!("[Hata] Wikipedia Dump işlenirken bir hata oluştu: {:?}", e);
                     }
                 }
-                let _ = router.reload_mappings(storage_dir);
+                let _ = router.reload_mappings(&cortex.db);
             }
             _ => {
                 println!("[Hata] Geçersiz seçim!");
