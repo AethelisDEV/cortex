@@ -238,9 +238,14 @@ fn run_deterministic_walk(
     mut active_nodes: Vec<ConceptNode>,
     graph: &StableDiGraph<ConceptNode, Synapse>,
 ) -> Vec<ConceptNode> {
+    let mut id_to_index = HashMap::with_capacity(graph.node_count());
+    for idx in graph.node_indices() {
+        id_to_index.insert(graph[idx].id, idx);
+    }
+
     active_nodes.sort_by(|a, b| {
-        let index_a = graph.node_indices().find(|&idx| graph[idx].id == a.id);
-        let index_b = graph.node_indices().find(|&idx| graph[idx].id == b.id);
+        let index_a = id_to_index.get(&a.id).cloned();
+        let index_b = id_to_index.get(&b.id).cloned();
         
         if let (Some(idx_a), Some(idx_b)) = (index_a, index_b) {
             if let Some(edge) = graph.find_edge(idx_a, idx_b) {
@@ -269,6 +274,11 @@ fn run_speculative_walk(
         return None;
     }
 
+    let mut id_to_index = HashMap::with_capacity(graph.node_count());
+    for idx in graph.node_indices() {
+        id_to_index.insert(graph[idx].id, idx);
+    }
+
     let mut rng = thread_rng();
     let mut walk = Vec::new();
     let mut visited = HashSet::new();
@@ -285,7 +295,7 @@ fn run_speculative_walk(
 
     // Yürüyüş adımları
     for _ in 0..5 {
-        let current_idx = graph.node_indices().find(|&idx| graph[idx].id == current.id)?;
+        let current_idx = *id_to_index.get(&current.id)?;
 
         // Aday seçimi (Doğrudan komşular + 2/3 adım dolaylılar + benzer etiketliler)
         let mut candidates = Vec::new();
@@ -295,7 +305,7 @@ fn run_speculative_walk(
                 continue;
             }
 
-            let cand_idx = graph.node_indices().find(|&idx| graph[idx].id == candidate_node.id)?;
+            let cand_idx = *id_to_index.get(&candidate_node.id)?;
 
             let is_direct = graph.find_edge(current_idx, cand_idx).is_some() 
                 || graph.find_edge(cand_idx, current_idx).is_some();
@@ -349,6 +359,11 @@ fn evaluate_walk(
         return 1.0;
     }
 
+    let mut id_to_index = HashMap::with_capacity(graph.node_count());
+    for idx in graph.node_indices() {
+        id_to_index.insert(graph[idx].id, idx);
+    }
+
     let mut score = 0.5f32;
     let mut total_checks = 0;
 
@@ -356,11 +371,11 @@ fn evaluate_walk(
         let u = &walk[i];
         let v = &walk[i + 1];
 
-        let u_idx = match graph.node_indices().find(|&idx| graph[idx].id == u.id) {
+        let u_idx = match id_to_index.get(&u.id).cloned() {
             Some(idx) => idx,
             None => continue,
         };
-        let v_idx = match graph.node_indices().find(|&idx| graph[idx].id == v.id) {
+        let v_idx = match id_to_index.get(&v.id).cloned() {
             Some(idx) => idx,
             None => continue,
         };
@@ -648,6 +663,11 @@ fn evaluate_generative_sentence(
     if concepts.len() < 2 {
         return 0.5;
     }
+
+    let mut content_to_index = HashMap::with_capacity(graph.node_count());
+    for idx in graph.node_indices() {
+        content_to_index.insert(&graph[idx].content, idx);
+    }
     
     let mut total_score = 0.5f32;
     let mut total_checks = 0;
@@ -657,8 +677,8 @@ fn evaluate_generative_sentence(
             let c1 = &concepts[i];
             let c2 = &concepts[j];
             
-            let idx1 = graph.node_indices().find(|&idx| graph[idx].content == *c1);
-            let idx2 = graph.node_indices().find(|&idx| graph[idx].content == *c2);
+            let idx1 = content_to_index.get(c1).cloned();
+            let idx2 = content_to_index.get(c2).cloned();
             
             total_checks += 1;
             if let (Some(u), Some(v)) = (idx1, idx2) {

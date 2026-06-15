@@ -322,8 +322,35 @@ pub fn derive_lobe_name_from_title(title: &str) -> String {
     }
 }
 
+fn truncate_references(text: &str) -> &str {
+    let lower = text.to_lowercase();
+    let targets = [
+        "==kaynakça==", "== kaynakça ==",
+        "==references==", "== references ==",
+        "==dış bağlantılar==", "== dış bağlantılar ==",
+        "==external links==", "== external links ==",
+        "==ayrıca bakınız==", "== ayrıca bakınız ==",
+        "==see also==", "== see also ==",
+        "==kaynaklar==", "== kaynaklar ==",
+        "==notlar==", "== notlar ==",
+    ];
+
+    let mut min_idx = text.len();
+    for target in &targets {
+        if let Some(idx) = lower.find(target) {
+            if idx < min_idx {
+                min_idx = idx;
+            }
+        }
+    }
+    &text[..min_idx]
+}
+
 /// MediaWiki biçimlendirmelerini, bilgi kutularını, bağlantıları ve HTML'leri temizleyen fonksiyon.
 pub fn clean_mediawiki_syntax(text: &str) -> String {
+    // 0. Truncate references and external links sections to avoid ingestion noise
+    let text = truncate_references(text);
+
     // 1. HTML Yorumlarını temizle
     let mut text = remove_pattern(text, "<!--", "-->");
     
