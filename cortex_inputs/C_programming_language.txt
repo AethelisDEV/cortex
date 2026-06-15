@@ -1,0 +1,669 @@
+"C programming language" redirects here. For the book, see The C Programming Language.
+"C lang" redirects here. For the compiler front end, see Clang.
+Not to be confused with C++ or C#.
+C
+
+Logotype used on the cover of the first edition of The C Programming Language[1]
+Paradigm	Multi-paradigm: imperative (procedural), structured
+Designed by	Dennis Ritchie
+Developer	ANSI X3J11 (ANSI C); ISO/IEC JTC 1 (Joint Technical Committee 1) / SC 22 (Subcommittee 22) / WG 14 (Working Group 14) (ISO C)
+First appeared	1972; 54 years ago[a]
+Stable release	
+C23 / October 31, 2024; 19 months ago
+Preview release	
+C2Y (N3220) / February 21, 2024; 2 years ago[5]
+Typing discipline	Static, weak, manifest, nominal
+OS	Cross-platform
+Filename extensions	.c, .h
+Website	
+c-language.org
+iso.org
+open-std.org
+Major implementations
+pcc, GCC, Clang, Intel C, C++Builder, Microsoft Visual C++, Watcom C
+Dialects
+Cyclone, Unified Parallel C, Split-C, Cilk, C*
+Influenced by
+B, BCPL, CPL, ALGOL 68,[b] PL/I, Fortran
+Influenced
+Numerous: AMPL, AWK, csh, C++, C--, C#, Objective-C, D, Go, Java, JavaScript, JS++, Julia, Limbo, LPC, Perl, PHP, Pike, Processing, Python, Rust, V (Vlang), Vala, Verilog (HDL),[8] Nim, Zig
+Wikibooks logo C Programming at Wikibooks
+This article is part of a series on the
+C programming language
+The logo of C programming language
+C libraries and tools
+C IDEs
+C compilers
+C mathematical libraries
+See also
+icon Computer programming portal
+C programming (Wikibooks)
+vte
+C[c] is a general-purpose programming language created in the 1970s by Dennis Ritchie. By design, C gives the programmer relatively direct access to the features of the typical CPU architecture, customized for the target instruction set. It has been and continues to be used to implement operating systems (especially kernels[10]), device drivers, and protocol stacks, but its use in application software has been decreasing.[11] C is used on computers that range from the largest supercomputers to the smallest microcontrollers and embedded systems.
+
+A successor to the programming language B, C was originally developed at Bell Labs by Ritchie between 1972 and 1973 to construct utilities running on Unix. It was applied to re-implementing the kernel of the Unix operating system.[12] During the 1980s, C gradually gained popularity. It has become one of the most widely used programming languages,[13][14] with C compilers available for practically all modern computer architectures and operating systems. The book The C Programming Language, co-authored by the original language designer, served for many years as the de facto standard for the language.[15][1] C has been standardized since 1989 by the American National Standards Institute (ANSI) and, subsequently, jointly by the International Organization for Standardization (ISO) and the International Electrotechnical Commission (IEC).
+
+C is an imperative procedural language, supporting structured programming, lexical variable scope, and recursion, with a static type system. It was designed to be compiled to provide low-level access to memory and language constructs that map efficiently to machine instructions, all with minimal runtime support. Despite its low-level capabilities, the language was designed to encourage cross-platform programming. A standards-compliant C program written with portability in mind can be compiled for a wide variety of computer platforms and operating systems with few changes to its source code.
+
+Although neither C nor its standard library provide some popular features found in other languages, it is flexible enough to support them. For example, object orientation and garbage collection are provided by external libraries GLib Object System and Boehm garbage collector, respectively.
+
+Since 2000, C has typically ranked as the most or second-most popular language in the TIOBE index.[16]
+
+Characteristics
+
+Dennis Ritchie (right), the inventor of the C programming language, with Ken Thompson
+The C language exhibits the following characteristics:
+
+Free-form source code
+Semicolons terminate statements
+Curly braces group statements into blocks
+Executable code is contained in functions (no script-like syntax)
+Parameters are passed by value; pass by-reference is achieved by passing a pointer to a value
+Relatively small number of keywords
+Control flow constructs, including if, for, do, while, and switch
+Arithmetic, bitwise, and logic operators, including +,+=,++,&,||
+Multiple assignments may be performed in a single statement
+User-defined identifiers are not distinguished from keywords (i.e., by a sigil)
+A variable declared inside a block is accessible only in that block and only below the declaration
+A function return value can be ignored
+A function cannot be nested inside a function, but some translators support this
+Run-time polymorphism may be achieved using function pointers
+Supports recursion
+Data typing is static, but weakly enforced; all variables have a type, but implicit conversion between primitive types weakens the separation of the different types
+User-defined data types allow for aliasing a data type specifier
+Syntax for array definition and access is via square bracket notation, for example month[11]. Indexing is defined in terms of pointer arithmetic. Whole arrays cannot be copied or compared without custom or library code
+User-defined structure types allow related data elements to be passed and copied as a unit although two structures cannot be compared without custom code to compare each field
+User-defined union types support overlapping members, allowing multiple data types to share the same memory location
+User-defined enumeration types support aliasing integer values
+Lacks a string type but has syntax for null-terminated strings with associated handling in its standard library
+Supports low-level access to computer memory via pointers
+Supports procedure-like construct as a function returning void
+Supports dynamic memory via standard library functions
+Includes the C preprocessor to perform macro definition, source code file inclusion, and conditional compilation
+Supports modularity in that files are processed separately, with visibility control via static and extern attributes
+Minimized functionality in the core language while relatively complex functionality such as I/O, string manipulation, and mathematical functions supported via standard library functions
+Resulting compiled code has relatively straightforward needs on the underlying platform, making it desirable for operating and embedded systems
+"Hello, world" example
+
+"Hello, World" program by Brian Kernighan (1978)
+The "Hello, World!" program example that appeared in the first edition of K&R has become the model for an introductory program in most programming textbooks. The program prints "hello, world" to the standard output.
+
+The original version was:[17]
+
+main()
+{
+    printf("hello, world\n");
+}
+A more modern version is:[d]
+
+#include <stdio.h>
+
+int main(void)
+{
+    printf("hello, world\n");
+}
+The first line is a preprocessor directive, indicated by #include, which causes the preprocessor to replace that line of code with the text of the stdio.h header file, which contains declarations for input and output functions including printf. The angle brackets around stdio.h indicate that the header file can be located using a search strategy that selects header files provided with the compiler over files with the same name that may be found in project-specific directories.
+
+The next code line declares the entry point function main. The run-time environment calls this function to begin program execution. The type specifier int indicates that the function returns an integer value. The void parameter list indicates that the function consumes no arguments. The run-time environment actually passes two arguments (typed int and char *[]), but this implementation ignores them. The ISO C standard (section 5.1.2.2.1) requires syntax that either is void or these two arguments – a special treatment not afforded to other functions.
+
+The opening curly brace indicates the beginning of the code that defines the function.
+
+The next line of code calls (diverts execution to) the C standard library function printf with the address of the first character of a null-terminated string specified as a string literal. The text \n is an escape sequence that denotes the newline character which when output in a terminal results in moving the cursor to the beginning of the next line. Even though printf returns an int value, it is silently discarded. The semicolon ; terminates the call statement.
+
+The closing curly brace indicates the end of the main function. Prior to C99, an explicit return 0; statement was required at the end of main function, but since C99, the main function (as being the initial function call) implicitly returns 0 upon reaching its final closing curly brace.[e]
+
+History
+Early developments
+Timeline of C language
+Year	Informal
+name	Official
+standard
+1972	first release	—N/a
+1978	K&R C	—N/a
+1989,
+1990	ANSI C, C89,
+ISO C, C90	ANSI X3.159-1989
+ISO/IEC 9899:1990
+1999	C99, C9X	ISO/IEC 9899:1999
+2011	C11, C1X	ISO/IEC 9899:2011
+2018	C17, C18	ISO/IEC 9899:2018
+2024	C23, C2X	ISO/IEC 9899:2024
+TBA	C2Y	
+The origin of C is closely tied to the development of the Unix operating system, originally implemented in assembly language on a PDP-7 by Dennis Ritchie and Ken Thompson, incorporating several ideas from colleagues. Eventually, they decided to port the operating system to a PDP-11. The original PDP-11 version of Unix was also developed in assembly language.[12]
+
+B
+Main article: B (programming language)
+Thompson wanted a programming language for developing utilities for the new platform. He first tried writing a Fortran compiler, but he soon gave up the idea and instead created a cut-down version of the recently developed systems programming language called BCPL. The official description of BCPL was not available at the time,[19] and Thompson modified the syntax to be less 'wordy' and similar to a simplified ALGOL known as SMALGOL.[20] He called the result B,[12] describing it as "BCPL semantics with a lot of SMALGOL syntax".[20] Like BCPL, B had a bootstrapping compiler to facilitate porting to new machines.[20] Ultimately, few utilities were written in B because it was too slow and could not take advantage of PDP-11 features such as byte addressability.
+
+Unlike BCPL's // comment marking comments up to the end of the line, B adopted /* comment */ as the comment delimiter, more akin to PL/1, and allowing comments to appear in the middle of lines. (BCPL's comment style would be reintroduced in C++.)[12]
+
+New B and first C release
+In 1971, Ritchie started to improve B, to use the features of the more-powerful PDP-11. A significant addition was a character data type. He called this New B (NB).[20] Thompson started to use NB to write the Unix kernel, and his requirements shaped the direction of the language development.[20][21]
+
+Through to 1972, richer types were added to the NB language. NB had arrays of int and char, and to these types were added pointers, the ability to generate pointers to other types, arrays of all types, and types to be returned from functions. Arrays within expressions were effectively treated as pointers. A new compiler was written, and the language was renamed C.[12]
+
+The C compiler and some utilities made with it were included in Version 2 Unix, which is also known as Research Unix.[22]
+
+Structures and Unix kernel re-write
+At Version 4 Unix, released in November 1973, the Unix kernel was extensively re-implemented in C.[12] By this time, the C language had acquired some powerful features such as struct types.
+
+The preprocessor was introduced around 1973 at the urging of Alan Snyder and also in recognition of the usefulness of the file-inclusion mechanisms available in BCPL and PL/I. Its original version provided only included files and simple string replacements: #include and #define of parameterless macros. Soon after that, it was extended, mostly by Mike Lesk and then by John Reiser, to incorporate macros with arguments and conditional compilation.[12]
+
+Unix was one of the first operating system kernels implemented in a language other than assembly. Earlier instances include the Multics system (which was written in PL/I) and Master Control Program (MCP) for the Burroughs B5000 (which was written in ALGOL) in 1961. In and around 1977, Ritchie and Stephen C. Johnson made further changes to the language to facilitate portability of the Unix operating system. Johnson's Portable C Compiler served as the basis for several implementations of C on new platforms.[21]
+
+K&R C
+
+The cover of the book The C Programming Language, first edition, by Brian Kernighan and Dennis Ritchie
+In 1978, Brian Kernighan and Dennis Ritchie published the first edition of The C Programming Language.[23] Known as K&R from the initials of its authors, the book served for many years as an informal specification of the language. The version of C that it describes is commonly referred to as "K&R C". As this was released in 1978, it is now also referred to as C78.[24] The second edition of the book[25] covers the later ANSI C standard, described below.
+
+K&R introduced several language features:
+
+Standard I/O library
+long int data type
+unsigned int data type
+Compound assignment operators of the form =op (such as =-) were changed to the form op= (that is, -=) to remove the semantic ambiguity created by constructs such as i=-10, which had been interpreted as i =- 10 (decrement i by 10) instead of the possibly intended i = -10 (let i be −10).
+Even after the publication of the 1989 ANSI standard, for many years K&R C was still considered the "lowest common denominator" to which C programmers restricted themselves when maximum portability was desired, since many older compilers were still in use, and because carefully written K&R C code can be legal Standard C as well.
+
+Although later versions of C require functions to have an explicit type declaration, K&R C only requires functions that return a type other than int to be declared before use. Functions used without prior declaration were presumed to return int.
+
+For example:
+
+long long_function();
+
+calling_function()
+{
+    long longvar;
+    register intvar;
+    longvar = long_function();
+    if (longvar > 1)
+          intvar = 0;
+    else
+          intvar = int_function();
+    return intvar;
+}
+The declaration of long_function() (on line 1) is required since it returns long; not int. Function int_function can be called (line 11) even though it is not declared since it returns int. Also, variable intvar does not need to be declared as type int since that is the default type for register keyword.
+
+Since function declarations did not include information about arguments, type checks were not performed, although some compilers would issue a warning if different calls to a function used different numbers or types of arguments. Tools such as Unix's lint utility were developed that (among other things) checked for consistency of function use across multiple source files.
+
+In the years following the publication of K&R C, several features were added to the language, supported by compilers from AT&T (in particular PCC[26]) and other vendors. These included:
+
+void functions; functions returning no value
+Functions returning struct or union types
+Assignment for struct variables
+Enumerated types
+The popularity of the language, lack of agreement on standard library interfaces, and lack of compliance to the K&R specification, led to standardization efforts.[27]
+
+ANSI C and ISO C
+Main article: ANSI C
+During the late 1970s and 1980s, versions of C were implemented for a wide variety of mainframe computers, minicomputers, and microcomputers, including the IBM PC, as its popularity increased significantly.
+
+In 1983 the American National Standards Institute (ANSI) formed a committee, X3J11, to establish a standard specification of C. X3J11 based the C standard on the Unix implementation; however, the non-portable portion of the Unix C library was handed off to the IEEE working group 1003 to become the basis for the 1988 POSIX standard. In 1989, the C standard was ratified as ANSI X3.159-1989 "Programming Language C". This version of the language is often referred to as ANSI C, Standard C, or sometimes C89.
+
+In 1990 the ANSI C standard (with formatting changes) was adopted by the International Organization for Standardization (ISO) as ISO/IEC 9899:1990, which is sometimes called C90. Therefore, the terms "C89" and "C90" refer to the same programming language.
+
+ANSI, like other national standards bodies, no longer develops the C standard independently, but defers to the international C standard, maintained by the working group ISO/IEC JTC1/SC22/WG14. National adoption of an update to the international standard typically occurs within a year of ISO publication.
+
+One of the aims of the C standardization process was to produce a superset of K&R C, incorporating many of the subsequently introduced unofficial features. The standards committee also included several additional features such as function prototypes (borrowed from C++), void pointers, support for international character sets and locales, and preprocessor enhancements. Although the syntax for parameter declarations was augmented to include the style used in C++, the K&R interface continued to be permitted, for compatibility with existing source code.
+
+C89 is supported by current C compilers, and most modern C code is based on it. Any program written only in Standard C and without any hardware-dependent assumptions will run correctly on any platform with a conforming C implementation, within its resource limits. Without such precautions, programs may compile only on a certain platform or with a particular compiler, due, for example, to the use of non-standard libraries, such as GUI libraries, or to a reliance on compiler- or platform-specific attributes such as the exact size of data types and byte endianness.
+
+In cases where code must be compilable by either standard-conforming or K&R C-based compilers, the __STDC__ macro can be used to split the code into Standard and K&R sections to prevent the use on a K&R C-based compiler of features available only in Standard C.
+
+After the ANSI/ISO standardization process, the C language specification remained relatively static for several years. In 1995, Normative Amendment 1 to the 1990 C standard (ISO/IEC 9899/AMD1:1995, known informally as C95) was published, to correct some details and to add more extensive support for international character sets.[28]
+
+C99
+Main article: C99
+The C standard was further revised in the late 1990s, leading to the publication of ISO/IEC 9899:1999 in 1999, which is commonly referred to as "C99". It has since been amended three times by Technical Corrigenda.[29]
+
+C99 introduced several new features, including inline functions, several new data types (including long long int and a complex type to represent complex numbers), variable-length arrays and flexible array members, improved support for IEEE 754 floating point, support for variadic macros (macros of variable arity), and support for one-line comments beginning with //, as in BCPL or C++. Many of these had already been implemented as extensions in several C compilers.
+
+C99 is for the most part backward compatible with C90, but is stricter in some ways; in particular, a declaration that lacks a type specifier no longer has int implicitly assumed. A standard macro __STDC_VERSION__ is defined with value 199901L to indicate that C99 support is available. GCC, Solaris Studio, and other C compilers now[when?] support many or all of the new features of C99. The C compiler in Microsoft Visual C++, however, implements the C89 standard and those parts of C99 that are required for compatibility with C++11.[30][needs update]
+
+In addition, the C99 standard requires support for identifiers using Unicode in the form of escaped characters (e.g. \u0040 or \U0001f431) and suggests support for raw Unicode names.
+
+C11
+Main article: C11
+Work began in 2007 on another revision of the C standard, informally called "C1X" until its official publication of ISO/IEC 9899:2011 on December 8, 2011. The C standards committee adopted guidelines to limit the adoption of new features that had not been tested by existing implementations.
+
+The C11 standard adds numerous new features to C and the library, including type generic macros, anonymous structures, improved Unicode support, atomic operations, multi-threading, and bounds-checked functions. It also makes some portions of the existing C99 library optional, and improves compatibility with C++. The standard macro __STDC_VERSION__ is defined as 201112L to indicate that C11 support is available.
+
+C17
+Main article: C17
+C17 is an informal name for ISO/IEC 9899:2018, a standard for the C programming language published in June 2018. It introduces no new language features, only technical corrections, and clarifications to defects in C11. The standard macro __STDC_VERSION__ is defined as 201710L to indicate that C17 support is available.
+
+C23
+Main article: C23
+C23 is an informal name for the current major C language standard revision. It was known as "C2X" through most of its development. It builds on past releases, introducing features like new keywords, additional meaning for auto to provide type inference when declaring variables, new types including nullptr_t and _BitInt(N), and expansions to the standard library.[31]
+
+C23 was published in October 2024 as ISO/IEC 9899:2024.[32] The standard macro __STDC_VERSION__ is defined as 202311L to indicate that C23 support is available.
+
+C2Y
+Main article: C2Y
+C2Y is an informal name for the next major C language standard revision, after C23 (C2X), that is hoped to be released later in the 2020s, hence the '2' in "C2Y". An early working draft of C2Y was released in February 2024 as N3220 by the working group ISO/IEC JTC1/SC22/WG14.[33]
+
+Embedded C
+Main article: Embedded C
+Historically, embedded C programming requires non-standard extensions to the C language to support exotic features such as fixed-point arithmetic, multiple distinct memory banks, and basic I/O operations.
+
+In 2008, the C Standards Committee published a technical report extending the C language[34] to address these issues by providing a common standard for all implementations to adhere to. It includes a number of features not available in normal C, such as fixed-point arithmetic, named address spaces, and basic I/O hardware addressing.
+
+Definition
+Main article: C syntax
+C has a formal grammar specified by the C standard.[35] Line endings are generally not significant in C; however, line boundaries do have significance during the preprocessing phase. Comments may appear either between the delimiters /* and */, or (since C99) following // until the end of the line. Comments delimited by /* and */ do not nest, and these sequences of characters are not interpreted as comment delimiters if they appear inside string or character literals.[36]
+
+C source files contain declarations and function definitions. Function definitions, in turn, contain declarations and statements. Declarations either define new types using keywords such as struct, union, and enum, or assign types to and perhaps reserve storage for new variables, usually by writing the type followed by the variable name. Keywords such as char and int specify built-in types. Sections of code are enclosed in braces ({ and }, sometimes called "curly brackets") to limit the scope of declarations and to act as a single statement for control structures.
+
+As an imperative language, C uses statements to specify actions. The most common statement is an expression statement, consisting of an expression to be evaluated, followed by a semicolon; as a side effect of the evaluation, functions may be called and variables assigned new values. To modify the normal sequential execution of statements, C provides several control-flow statements identified by reserved keywords. Structured programming is supported by if ... [else] conditional execution and by do ... while, while, and for iterative execution (looping). The for statement has separate initialization, testing, and reinitialization expressions, any or all of which can be omitted. break and continue can be used within the loop. Break is used to leave the innermost enclosing loop statement and continue is used to skip to its reinitialisation. There is also a non-structured goto statement, which branches directly to the designated label within the function. switch selects a case to be executed based on the value of an integer expression. Different from many other languages, control-flow will fall through to the next case unless terminated by a break.
+
+Expressions can use a variety of built-in operators and may contain function calls. The order in which arguments to functions and operands to most operators are evaluated is unspecified. The evaluations may even be interleaved. However, all side effects (including storage to variables) will occur before the next "sequence point"; sequence points include the end of each expression statement, and the entry to and return from each function call. Sequence points also occur during evaluation of expressions containing certain operators (&&, ||, ?: and the comma operator). This permits a high degree of object code optimization by the compiler, but requires C programmers to take more care to obtain reliable results than is needed for other programming languages.
+
+Kernighan and Ritchie say in the Introduction of The C Programming Language: "C, like any other language, has its blemishes. Some of the operators have the wrong precedence; some parts of the syntax could be better."[37] The C standard did not attempt to correct many of these blemishes, because of the impact of such changes on already existing software.
+
+Character set
+The basic C source character set includes the following characters:[38]
+
+Lowercase and uppercase letters of the ISO basic Latin alphabet: a–z, A–Z
+Decimal digits: 0–9
+Graphic characters: ! " # % & ' ( ) * + , - . / : ; < = > ? [ \ ] ^ _ { | } ~
+Whitespace characters: space, horizontal tab, vertical tab, form feed, newline
+The newline character indicates the end of a text line; it need not correspond to an actual single character, although for convenience C treats it as such.
+
+The POSIX standard mandates a portable character set which adds a few characters (notably "@") to the basic C source character set. Both standards do not prescribe any particular value encoding—ASCII and EBCDIC both comply with these standards, since they include at least those basic characters, even though they use different encoded values for those characters.
+
+Additional multi-byte encoded characters may be used in string literals, but they are not entirely portable. Since C99 multi-national Unicode characters can be embedded portably within C source text by using \uXXXX or \UXXXXXXXX encoding (where X denotes a hexadecimal character).
+
+The basic C execution character set contains the same characters, along with representations for the null character, alert, backspace, and carriage return.[38]
+
+Run-time support for extended character sets has increased with each revision of the C standard.
+
+Reserved words
+All versions of C have reserved words that are case sensitive. As reserved words, they cannot be used for variable names.
+
+C89 has 32 reserved words:
+
+auto
+break
+case
+char
+const
+continue
+default
+do
+double
+else
+enum
+extern
+float
+for
+goto
+if
+int
+long
+register
+return
+short
+signed
+sizeof
+static
+struct
+switch
+typedef
+union
+unsigned
+void
+volatile
+while
+C99 added five more reserved words: (‡ indicates an alternative spelling alias for a C23 keyword)
+
+inline
+restrict
+_Bool ‡
+_Complex
+_Imaginary
+C11 added seven more reserved words:[39] (‡ indicates an alternative spelling alias for a C23 keyword)
+
+_Alignas ‡
+_Alignof ‡
+_Atomic
+_Generic
+_Noreturn
+_Static_assert ‡
+_Thread_local ‡
+C23 reserved fifteen more words:
+
+alignas
+alignof
+bool
+constexpr
+false
+nullptr
+static_assert
+thread_local
+true
+typeof
+typeof_unqual
+_BitInt
+_Decimal32
+_Decimal64
+_Decimal128
+Most of the recently reserved words begin with an underscore followed by a capital letter, because identifiers of that form were previously reserved by the C standard for use only by implementations. Since existing program source code should not have been using these identifiers, it would not be affected when C implementations started supporting these extensions to the programming language. Some standard headers do define more convenient synonyms for underscored identifiers. Some of those words were added as keywords with their conventional spelling in C23 and the corresponding macros were removed.
+
+Prior to C89, entry was reserved as a keyword. In the second edition of their book The C Programming Language, which describes what became known as C89, Kernighan and Ritchie wrote, "The ... [keyword] entry, formerly reserved but never used, is no longer reserved." and "The stillborn entry keyword is withdrawn."[40]
+
+Operators
+Main article: Operators in C and C++
+C supports a rich set of operators, which are symbols used within an expression to specify the manipulations to be performed while evaluating that expression. C has operators for:
+
+arithmetic: +, -, *, /, %
+assignment: =
+augmented assignment: +=, -=, *=, /=, %=, &=, |=, ^=, <<=, >>=
+bitwise logic: ~, &, |, ^
+bitwise shifts: <<, >>
+Boolean logic: !, &&, ||
+conditional evaluation: ? :
+equality testing: ==, !=
+calling functions: ( )
+increment and decrement: ++, --
+member selection: ., ->
+object size: sizeof
+type: typeof, typeof_unqual since C23
+order relations: <, <=, >, >=
+reference and dereference: &, *, [ ]
+sequencing: ,
+subexpression grouping: ( )
+type conversion: (typename)
+C uses the operator = (used in mathematics to express equality) to indicate assignment, following the precedent of Fortran and PL/I, but unlike ALGOL and its derivatives. C uses the operator == to test for equality. The similarity between the operators for assignment and equality may result in the accidental use of one in place of the other, and in many cases the mistake does not produce an error message (although some compilers produce warnings). For example, the conditional expression if (a == b + 1) might mistakenly be written as if (a = b + 1), which will be evaluated as true unless the value of a is 0 after the assignment.[41]
+
+The C operator precedence is not always intuitive. For example, the operator == binds more tightly than (is executed prior to) the operators & (bitwise AND) and | (bitwise OR) in expressions such as x & 1 == 0, which must be written as (x & 1) == 0 if that is the coder's intent.[42]
+
+Data types
+Main article: C data types
+icon
+This section needs additional citations for verification. Please help improve this article by adding citations to reliable sources in this section. Unsourced material may be challenged and removed. (October 2012) (Learn how and when to remove this message)
+
+The type system in C is static and weakly typed, which makes it similar to the type system of ALGOL descendants such as Pascal.[43] There are built-in types for integers of various sizes, both signed and unsigned, floating-point numbers, and enumerated types (enum). Integer type char is often used for single-byte characters. C99 added a Boolean data type. There are also derived types including arrays, pointers, records (struct), and unions (union).
+
+C is often used in low-level systems programming where escapes from the type system may be necessary. The compiler attempts to ensure type correctness of most expressions, but the programmer can override the checks in various ways, either by using a type cast to explicitly convert a value from one type to another, or by using pointers or unions to reinterpret the underlying bits of a data object in some other way.
+
+Some find C's declaration syntax unintuitive, particularly for function pointers. (Ritchie's idea was to declare identifiers in contexts resembling their use: "declaration reflects use".)[44]
+
+C's usual arithmetic conversions allow for efficient code to be generated, but can sometimes produce unexpected results. For example, a comparison of signed and unsigned integers of equal width requires a conversion of the signed value to unsigned. This can generate unexpected results if the signed value is negative.
+
+Pointers
+C supports the use of pointers, a type of reference that records the address or location of an object or function in memory. Pointers can be dereferenced to access data stored at the address pointed to, or to invoke a pointed-to function. Pointers can be manipulated using assignment or pointer arithmetic. The run-time representation of a pointer value is typically a raw memory address (perhaps augmented by an offset-within-word field), but since a pointer's type includes the type of the thing pointed to, expressions including pointers can be type-checked at compile time. Pointer arithmetic is automatically scaled by the size of the pointed-to data type.
+
+Pointers are used for many purposes in C. Text strings are commonly manipulated using pointers into arrays of characters. Dynamic memory allocation is performed using pointers; the result of a malloc is usually cast to the data type of the data to be stored. Many data types, such as trees, are commonly implemented as dynamically allocated struct objects linked together using pointers. Pointers to other pointers are often used in multi-dimensional arrays and arrays of struct objects. Pointers to functions (function pointers) are useful for passing functions as arguments to higher-order functions (such as qsort or bsearch), in dispatch tables, or as callbacks to event handlers.[18]
+
+A null pointer value explicitly points to no valid location. Dereferencing a null pointer value is undefined, often resulting in a segmentation fault. Null pointer values are useful for indicating special cases such as no "next" pointer in the final node of a linked list, or as an error indication from functions returning pointers. In appropriate contexts in source code, such as for assigning to a pointer variable, a null pointer constant can be written as 0, with or without explicit casting to a pointer type, as the NULL macro defined by several standard headers or, since C23 with the constant nullptr. In conditional contexts, null pointer values evaluate to false, while all other pointer values evaluate to true.
+
+Void pointers (void *) point to objects of unspecified type, and can therefore be used as "generic" data pointers. Since the size and type of the pointed-to object is not known, void pointers cannot be dereferenced, nor is pointer arithmetic on them allowed, although they can easily be (and in many contexts implicitly are) converted to and from any other object pointer type.[18]
+
+Careless use of pointers is potentially dangerous. Because they are typically unchecked, a pointer variable can be made to point to any arbitrary location, which can cause undesirable effects. Although properly used pointers point to safe places, they can be made to point to unsafe places by using invalid pointer arithmetic; the objects they point to may continue to be used after deallocation (dangling pointers); they may be used without having been initialized (wild pointers); or they may be directly assigned an unsafe value using a cast, union, or through another corrupt pointer. In general, C is permissive in allowing manipulation of and conversion between pointer types, although compilers typically provide options for various levels of checking. Some other programming languages address these problems by using more restrictive reference types.
+
+Arrays
+See also: C string handling
+Array types in C are traditionally of a fixed, static size specified at compile time. The more recent C99 standard also allows a form of variable-length arrays. However, it is also possible to allocate a block of memory (of arbitrary size) at run time, using the standard library's malloc function, and treat it as an array.
+
+Since arrays are always accessed (in effect) via pointers, array accesses are typically not checked against the underlying array size, although some compilers may provide bounds checking as an option.[45][46] Array bounds violations are therefore possible and can lead to various repercussions, including illegal memory accesses, corruption of data, buffer overflows, and run-time exceptions.
+
+C does not have a special provision for declaring multi-dimensional arrays, but rather relies on recursion within the type system to declare arrays of arrays, which effectively accomplishes the same thing. The index values of the resulting "multi-dimensional array" can be thought of as increasing in row-major order. Multi-dimensional arrays are commonly used in numerical algorithms (mainly from applied linear algebra) to store matrices. The structure of the C array is well suited to this particular task. However, in early versions of C the bounds of the array must be known fixed values or else explicitly passed to any subroutine that requires them, and dynamically sized arrays of arrays cannot be accessed using double indexing. (A workaround for this was to allocate the array with an additional "row vector" of pointers to the columns.) C99 introduced "variable-length arrays" which address this issue.
+
+The following example using modern C (C99 or later) shows allocation of a two-dimensional array on the heap and the use of multi-dimensional array indexing for accesses (which can use bounds-checking on many C compilers):
+
+int func(int n, int m) {
+    float (*p)[n][m] = malloc(sizeof *p);
+    if (p == NULL) {
+         return -1;
+    }
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            (*p)[i][j] = i + j;
+        }
+    }
+    print_array(n, m, p);
+    free(p);
+    return 1;
+}
+And here is a similar implementation using C99's Auto VLA feature:[f]
+
+int func(int n, int m) {
+    // Caution: checks should be made to ensure n * m * sizeof(float) does NOT exceed limitations for auto VLAs and is within available size of stack.
+    float p[n][m]; // auto VLA is held on the stack, and sized when the function is invoked
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++) {
+            p[i][j] = i + j;
+        }
+    }
+    print_array(n, m, p);
+    // no need to free(p) since it will disappear when the function exits, along with the rest of the stack frame
+    return 1;
+}
+Array–pointer interchangeability
+The subscript notation x[i] (where x designates a pointer) is syntactic sugar for *(x+i).[47] Taking advantage of the compiler's knowledge of the pointer type, the address that x + i points to is not the base address (pointed to by x) incremented by i bytes, but rather is defined to be the base address incremented by i multiplied by the size of an element that x points to. Thus, x[i] designates the i+1th element of the array.
+
+Furthermore, in most expression contexts (a notable exception is as operand of sizeof), an expression of array type is automatically converted to a pointer to the array's first element. This implies that an array is never copied as a whole when named as an argument to a function, but rather only the address of its first element is passed. Therefore, although function calls in C use pass-by-value semantics, arrays are in effect passed by reference.
+
+The total size of an array x can be determined by applying sizeof to an expression of array type. The size of an element can be determined by applying the operator sizeof to any dereferenced element of an array A, as in n = sizeof A[0]. Thus, the number of elements in a declared array A can be determined as sizeof A / sizeof A[0]. Note, that if only a pointer to the first element is available as it is often the case in C code because of the automatic conversion described above, the information about the full type of the array and its length are lost.
+
+Memory management
+One of the most important functions of a programming language is to provide facilities for managing memory and the objects that are stored in memory. C provides three principal ways to allocate memory for objects:[18]
+
+Static memory allocation: space for the object is provided in the binary at compile time; these objects have an extent (or lifetime) as long as the binary which contains them is loaded into memory.
+Automatic memory allocation: temporary objects can be stored on the stack, and this space is automatically freed and reusable after the block in which they are declared is exited.
+Dynamic memory allocation: blocks of memory of arbitrary size can be requested at run time using library functions such as malloc from a region of memory called the heap; these blocks persist until subsequently freed for reuse by calling the library function realloc or free.
+These three approaches are appropriate in different situations and have various trade-offs. For example, static memory allocation has little allocation overhead, automatic allocation may involve slightly more overhead, and dynamic memory allocation can potentially have a great deal of overhead for both allocation and deallocation. The persistent nature of static objects is useful for maintaining state information across function calls, automatic allocation is easy to use but stack space is typically much more limited and transient than either static memory or heap space, and dynamic memory allocation allows convenient allocation of objects whose size is known only at run time. Most C programs make extensive use of all three.
+
+Where possible, automatic or static allocation is usually simplest because the storage is managed by the compiler, freeing the programmer of the potentially error-prone chore of manually allocating and releasing storage. However, many data structures can change in size at run time, and since static allocations (and automatic allocations before C99) must have a fixed size at compile time, there are many situations in which dynamic allocation is necessary.[18] Prior to the C99 standard, variable-sized arrays were a common example of this. (See the article on C dynamic memory allocation for an example of dynamically allocated arrays.) Unlike automatic allocation, which can fail at run time with uncontrolled consequences, the dynamic allocation functions return an indication (in the form of a null pointer value) when the required storage cannot be allocated. (Static allocation that is too large is usually detected by the linker or loader, before the program can even begin execution.)
+
+Unless otherwise specified, static objects contain zero or null pointer values upon program startup. Automatically and dynamically allocated objects are initialized only if an initial value is explicitly specified; otherwise they initially have indeterminate values (typically, whatever bit pattern happens to be present in the storage, which might not even represent a valid value for that type). If the program attempts to access an uninitialized value, the results are undefined. Many modern compilers try to detect and warn about this problem, but both false positives and false negatives can occur.
+
+Heap memory allocation has to be synchronized with its actual usage in any program to be reused as much as possible. For example, if the only pointer to a heap memory allocation goes out of scope or has its value overwritten before it is deallocated explicitly, then that memory cannot be recovered for later reuse and is essentially lost to the program, a phenomenon known as a memory leak. Conversely, it is possible for memory to be freed but referenced subsequently, leading to unpredictable results. Typically, the failure symptoms appear in a portion of the program unrelated to the code that causes the error, making it difficult to diagnose the failure. Such issues are ameliorated in languages with automatic garbage collection.
+
+Libraries
+The C programming language uses libraries as its primary method of extension. In C, a library is a set of functions contained within a single "archive" file. Each library typically has a header file, which contains the prototypes of the functions contained within the library that may be used by a program, and declarations of special data types and macro symbols used with these functions. For a program to use a library, it must include the library's header file, and the library must be linked with the program, which in many cases requires compiler flags (e.g., -lm, shorthand for "link the math library").[18]
+
+The most common C library is the C standard library, which is specified by the ISO and ANSI C standards and comes with every C implementation (implementations which target limited environments such as embedded systems may provide only a subset of the standard library). This library supports stream input and output, memory allocation, mathematics, character strings, and time values. Several separate standard headers (for example, stdio.h) specify the interfaces for these and other standard library facilities.
+
+Another common set of C library functions are those used by applications specifically targeted for Unix and Unix-like systems, especially functions which provide an interface to the kernel. These functions are detailed in various standards such as POSIX and the Single UNIX Specification.
+
+Since many programs have been written in C, there are a wide variety of other libraries available. Libraries are often written in C because C compilers generate efficient object code; programmers then create interfaces to the library so that the routines can be used from higher-level languages like Java, Perl, and Python.[18]
+
+File handling and streams
+File input and output (I/O) is not part of the C language itself but instead is handled by libraries (such as the C standard library) and their associated header files (e.g. stdio.h). File handling is generally implemented through high-level I/O which works through streams. A stream is from this perspective a data flow that is independent of devices, while a file is a concrete device. The high-level I/O is done through the association of a stream to a file. In the C standard library, a buffer (a memory area or queue) is temporarily used to store data before it is sent to the final destination. This reduces the time spent waiting for slower devices, for example a hard drive or solid-state drive. Low-level I/O functions are not part of the standard C library[clarification needed] but are generally part of "bare metal" programming (programming that is independent of any operating system such as most embedded programming). With few exceptions, implementations include low-level I/O.
+
+Language tools
+See also: List of C software and tools
+A number of tools have been developed to help C programmers find and fix statements with undefined behavior or possibly erroneous expressions, with greater rigor than that provided by the compiler.
+
+Automated source code checking and auditing tools exist, such as Lint. A common practice is to use Lint to detect questionable code when a program is first written. Once a program passes Lint, it is then compiled using the C compiler. Also, many compilers can optionally warn about syntactically valid constructs that are likely to actually be errors. MISRA C is a proprietary set of guidelines to avoid such questionable code, developed for embedded systems.[48]
+
+There are also compilers, libraries, and operating system level mechanisms for performing actions that are not a standard part of C, such as bounds checking for arrays, detection of buffer overflow, serialization, dynamic memory tracking, and automatic garbage collection.
+
+Memory management checking tools like Purify or Valgrind and linking with libraries containing special versions of the memory allocation functions can help uncover run-time errors in memory usage.[49][50]
+
+Uses
+C has been widely used to implement end-user and system-level applications.[51]
+
+Rationale for use in systems programming
+
+Some software written in C
+C is widely used for systems programming in implementing operating systems and embedded system applications.[52] This is for several reasons:
+
+The C language permits platform hardware and memory to be accessed with pointers and type punning, so system-specific features (e.g. Control/Status Registers, I/O registers) can be configured and used with code written in C – it allows fullest control of the platform it is running on.
+The code generated by compilation does not demand many system features, and can be invoked from some boot code in a straightforward manner – it is simple to execute.
+The C language statements and expressions typically map well to sequences of instructions for the target processor, and consequently there is a low run-time demand on system resources – it is fast to execute.
+With its rich set of operators, the C language can use many of the features of target CPUs. Where a particular CPU has more esoteric instructions, a language variant can be constructed with perhaps intrinsic functions to exploit those instructions – it can use practically all the target CPU's features.
+The language makes it easy to overlay structures onto blocks of binary data, allowing the data to be comprehended, navigated and modified – it can write data structures, even file systems.
+The language supports a rich set of operators, including bit manipulation, for integer arithmetic and logic, and perhaps different sizes of floating point numbers – it can process appropriately structured data effectively.
+C is a fairly small language, with only a handful of statements, and without too many features that generate extensive target code – it is comprehensible.
+C has direct control over memory allocation and deallocation, which gives reasonable efficiency and predictable timing to memory-handling operations, without any concerns for sporadic stop-the-world garbage collection events – it has predictable performance.
+C permits the use and implementation of different memory allocation schemes, including a typical malloc and free; a more sophisticated mechanism with arenas; or a version for an OS kernel that may suit DMA, use within interrupt handlers, or integrated with the virtual memory system.
+Depending on the linker and environment, C code can also call libraries written in assembly language, and may be called from assembly language – it interoperates well with other lower-level code.
+C and its calling conventions and linker structures are commonly used in conjunction with other high-level languages, with calls both to C and from C supported – it interoperates well with other high-level code.
+C has a mature and broad ecosystem, including libraries, frameworks, open source compilers, debuggers and utilities, and is the de facto standard. It is likely the drivers already exist in C, or that there is a similar CPU architecture as a back-end of a C compiler, so there is reduced incentive to choose another language.
+Games
+Computer games are often built from a combination of languages. C has featured significantly, especially for those games attempting to obtain best performance from computer platforms. Examples include Doom from 1993.[53]
+
+World Wide Web
+Historically, C was sometimes used for web development using the Common Gateway Interface (CGI) as a "gateway" for information between the web application, the server, and the browser.[54] C may have been chosen over interpreted languages because of its speed, stability, and near-universal availability.[55] It is no longer common practice for web development to be done in C,[56] and many other web development languages are popular. Applications where C-based web development continues include the HTTP configuration pages on routers, IoT devices and similar, although even here some projects have parts in higher-level languages e.g. the use of Lua within OpenWRT.
+
+Two popular web servers, Apache HTTP Server and Nginx, are written in C.[57][58][better source needed] C's close-to-the-metal approach allows for the construction of these high-performance software systems.[citation needed]
+
+C as an intermediate language
+C is sometimes used as an intermediate language by implementations of other languages. This approach may be used for portability or convenience; by using C as an intermediate language, additional machine-specific code generators are not necessary. C has some features, such as line-number preprocessor directives and optional superfluous commas at the end of initializer lists, that support compilation of generated code. However, some of C's shortcomings have prompted the development of other C-based languages specifically designed for use as intermediate languages, such as C--. Also, contemporary major compilers GCC and LLVM both feature an intermediate representation that is not C, and those compilers support front ends for many languages including C.
+
+Computationally intensive libraries
+C enables programmers to create efficient implementations of algorithms and data structures, because the layer of abstraction from hardware is thin, and its overhead is low, an important criterion for computationally intensive programs. For example, the GNU Multiple Precision Arithmetic Library, the GNU Scientific Library, Mathematica, and MATLAB are completely or partially written in C. Many languages support calling library functions in C; for example, the Python-based framework NumPy uses C for the high-performance and hardware-interacting aspects.
+
+Other languages are written in C
+A consequence of C's wide availability and efficiency is that compilers, libraries and interpreters of other programming languages are often implemented in C.[59] For example, the reference implementations of Python,[60] Perl,[61] Ruby,[62] and PHP[63] are written in C.
+
+Limitations
+Ritchie himself joked about the limitations of the language that he created:[64]
+
+the power of assembly language and the convenience of ... assembly language
+
+— Dennis Ritchie
+While C is popular, influential and hugely successful, it has drawbacks, including:
+
+The standard dynamic memory handling with malloc and free is prone to mistakes. Improper use can lead to memory leaks and dangling pointers.[65]
+The use of pointers and the direct manipulation of memory means corruption of memory is possible.
+There is type checking, yet it does not apply to some areas like variadic functions, and the type checking can be trivially or inadvertently circumvented. It is weakly typed, despite being statically typed.
+Since the code generated by the compiler contains few run-time checks, there is a burden on the programmer to consider all possible outcomes, to protect against buffer overruns, array bounds checking, stack overflows, memory exhaustion, and consider race conditions, thread isolation, etc.
+The use of pointers and the run-time manipulation of these enables two ways to access the same data (aliasing), which is not always determinable at compile time. This means that some optimizations that may be available to some other languages, such as Fortran, are not possible in C. For this reason, Fortran is sometimes considered faster.[citation needed]
+Some of the standard library functions, e.g. scanf or strncat, can lead to buffer overruns.
+There is limited standardization in support for low-level variants in generated code, such as different function calling conventions and ABIs; different structure packing conventions; and different byte ordering within larger integers (including endianness). In many language implementations, some of these options may be handled with the preprocessor directive #pragma,[66][67] and some with additional keywords e.g. use __cdecl calling convention. The directive and options are not consistently supported.[68]
+String handling using the standard library is code-intensive, with explicit memory management required.
+The language does not directly support object orientation, introspection, run-time expression evaluation (like eval in JavaScript), garbage collection, etc.
+There are few guards against misuse of language features, which may enable unmaintainable code. In particular, the C preprocessor can hide troubling effects such as double evaluation and worse.[69] This capability for obfuscated code has been celebrated with competitions such as the International Obfuscated C Code Contest and the Underhanded C Contest.
+C lacks standard support for exception handling and only offers return codes for error checking. The setjmp and longjmp standard library functions have been used[70] to implement a try-catch mechanism via macros. Also, goto statements are commonly used for error handling.[citation needed]
+Mitigations for C's problems
+For some purposes, restricted styles of C have been adopted, e.g. MISRA C or CERT C, in an attempt to reduce the opportunity for unwanted behaviour.[71] Databases such as CWE attempt to count the ways that systems in general, especially those coded in C, have potential vulnerabilities, along with recommendations for mitigation.
+
+There are tools that can mitigate some of the drawbacks. Contemporary C compilers include checks which may generate warnings to help identify many potential bugs.
+
+C's use of pointers can be made less risky by use of instruction set architecture extensions such as CHERI or Permission Overlay Extensions. These techniques change the fundamental nature of pointers at a hardware level to include bounds checks and purposes, which can help prevent buffer over-runs and inappropriate heap accesses.
+
+Since the early 2020s the Linux kernel has sections written in Rust, a language which has specific measures to improve safety.[72]
+
+Related languages
+Main article: List of C-family programming languages
+
+TIOBE index
+Many languages developed after C were influenced by and borrowed aspects of C, including C++, C#, C shell, D, Go, Java, JavaScript, Julia, Limbo, LPC, Objective-C, Perl, PHP, Python, Ruby, Rust, Swift, Verilog and SystemVerilog.[8][73] Some claim that the most pervasive influence has been syntactical – that these languages combine the statement and expression syntax of C with type systems, data models and large-scale program structures that differ from those of C, sometimes radically.
+
+Several C or near-C interpreters exist, including Ch and CINT, which can also be used for scripting.
+
+When object-oriented programming languages became popular, C++ and Objective-C were two different extensions of C that provided object-oriented capabilities. Both languages were originally implemented as source-to-source compilers; source code was translated into C, and then compiled with a C compiler.[74]
+
+The C++ programming language (originally named "C with Classes") was devised by Bjarne Stroustrup as an approach to providing object-oriented functionality with a C-like syntax.[75] C++ adds greater typing strength, scoping, and other tools useful in object-oriented programming, and permits generic programming via templates. Nearly a superset of C, C++ now[when?] supports most of C, with a few exceptions.
+
+Objective-C was originally a thin layer on top of C, and remains a strict superset of C that permits object-oriented programming using a hybrid dynamic/static typing paradigm. Objective-C derives its syntax from both C and Smalltalk: syntax that involves preprocessing, expressions, function declarations, and function calls is inherited from C, while the syntax for object-oriented features was originally taken from Smalltalk.
+
+In addition to C++ and Objective-C, Ch, Cilk, and Unified Parallel C are nearly supersets of C.
+
+See also
+Comparison of Pascal and C
+Comparison of programming languages
+List of C compilers
+List of C programming books
+Outline of the C programming language
+Notes
+ "Thompson had made a brief attempt to produce a system coded in an early version of C—before structures—in 1972, but gave up the effort."[2][3][4]
+ "The scheme of type composition adopted by C owes considerable debt to Algol 68, although it did not, perhaps, emerge in a form that Algol's adherents would approve of."[6][7][4]
+ Pronounced /ˈsiː/, like the letter 'c'.[9]
+ The original example code will compile on most modern compilers that are not in strict standard compliance mode, but it does not fully conform to the requirements of either C89 or C99. In fact, C99 requires that a diagnostic message be produced.
+ Return value 0 is typically used in this context to indicate success.[18]
+ Code of print_array (not shown) slightly differs also, because of the type of p, being a pointer to the 2D array in the malloc'd version, and just a 2D array in the auto VNA version.
+References
+ Prinz, Peter; Crawford, Tony (December 16, 2005). C in a Nutshell. O'Reilly Media, Inc. p. 3. ISBN 978-0-596-55071-4.
+ Ritchie (1993a), p. 9.
+ Ritchie (1993b), p. 9.
+ Ritchie (2003).
+ "N3221 – Editor's Report, Post January 2024 Strasbourg France Meeting". ISO/IEC JTC1/SC22/WG14. Open Standards. February 21, 2024. Retrieved May 24, 2024.
+ Ritchie (1993a), p. 8.
+ Ritchie (1993b), p. 8.
+ "Verilog HDL (and C)" (PDF). The Research School of Computer Science at the Australian National University. June 3, 2010. Archived from the original (PDF) on November 6, 2013. Retrieved August 19, 2013. 1980s: Verilog first introduced; Verilog inspired by the C programming language
+ "The name is based on, and pronounced like the letter C in the English alphabet". the c programming language sound. English Chinese Dictionary. Archived from the original on November 17, 2022. Retrieved November 17, 2022.
+ Munoz, Daniel. "After All These Years, the World is Still Powered by C Programming | Toptal". Toptal Engineering Blog. Retrieved June 15, 2024.
+ "C Language Drops to Lowest Popularity Rating". Developer.com. August 9, 2016. Archived from the original on August 22, 2022. Retrieved August 1, 2022.
+ Ritchie (1993a).
+ "Programming Language Popularity". 2009. Archived from the original on January 16, 2009. Retrieved January 16, 2009.
+ "TIOBE Programming Community Index". 2009. Archived from the original on May 4, 2009. Retrieved May 6, 2009.
+ Ward, Terry A. (August 1983). "Annotated C / A Bibliography of the C Language". Byte. p. 268. Retrieved January 31, 2015.
+ "TIOBE Index for September 2024". Archived from the original on September 18, 2024. Retrieved December 16, 2025.
+ Kernighan & Ritchie (1978), p. 6.
+ Klemens, Ben (2013). 21st Century C. O'Reilly Media. ISBN 978-1-4493-2714-9.
+ Ritchie, Dennis. "BCPL to B to C". lysator.liu.se. Archived from the original on December 12, 2019. Retrieved September 10, 2019.
+ Jensen, Richard (December 9, 2020). ""A damn stupid thing to do"—the origins of C". Ars Technica. Archived from the original on March 28, 2022. Retrieved March 28, 2022.
+ Johnson, S. C.; Ritchie, D. M. (1978). "Portability of C Programs and the UNIX System". Bell System Tech. J. 57 (6): 2021–2048. CiteSeerX 10.1.1.138.35. doi:10.1002/j.1538-7305.1978.tb02141.x. ISSN 0005-8580. S2CID 17510065. (Note: The PDF is an OCR scan of the original, and contains a rendering of "IBM 370" as "IBM 310".)
+ McIlroy, M. D. (1987). A Research Unix reader: annotated excerpts from the Programmer's Manual, 1971–1986 (PDF) (Technical report). CSTR. Bell Labs. p. 10. 139. Archived from the original (PDF) on November 11, 2017. Retrieved February 1, 2015.
+ Kernighan & Ritchie (1978).
+ "C manual pages". FreeBSD Miscellaneous Information Manual (FreeBSD 13.0 ed.). May 30, 2011. Archived from the original on January 21, 2021. Retrieved January 15, 2021. [1] Archived January 21, 2021, at the Wayback Machine
+ Kernighan & Ritchie (1988).
+ Stroustrup, Bjarne (2002). Sibling rivalry: C and C++ (PDF) (Report). AT&T Labs. Archived from the original (PDF) on August 24, 2014. Retrieved April 14, 2014.
+ "Rationale for American National Standard for Information Systems – Programming Language – C". Archived from the original on July 17, 2024. Retrieved July 17, 2024.
+ C Integrity. International Organization for Standardization. March 30, 1995. Archived from the original on July 25, 2018. Retrieved July 24, 2018.
+ "JTC1/SC22/WG14 – C". Home page. ISO/IEC. Archived from the original on February 12, 2018. Retrieved June 2, 2011.
+ Andrew Binstock (October 12, 2011). "Interview with Herb Sutter". Dr. Dobbs. Archived from the original on August 2, 2013. Retrieved September 7, 2013.
+ "ISO/IEC 9899:2024 (en) — N3220 working draft" (PDF). Retrieved July 11, 2025.
+ "WG14-N3132 : Revised C23 Schedule" (PDF). open-std.org. June 4, 2023. Archived from the original (PDF) on June 9, 2023.
+ "WG14-N3220 : Working Draft, C2y" (PDF). open-std.org. February 21, 2024. Archived from the original (PDF) on February 26, 2024.
+ "TR 18037: Embedded C" (PDF). open-std.org. April 4, 2006. ISO/IEC JTC1 SC22 WG14 N1169. Archived from the original (PDF) on February 25, 2021. Retrieved July 26, 2011.
+ Harbison, Samuel P.; Steele, Guy L. (2002). C: A Reference Manual (5th ed.). Englewood Cliffs, NJ: Prentice Hall. ISBN 978-0-13-089592-9. Contains a BNF grammar for C.
+ Kernighan & Ritchie (1988), p. 192.
+ Kernighan & Ritchie (1978), p. 3.
+ "Committee Draft ISO/IEC 9899:TC3: 5.2.1 Character sets". 2007.
+ "ISO/IEC 9899:201x (ISO C11) Committee Draft" (PDF). open-std.org. December 2, 2010. Archived from the original (PDF) on December 22, 2017. Retrieved September 16, 2011.
+ Kernighan & Ritchie (1988), pp. 192, 259.
+ "10 Common Programming Mistakes in C++". Cs.ucr.edu. Archived from the original on October 21, 2008. Retrieved June 26, 2009.
+ Schultz, Thomas (2004). C and the 8051 (3rd ed.). Otsego, MI: PageFree Publishing Inc. p. 20. ISBN 978-1-58961-237-2. Retrieved February 10, 2012.
+ Feuer, Alan R.; Gehani, Narain H. (March 1982). "Comparison of the Programming Languages C and Pascal". ACM Computing Surveys. 14 (1): 73–92. doi:10.1145/356869.356872. S2CID 3136859.
+ Kernighan & Ritchie (1988), p. 122.
+ For example, gcc provides _FORTIFY_SOURCE. "Security Features: Compile Time Buffer Checks (FORTIFY_SOURCE)". fedoraproject.org. Archived from the original on January 7, 2007. Retrieved August 5, 2012.
+ เอี่ยมสิริวงศ์, โอภาศ (2016). Programming with C. Bangkok, Thailand: SE-EDUCATION PUBLIC COMPANY LIMITED. pp. 225–230. ISBN 978-616-08-2740-4.
+ Raymond, Eric S. (October 11, 1996). The New Hacker's Dictionary (3rd ed.). MIT Press. p. 432. ISBN 978-0-262-68092-9. Retrieved August 5, 2012.
+ "Man Page for lint (freebsd Section 1)". unix.com. May 24, 2001. Retrieved July 15, 2014.
+ Hardison, Nate. "CS107 Valgrind Memcheck". web.stanford.edu. Retrieved June 23, 2023.
+ Hastings, Reed; Joyce, Bob. "Purify: Fast Detection of Memory Leaks and Access Errors" (PDF). Pure Software Inc.: 9.
+ Munoz, Daniel. "After All These Years, the World is Still Powered by C Programming". Toptal Engineering Blog. Retrieved November 17, 2023.
+ Dale, Nell B.; Weems, Chip (2014). Programming and problem solving with C++ (6th ed.). Burlington, Massachusetts: Jones & Bartlett Learning. ISBN 978-1-4496-9428-9. OCLC 894992484.
+ "Development of Doom". DoomWiki.org. March 2, 2025. Retrieved March 2, 2025.
+ Dr. Dobb's Sourcebook. U.S.: Miller Freeman, Inc. November–December 1995.
+ "Using C for CGI Programming". linuxjournal.com. March 1, 2005. Archived from the original on February 13, 2010. Retrieved January 4, 2010.
+ Perkins, Luc (September 17, 2013). "Web development in C: crazy? Or crazy like a fox?". Medium. Archived from the original on October 4, 2014. Retrieved April 8, 2022.
+ "What programming language does NGINX use?".
+ "What is Apache and What Does it Do for Website Development?". February 15, 2022.
+ "C – the mother of all languages". ICT Academy at IITK. November 13, 2018. Archived from the original on May 31, 2021. Retrieved October 11, 2022.
+ "1. Extending Python with C or C++". Python 3.10.7 documentation. Archived from the original on November 5, 2012. Retrieved October 11, 2022.
+ Conrad, Michael (January 22, 2018). "An overview of the Perl 5 engine". Opensource.com. Archived from the original on May 26, 2022. Retrieved October 11, 2022.
+ "To Ruby From C and C++". Ruby Programming Language. Archived from the original on August 12, 2013. Retrieved October 11, 2022.
+ Para, Michael (August 3, 2022). "What is PHP? How to Write Your First PHP Program". freeCodeCamp. Archived from the original on August 4, 2022. Retrieved October 11, 2022.
+ Metz, Cade (October 13, 2011). "Dennis Ritchie: The Shoulders Steve Jobs Stood On". Wired. Archived from the original on April 12, 2022. Retrieved April 19, 2022.
+ Internet Security Research Group. "What is memory safety and why does it matter?". Prossimo. Retrieved March 3, 2025.
+ corob-msft (March 31, 2022). "Pragma directives and the __pragma and _Pragma keywords". Microsoft Learn. Archived from the original on September 24, 2022. Retrieved September 24, 2022.
+ "Pragmas (The C Preprocessor)". GCC, the GNU Compiler Collection. Archived from the original on June 17, 2002. Retrieved September 24, 2022.
+ "Pragmas". Intel C++ Compiler Classic Developer Guide and Reference. Intel. Archived from the original on April 10, 2022. Retrieved April 10, 2022.
+ "In praise of the C preprocessor". apenwarr. August 13, 2007. Retrieved July 9, 2023.
+ Roberts, Eric S. (March 21, 1989). "Implementing Exceptions in C" (PDF). DEC Systems Research Center. SRC-RR-40. Archived from the original (PDF) on January 15, 2017. Retrieved January 4, 2022.
+ "Secure Coding Overview" (PDF). Software Engineering Institute, Carnegie Mellon University. Retrieved December 15, 2025.
+ "New Linux Patch Confirms: Rust Experiment Is Done, Rust Is Here To Stay". www.phoronix.com. Retrieved December 15, 2025.
+ O'Regan, Gerard (September 24, 2015). Pillars of computing : a compendium of select, pivotal technology firms. Springer. ISBN 978-3-319-21464-1. OCLC 922324121.
+ Rauchwerger, Lawrence (2004). Languages and compilers for parallel computing : 16th international workshop, LCPC 2003, College Station, TX, USA, October 2–4, 2003 : revised papers. Springer. ISBN 978-3-540-24644-2. OCLC 57965544.
+ Stroustrup, Bjarne (1993). "A History of C++: 1979–1991" (PDF). Archived from the original (PDF) on February 2, 2019. Retrieved June 9, 2011.
+Sources
+Kernighan, Brian W.; Ritchie, Dennis M. (1978). The C Programming Language (1st ed.). Englewood Cliffs: Prentice Hall. ISBN 978-0-13-110163-0. LCCN 77028983. OCLC 3608698. OL 4558528M. Wikidata Q63565563.
+Kernighan, Brian W.; Ritchie, Dennis M. (1988). The C Programming Language (2nd ed.). Upper Saddle River: Prentice Hall. ISBN 978-0-13-110362-7. LCCN 88005934. OCLC 254455874. OL 2030445M. Wikidata Q63413168.
+Ritchie, Dennis M. (March 1993a). Wexelblat, Richard L. (ed.). "The Development of the C Language". ACM SIGPLAN Notices. 28 (3). New York City: Association for Computing Machinery: 201–208. doi:10.1145/155360.155580. ISSN 0362-1340. Wikidata Q55869040.
+Ritchie, Dennis M. (1993b). Bergin, Thomas J.; Gibson, Richard G. (eds.). "The Development of the C Language". The Second ACM SIGPLAN Conference on History of Programming Languages (HOPL-II). New York City: Association for Computing Machinery: 201–208. doi:10.1145/154766.155580. Wikidata Q29392176.
+Ritchie, Dennis M. (2003) [1993]. The Development of the C Language. Dennis Ritchie. Wikidata Q134885774. Archived from the original on January 30, 2025 – via Bell Labs/Lucent Technologies.
+Further reading
+Plauger, P.J. (1992). The Standard C Library (1 ed.). Prentice Hall. ISBN 978-0-13-131509-9. (source)
+Banahan, M.; Brady, D.; Doran, M. (1991). The C Book: Featuring the ANSI C Standard (2 ed.). Addison-Wesley. ISBN 978-0-201-54433-6. (free)
+Feuer, Alan R. (1985). The C Puzzle Book (1 ed.). Prentice Hall. ISBN 0-13-109934-5.
+Harbison, Samuel; Steele, Guy Jr. (2002). C: A Reference Manual (5 ed.). Pearson. ISBN 978-0-13-089592-9. (archive)
+King, K.N. (2008). C Programming: A Modern Approach (2 ed.). W. W. Norton. ISBN 978-0-393-97950-3. (archive)
+Griffiths, David; Griffiths, Dawn (2012). Head First C (1 ed.). O'Reilly. ISBN 978-1-4493-9991-7.
+Perry, Greg; Miller, Dean (2013). C Programming: Absolute Beginner's Guide (3 ed.). Que. ISBN 978-0-7897-5198-0.
+Deitel, Paul; Deitel, Harvey (2015). C: How to Program (8 ed.). Pearson. ISBN 978-0-13-397689-2.
+Gustedt, Jens (2025). Modern C (3 ed.). Manning. ISBN 9781633437777. (free)

@@ -1,0 +1,2753 @@
+{
+  "lobe_name": "quantum",
+  "nodes": [
+    {
+      "id": 1,
+      "content": "Schrodinger'in kedisi deneyi, kuantum süperpozisyon durumunu temsil eder.",
+      "tags": {
+        "quantum": 1.0,
+        "schrodinger": 1.0,
+        "superposition": 1.0,
+        "kedi": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 471,
+      "content": "Kuantum mekaniği atom altı parçacıkların davranışını inceler",
+      "tags": {
+        "kuantum": 1.0,
+        "inceler": 1.0,
+        "parçacıkların": 1.0,
+        "mekaniği": 1.0,
+        "atom": 1.0,
+        "altı": 1.0,
+        "davranışını": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 473,
+      "content": "Kuantum",
+      "tags": {
+        "kuantum": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 474,
+      "content": "mekanik",
+      "tags": {
+        "mekanik": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 475,
+      "content": "atom",
+      "tags": {
+        "atom": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 476,
+      "content": "[al]",
+      "tags": {
+        "al": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 477,
+      "content": "parçacık",
+      "tags": {
+        "parçacık": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 478,
+      "content": "davranış",
+      "tags": {
+        "davranış": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 479,
+      "content": "[incele]",
+      "tags": {
+        "incele": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 480,
+      "content": "Dalga fonksiyonu Schrodinger denklemi ile hesaplanır",
+      "tags": {
+        "fonksiyonu": 1.0,
+        "dalga": 1.0,
+        "denklemi": 1.0,
+        "hesaplanır": 1.0,
+        "schrodinger": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 482,
+      "content": "Dalga",
+      "tags": {
+        "dalga": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 483,
+      "content": "fonksiyo",
+      "tags": {
+        "fonksiyo": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 484,
+      "content": "Schrodinger",
+      "tags": {
+        "schrodinger": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 485,
+      "content": "denklem",
+      "tags": {
+        "denklem": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 486,
+      "content": "[hesapla]",
+      "tags": {
+        "hesapla": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 487,
+      "content": "Parçacıklar süperpozisyon durumunda bulunabilir",
+      "tags": {
+        "süperpozisyon": 1.0,
+        "bulunabilir": 1.0,
+        "durumunda": 1.0,
+        "parçacıklar": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 489,
+      "content": "Parçacık",
+      "tags": {
+        "parçacık": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 490,
+      "content": "süperpozisyon",
+      "tags": {
+        "süperpozisyon": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 491,
+      "content": "durum",
+      "tags": {
+        "durum": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 492,
+      "content": "[bulun]",
+      "tags": {
+        "bulun": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 493,
+      "content": "Lineer cebir matris işlemleri bu denklemleri çözmede kullanılır",
+      "tags": {
+        "cebir": 1.0,
+        "denklemleri": 1.0,
+        "kullanılır": 1.0,
+        "matris": 1.0,
+        "lineer": 1.0,
+        "çözmede": 1.0,
+        "işlemleri": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 495,
+      "content": "Lineer",
+      "tags": {
+        "lineer": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 496,
+      "content": "cebir",
+      "tags": {
+        "cebir": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 497,
+      "content": "matris",
+      "tags": {
+        "matris": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 498,
+      "content": "[işle]",
+      "tags": {
+        "işle": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 499,
+      "content": "bu",
+      "tags": {
+        "bu": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 500,
+      "content": "denklemleri",
+      "tags": {
+        "denklemleri": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 501,
+      "content": "çözmet",
+      "tags": {
+        "çözmet": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 502,
+      "content": "[kullan]",
+      "tags": {
+        "kullan": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "quantum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": 473,
+      "target_id": 474,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 474,
+      "target_id": 475,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 475,
+      "target_id": 476,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 477,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 477,
+      "target_id": 478,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 478,
+      "target_id": 479,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 473,
+      "target_id": 476,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Özne"
+      }
+    },
+    {
+      "source_id": 474,
+      "target_id": 476,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 477,
+      "target_id": 476,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 478,
+      "target_id": 476,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 482,
+      "target_id": 483,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 483,
+      "target_id": 484,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 484,
+      "target_id": 485,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 485,
+      "target_id": 486,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 482,
+      "target_id": 486,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Özne"
+      }
+    },
+    {
+      "source_id": 483,
+      "target_id": 486,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 484,
+      "target_id": 486,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 471,
+      "target_id": 480,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 489,
+      "target_id": 490,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 490,
+      "target_id": 491,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 491,
+      "target_id": 492,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 489,
+      "target_id": 492,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Özne"
+      }
+    },
+    {
+      "source_id": 490,
+      "target_id": 492,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 480,
+      "target_id": 487,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 495,
+      "target_id": 496,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 496,
+      "target_id": 497,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 497,
+      "target_id": 498,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 498,
+      "target_id": 499,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 499,
+      "target_id": 500,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 500,
+      "target_id": 501,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 501,
+      "target_id": 502,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 495,
+      "target_id": 498,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Özne"
+      }
+    },
+    {
+      "source_id": 496,
+      "target_id": 498,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 499,
+      "target_id": 498,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 500,
+      "target_id": 498,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 501,
+      "target_id": 498,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 487,
+      "target_id": 493,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 700,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 675,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 2153,
+      "target_lobe": "data_types",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 624,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 3046,
+      "target_lobe": "cargo",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 602,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 3871,
+      "target_lobe": "guessing_game",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 967,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 530,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 1521,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 600,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 2179,
+      "target_lobe": "data_types",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 830,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 5914,
+      "target_lobe": "rust",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 7077,
+      "target_lobe": "rust",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 7315,
+      "target_lobe": "rust",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 1386,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 955,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 571,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 1667,
+      "target_lobe": "data_types",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 9509,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 12382,
+      "target_lobe": "vm_7_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 604,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 893,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9694,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 12326,
+      "target_lobe": "vm_7_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 498,
+      "target_id": 476,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 742,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 10537,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10279,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9442,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9429,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 9593,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 498,
+      "target_id": 9476,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 498,
+      "target_id": 9606,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9622,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9657,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9674,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9904,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 9458,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 502,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 9463,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 9993,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 10204,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9901,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10217,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10269,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 478,
+      "target_id": 9513,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 478,
+      "target_id": 2786,
+      "target_lobe": "cargo",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10317,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 9489,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9513,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 499,
+      "target_id": 9502,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10354,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 498,
+      "target_id": 10367,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10377,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 498,
+      "target_id": 10374,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 498,
+      "target_id": 10139,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10029,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10429,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 498,
+      "target_id": 10181,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 486,
+      "target_id": 10458,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9543,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10181,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 9547,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10493,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10531,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 498,
+      "target_id": 10552,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10532,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9988,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10535,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10616,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 10624,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9720,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 498,
+      "target_id": 10656,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 9444,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10677,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10423,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10730,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9951,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10741,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 498,
+      "target_id": 10747,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9593,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10735,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 10817,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 5922,
+      "target_lobe": "rust",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 498,
+      "target_id": 9891,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 9998,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10855,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 498,
+      "target_id": 10862,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10251,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 498,
+      "target_id": 10863,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9458,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 9918,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 10230,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 492,
+      "target_id": 9972,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 483,
+      "target_id": 11230,
+      "target_lobe": "vm_3_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 486,
+      "target_id": 11223,
+      "target_lobe": "vm_3_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 11398,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 499,
+      "target_id": 11345,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 499,
+      "target_id": 9687,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 499,
+      "target_id": 491,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 491,
+      "target_id": 11461,
+      "target_lobe": "vm_4_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10280,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10080,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 10080,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9632,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 11668,
+      "target_lobe": "vm_4_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9839,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9643,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 11797,
+      "target_lobe": "vm_5_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 11582,
+      "target_lobe": "vm_4_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10071,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 11730,
+      "target_lobe": "vm_4_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 11570,
+      "target_lobe": "vm_4_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 11990,
+      "target_lobe": "vm_5_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 582,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 486,
+      "target_id": 12027,
+      "target_lobe": "vm_5_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 486,
+      "target_id": 10157,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 499,
+      "target_id": 11231,
+      "target_lobe": "vm_3_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 499,
+      "target_id": 486,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 12039,
+      "target_lobe": "vm_5_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 9720,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 478,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 478,
+      "target_id": 9530,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9530,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 12108,
+      "target_lobe": "vm_6_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 12133,
+      "target_lobe": "vm_6_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 9530,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9464,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 478,
+      "target_id": 12087,
+      "target_lobe": "vm_6_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 478,
+      "target_id": 12154,
+      "target_lobe": "vm_6_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 9718,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 11609,
+      "target_lobe": "vm_4_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 478,
+      "target_id": 12211,
+      "target_lobe": "vm_6_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 478,
+      "target_id": 502,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 12215,
+      "target_lobe": "vm_6_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 11907,
+      "target_lobe": "vm_5_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10588,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 12256,
+      "target_lobe": "vm_6_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 12287,
+      "target_lobe": "vm_6_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 12270,
+      "target_lobe": "vm_6_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9725,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10751,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 12241,
+      "target_lobe": "vm_6_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 11796,
+      "target_lobe": "vm_5_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9468,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 12297,
+      "target_lobe": "vm_6_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 498,
+      "target_id": 9463,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10062,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9813,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 12072,
+      "target_lobe": "vm_6_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 486,
+      "target_id": 12512,
+      "target_lobe": "vm_6_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9426,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 12453,
+      "target_lobe": "vm_7_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9665,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10750,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 9591,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 12569,
+      "target_lobe": "vm_7_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 486,
+      "target_id": 9717,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 10132,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 486,
+      "target_id": 9623,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 11804,
+      "target_lobe": "vm_5_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 502,
+      "target_id": 9591,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 486,
+      "target_id": 10389,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 486,
+      "target_id": 10246,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 13457,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 14634,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 14987,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 15402,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 12619,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 15866,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 4876,
+      "target_lobe": "rust",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 7130,
+      "target_lobe": "rust",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 4981,
+      "target_lobe": "rust",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 15405,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 18126,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 18339,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 476,
+      "target_id": 16010,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,4376 @@
+{
+  "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+  "nodes": [
+    {
+      "id": 11266,
+      "content": "VERİ MADENCİLİĞİ WEKA KURULUM ve TANITIM UZAKTAN EĞİTİM MESLEK YÜKSEKOKULU",
+      "tags": {
+        "meslek": 1.0,
+        "weka": 1.0,
+        "tanitim": 1.0,
+        "eği": 1.0,
+        "ti": 1.0,
+        "veri": 1.0,
+        "ği": 1.0,
+        "uzaktan": 1.0,
+        "li": 1.0,
+        "yüksekokulu": 1.0,
+        "madenci": 1.0,
+        "kurulum": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11268,
+      "content": "WEKA",
+      "tags": {
+        "weka": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11269,
+      "content": "KURULUM",
+      "tags": {
+        "kurulum": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11270,
+      "content": "TANITIM",
+      "tags": {
+        "tanitim": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11271,
+      "content": "Açılan sayfada «Download» Tıklanarak, indirme",
+      "tags": {
+        "sayfada": 1.0,
+        "açılan": 1.0,
+        "tıklanarak": 1.0,
+        "indirme": 1.0,
+        "download": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11272,
+      "content": "Açılan",
+      "tags": {
+        "açılan": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11273,
+      "content": "sayfat",
+      "tags": {
+        "sayfat": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11274,
+      "content": "«Download»",
+      "tags": {
+        "«download»": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11275,
+      "content": "Tıklanarak",
+      "tags": {
+        "tıklanarak": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11276,
+      "content": "indirme",
+      "tags": {
+        "indirme": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11277,
+      "content": "İşletim sistemine uygun olan indirme linki tıklanır",
+      "tags": {
+        "indirme": 1.0,
+        "tıklanır": 1.0,
+        "uygun": 1.0,
+        "sistemine": 1.0,
+        "linki": 1.0,
+        "şletim": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11279,
+      "content": "İşletim",
+      "tags": {
+        "i̇şletim": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11280,
+      "content": "linki",
+      "tags": {
+        "linki": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11281,
+      "content": "tıklanır",
+      "tags": {
+        "tıklanır": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11282,
+      "content": "İndirme tamamlandıktan sonra «setup» dosyası çalıştırılır",
+      "tags": {
+        "setup": 1.0,
+        "ndirme": 1.0,
+        "dosyası": 1.0,
+        "tamamlandıktan": 1.0,
+        "sonra": 1.0,
+        "çalıştırılır": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11284,
+      "content": "İndirme",
+      "tags": {
+        "i̇ndirme": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11285,
+      "content": "tamamlandık",
+      "tags": {
+        "tamamlandık": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11286,
+      "content": "sonr",
+      "tags": {
+        "sonr": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11287,
+      "content": "«setup»",
+      "tags": {
+        "«setup»": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11288,
+      "content": "dosyası",
+      "tags": {
+        "dosyası": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11289,
+      "content": "Program çalıştırıldıktan sonra masaüstünde şekildeki gibi bir pencere ekranı karşılamaktadır",
+      "tags": {
+        "şekildeki": 1.0,
+        "çalıştırıldıktan": 1.0,
+        "ekranı": 1.0,
+        "program": 1.0,
+        "sonra": 1.0,
+        "masaüstünde": 1.0,
+        "karşılamaktadır": 1.0,
+        "pencere": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11291,
+      "content": "masaüstü",
+      "tags": {
+        "masaüstü": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11292,
+      "content": "şekildeki",
+      "tags": {
+        "şekildeki": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11293,
+      "content": "pencer",
+      "tags": {
+        "pencer": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11294,
+      "content": "ekr",
+      "tags": {
+        "ekr": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11295,
+      "content": "karşılamaktadır",
+      "tags": {
+        "karşılamaktadır": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11296,
+      "content": "Explorer • Veri önişleme • VM (sınıflandırma, kümeleme, birliktelik) süreçleri • Görselleştirme",
+      "tags": {
+        "önişleme": 1.0,
+        "kümeleme": 1.0,
+        "süreçleri": 1.0,
+        "explorer": 1.0,
+        "görselleştirme": 1.0,
+        "vm": 1.0,
+        "birliktelik": 1.0,
+        "sınıflandırma": 1.0,
+        "veri": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11297,
+      "content": "önişleme",
+      "tags": {
+        "önişleme": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11298,
+      "content": "Görselleştirme",
+      "tags": {
+        "görselleştirme": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11299,
+      "content": "Explorer bölümünde açılan kullanıcı ara yüzü",
+      "tags": {
+        "explorer": 1.0,
+        "bölümünde": 1.0,
+        "açılan": 1.0,
+        "kullanıcı": 1.0,
+        "yüzü": 1.0,
+        "ara": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11301,
+      "content": "açılan",
+      "tags": {
+        "açılan": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11302,
+      "content": "ara",
+      "tags": {
+        "ara": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11303,
+      "content": "yüz",
+      "tags": {
+        "yüz": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11304,
+      "content": "WEKAWeka içerisinde yüklü olarak gelen ve literatürde kabul görmüş verisetlerine ulaşabilirsiniz",
+      "tags": {
+        "gelen": 1.0,
+        "yüklü": 1.0,
+        "literatürde": 1.0,
+        "içerisinde": 1.0,
+        "wekaweka": 1.0,
+        "görmüş": 1.0,
+        "kabul": 1.0,
+        "verisetlerine": 1.0,
+        "ulaşabilirsiniz": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11306,
+      "content": "WEKAWek",
+      "tags": {
+        "wekawek": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11307,
+      "content": "içerisi",
+      "tags": {
+        "içerisi": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11308,
+      "content": "yüklü",
+      "tags": {
+        "yüklü": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11309,
+      "content": "literatürt",
+      "tags": {
+        "literatürt": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11310,
+      "content": "kabul",
+      "tags": {
+        "kabul": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11311,
+      "content": "görmüş",
+      "tags": {
+        "görmüş": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11312,
+      "content": "ulaşabilirsiniz",
+      "tags": {
+        "ulaşabilirsiniz": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11313,
+      "content": "Bunun için «Open file …» butonu tıklandıktan sonra data dizini seçilmelidir",
+      "tags": {
+        "file": 1.0,
+        "sonra": 1.0,
+        "butonu": 1.0,
+        "dizini": 1.0,
+        "data": 1.0,
+        "seçilmelidir": 1.0,
+        "tıklandıktan": 1.0,
+        "open": 1.0,
+        "bunun": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11315,
+      "content": "«Open",
+      "tags": {
+        "«open": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11316,
+      "content": "…»",
+      "tags": {
+        "…»": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11317,
+      "content": "buto",
+      "tags": {
+        "buto": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11318,
+      "content": "tıklandık",
+      "tags": {
+        "tıklandık": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11319,
+      "content": "Experimenter • Var olan modellerin test edilmesi",
+      "tags": {
+        "test": 1.0,
+        "experimenter": 1.0,
+        "edilmesi": 1.0,
+        "modellerin": 1.0,
+        "var": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11320,
+      "content": "Var",
+      "tags": {
+        "var": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11321,
+      "content": "KnowledgeFlow • Grafik arayüz (sürükle bırak model kurulumu)",
+      "tags": {
+        "bırak": 1.0,
+        "model": 1.0,
+        "sürükle": 1.0,
+        "knowledgeflow": 1.0,
+        "kurulumu": 1.0,
+        "arayüz": 1.0,
+        "grafik": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11323,
+      "content": "sürükl",
+      "tags": {
+        "sürükl": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11324,
+      "content": "bırak",
+      "tags": {
+        "bırak": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11325,
+      "content": "kurulum",
+      "tags": {
+        "kurulum": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11326,
+      "content": "Workbench • Parametre/hiperparametre ayarlamaları • Model düzenlemeleri • Fonksiyon ekleme",
+      "tags": {
+        "ayarlamaları": 1.0,
+        "ekleme": 1.0,
+        "model": 1.0,
+        "parametre": 1.0,
+        "hiperparametre": 1.0,
+        "workbench": 1.0,
+        "düzenlemeleri": 1.0,
+        "fonksiyon": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11327,
+      "content": "Workbench",
+      "tags": {
+        "workbench": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11328,
+      "content": "Parametre/hiperparametr",
+      "tags": {
+        "parametre/hiperparametr": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11329,
+      "content": "ayarlamaları",
+      "tags": {
+        "ayarlamaları": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11330,
+      "content": "düzenlemeleri",
+      "tags": {
+        "düzenlemeleri": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11331,
+      "content": "Fonksiyon",
+      "tags": {
+        "fonksiyon": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11332,
+      "content": "ekleme",
+      "tags": {
+        "ekleme": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11333,
+      "content": "Simple CLI • Komut satırı",
+      "tags": {
+        "satırı": 1.0,
+        "cli": 1.0,
+        "komut": 1.0,
+        "simple": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11334,
+      "content": "Veri Dosyası Formatı",
+      "tags": {
+        "veri": 1.0,
+        "dosyası": 1.0,
+        "formatı": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11335,
+      "content": "Dosyası",
+      "tags": {
+        "dosyası": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11336,
+      "content": "Formatı",
+      "tags": {
+        "formatı": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11337,
+      "content": "arff Dosya Yapısı:",
+      "tags": {
+        "dosya": 1.0,
+        "arff": 1.0,
+        "yapısı": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11338,
+      "content": "arff",
+      "tags": {
+        "arff": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11339,
+      "content": "Yapısı",
+      "tags": {
+        "yapısı": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11340,
+      "content": "arff dosyası iki bölüm içermektedir",
+      "tags": {
+        "içermektedir": 1.0,
+        "arff": 1.0,
+        "dosyası": 1.0,
+        "iki": 1.0,
+        "bölüm": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11341,
+      "content": "iki",
+      "tags": {
+        "iki": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11342,
+      "content": "içermektedir",
+      "tags": {
+        "içermektedir": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11343,
+      "content": "- Başlık bölümü (Header) - Veri bölümü (Data)",
+      "tags": {
+        "header": 1.0,
+        "veri": 1.0,
+        "bölümü": 2.0,
+        "başlık": 1.0,
+        "data": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11345,
+      "content": "Başlık",
+      "tags": {
+        "başlık": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11346,
+      "content": "Header",
+      "tags": {
+        "header": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11347,
+      "content": "arff - Başlık bölümü (Header) Bu bölüm, ilişki adı, sütunlar ve sütun türleri gibi veri kümesiyle ilgili çeşitli bilgiler içerir",
+      "tags": {
+        "sütunlar": 1.0,
+        "türleri": 1.0,
+        "bölüm": 1.0,
+        "ilişki": 1.0,
+        "arff": 1.0,
+        "sütun": 1.0,
+        "header": 1.0,
+        "veri": 1.0,
+        "ilgili": 1.0,
+        "çeşitli": 1.0,
+        "başlık": 1.0,
+        "adı": 1.0,
+        "içerir": 1.0,
+        "kümesiyle": 1.0,
+        "bilgiler": 1.0,
+        "bölümü": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11349,
+      "content": "türleri",
+      "tags": {
+        "türleri": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11350,
+      "content": "kümesiyl",
+      "tags": {
+        "kümesiyl": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11351,
+      "content": "ilgili",
+      "tags": {
+        "ilgili": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11352,
+      "content": "çeşitli",
+      "tags": {
+        "çeşitli": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11353,
+      "content": "Başlık bölümü, tablo/ilişki ve öznitelik bölümü olmak üzere 2 alt kısımdan oluşur",
+      "tags": {
+        "kısımdan": 1.0,
+        "üzere": 1.0,
+        "öznitelik": 1.0,
+        "ilişki": 1.0,
+        "olmak": 1.0,
+        "alt": 1.0,
+        "başlık": 1.0,
+        "tablo": 1.0,
+        "oluşur": 1.0,
+        "bölümü": 2.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11355,
+      "content": "tablo/ilişki",
+      "tags": {
+        "tablo/ilişki": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11356,
+      "content": "öznitelik",
+      "tags": {
+        "öznitelik": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11357,
+      "content": "olmak",
+      "tags": {
+        "olmak": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11358,
+      "content": "üzer",
+      "tags": {
+        "üzer": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11359,
+      "content": "alt",
+      "tags": {
+        "alt": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11360,
+      "content": "kısım",
+      "tags": {
+        "kısım": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11361,
+      "content": "@relation : tablo adını belirtmek için kullanılır",
+      "tags": {
+        "tablo": 1.0,
+        "adını": 1.0,
+        "belirtmek": 1.0,
+        "relation": 1.0,
+        "kullanılır": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11363,
+      "content": "tablo",
+      "tags": {
+        "tablo": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11364,
+      "content": "belirtmek",
+      "tags": {
+        "belirtmek": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11365,
+      "content": "@attribute: sütun adı vermek için kullanılır",
+      "tags": {
+        "kullanılır": 1.0,
+        "adı": 1.0,
+        "attribute": 1.0,
+        "sütun": 1.0,
+        "vermek": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11367,
+      "content": "Veri Türleri - nominal : süslü parantezler içinde temsil edilir {sınıflama ölçeği} - string : dize değeri, metin verileri gibi … -",
+      "tags": {
+        "veri": 1.0,
+        "metin": 1.0,
+        "edilir": 1.0,
+        "verileri": 1.0,
+        "süslü": 1.0,
+        "değeri": 1.0,
+        "nominal": 1.0,
+        "string": 1.0,
+        "türleri": 1.0,
+        "içinde": 1.0,
+        "sınıflama": 1.0,
+        "temsil": 1.0,
+        "parantezler": 1.0,
+        "ölçeği": 1.0,
+        "dize": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11369,
+      "content": "nominal",
+      "tags": {
+        "nominal": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11370,
+      "content": "süslü",
+      "tags": {
+        "süslü": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11371,
+      "content": "parantez",
+      "tags": {
+        "parantez": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11372,
+      "content": "temsil",
+      "tags": {
+        "temsil": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11373,
+      "content": "sınıflama",
+      "tags": {
+        "sınıflama": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11374,
+      "content": "ölçek",
+      "tags": {
+        "ölçek": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11375,
+      "content": "…",
+      "tags": {
+        "…": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11376,
+      "content": "numeric/real : her çeşit sayısal veri - date : tarih verileri",
+      "tags": {
+        "tarih": 1.0,
+        "çeşit": 1.0,
+        "numeric": 1.0,
+        "real": 1.0,
+        "sayısal": 1.0,
+        "verileri": 1.0,
+        "date": 1.0,
+        "veri": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11378,
+      "content": "numeric/real",
+      "tags": {
+        "numeric/real": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11379,
+      "content": "çeşit",
+      "tags": {
+        "çeşit": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11380,
+      "content": "sayısal",
+      "tags": {
+        "sayısal": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11381,
+      "content": "Syntax @relation tablo_adi @attribute sutun_adi Örnek: @relation iris @attribute sepallength real @attribute sepalwidth real @attribute petallength",
+      "tags": {
+        "sepallength": 1.0,
+        "syntax": 1.0,
+        "attribute": 4.0,
+        "sutun_adi": 1.0,
+        "sepalwidth": 1.0,
+        "real": 2.0,
+        "petallength": 1.0,
+        "relation": 2.0,
+        "örnek": 1.0,
+        "iris": 1.0,
+        "tablo_adi": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11383,
+      "content": "tablo_adi",
+      "tags": {
+        "tablo_adi": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11384,
+      "content": "sutun_adi",
+      "tags": {
+        "sutun_adi": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11385,
+      "content": "iris",
+      "tags": {
+        "iris": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11386,
+      "content": "sepallength",
+      "tags": {
+        "sepallength": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11387,
+      "content": "sepalwidth",
+      "tags": {
+        "sepalwidth": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11388,
+      "content": "petallength",
+      "tags": {
+        "petallength": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11389,
+      "content": "real @attribute petalwidth real @attribute class {iris-setosa, iris-versicolor, iris-virginica}",
+      "tags": {
+        "iris-virginica": 1.0,
+        "iris-setosa": 1.0,
+        "iris-versicolor": 1.0,
+        "real": 2.0,
+        "attribute": 2.0,
+        "petalwidth": 1.0,
+        "class": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11391,
+      "content": "petalwidth",
+      "tags": {
+        "petalwidth": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11392,
+      "content": "iris-setos",
+      "tags": {
+        "iris-setos": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11393,
+      "content": "iris-versicolor",
+      "tags": {
+        "iris-versicolor": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11394,
+      "content": "iris-virginiç",
+      "tags": {
+        "iris-virginiç": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11395,
+      "content": "arff - Veri bölümü (Data) Veri bölümü, mevcut sütunlar için verileri veya girişleri temsil etmek için kullanılır (veriler, başlık",
+      "tags": {
+        "bölümü": 2.0,
+        "sütunlar": 1.0,
+        "kullanılır": 1.0,
+        "temsil": 1.0,
+        "başlık": 1.0,
+        "arff": 1.0,
+        "girişleri": 1.0,
+        "veriler": 1.0,
+        "etmek": 1.0,
+        "mevcut": 1.0,
+        "verileri": 1.0,
+        "veri": 2.0,
+        "data": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11397,
+      "content": "mevcut",
+      "tags": {
+        "mevcut": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11398,
+      "content": "başlık",
+      "tags": {
+        "başlık": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11399,
+      "content": "bölümündeki sıraya göre eklenir)",
+      "tags": {
+        "bölümündeki": 1.0,
+        "sıraya": 1.0,
+        "eklenir": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11401,
+      "content": "bölümündeki",
+      "tags": {
+        "bölümündeki": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11402,
+      "content": "sır",
+      "tags": {
+        "sır": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11403,
+      "content": "Veri bölümü @data ile başlar ve bu bölüm Başlık bölümünden sonra eklenmelidir",
+      "tags": {
+        "başlar": 1.0,
+        "sonra": 1.0,
+        "bölüm": 1.0,
+        "bölümünden": 1.0,
+        "bölümü": 1.0,
+        "veri": 1.0,
+        "başlık": 1.0,
+        "data": 1.0,
+        "eklenmelidir": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11405,
+      "content": "baş",
+      "tags": {
+        "baş": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11406,
+      "content": "Tek bir satıra yalnızca tek bir kayıt yazılabilir",
+      "tags": {
+        "yalnızca": 1.0,
+        "tek": 2.0,
+        "kayıt": 1.0,
+        "yazılabilir": 1.0,
+        "satıra": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11408,
+      "content": "Tek",
+      "tags": {
+        "tek": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11409,
+      "content": "satır",
+      "tags": {
+        "satır": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11410,
+      "content": "yalnızç",
+      "tags": {
+        "yalnızç": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11411,
+      "content": "kayıt",
+      "tags": {
+        "kayıt": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11412,
+      "content": "Tüm kayıtlar, başlık bölümünde tanımlanan özellikleriyle aynı formatta olmalıdır",
+      "tags": {
+        "kayıtlar": 1.0,
+        "özellikleriyle": 1.0,
+        "tanımlanan": 1.0,
+        "formatta": 1.0,
+        "aynı": 1.0,
+        "olmalıdır": 1.0,
+        "başlık": 1.0,
+        "tüm": 1.0,
+        "bölümünde": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11414,
+      "content": "Tüm",
+      "tags": {
+        "tüm": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11415,
+      "content": "tanımlanan",
+      "tags": {
+        "tanımlanan": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11416,
+      "content": "özellikleriyl",
+      "tags": {
+        "özellikleriyl": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11417,
+      "content": "ayn",
+      "tags": {
+        "ayn": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11418,
+      "content": "formatt",
+      "tags": {
+        "formatt": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11419,
+      "content": "olmalıdır",
+      "tags": {
+        "olmalıdır": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11420,
+      "content": "Syntax @data Veri1 Veri2 Örnek: @data 5",
+      "tags": {
+        "veri": 2.0,
+        "örnek": 1.0,
+        "data": 2.0,
+        "syntax": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11421,
+      "content": "Veri1",
+      "tags": {
+        "veri1": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11422,
+      "content": "Veri2",
+      "tags": {
+        "veri2": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11423,
+      "content": "2, iris-setosa 4",
+      "tags": {
+        "iris-setosa": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11424,
+      "content": "2, iris-virginica 4",
+      "tags": {
+        "iris-virginica": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11425,
+      "content": "1, iris-virginica",
+      "tags": {
+        "iris-virginica": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11426,
+      "content": "Veri dosyasını Weka da açmak",
+      "tags": {
+        "açmak": 1.0,
+        "weka": 1.0,
+        "dosyasını": 1.0,
+        "veri": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11428,
+      "content": "dosyas",
+      "tags": {
+        "dosyas": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 11429,
+      "content": "açmak",
+      "tags": {
+        "açmak": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "vm_4_5_hafta_weka_ek_sunum",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": 11417,
+      "target_id": 11907,
+      "target_lobe": "vm_5_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11286,
+      "target_id": 9901,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11285,
+      "target_id": 9901,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11286,
+      "target_id": 1422,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11356,
+      "target_id": 476,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11356,
+      "target_id": 9696,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11380,
+      "target_id": 9509,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11268,
+      "target_id": 11269,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11269,
+      "target_id": 11270,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11270,
+      "target_id": 9413,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11272,
+      "target_id": 11273,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11273,
+      "target_id": 11274,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11274,
+      "target_id": 11275,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11275,
+      "target_id": 11276,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11266,
+      "target_id": 11271,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11279,
+      "target_id": 9891,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11276,
+      "target_id": 11280,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11280,
+      "target_id": 11281,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11271,
+      "target_id": 11277,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11284,
+      "target_id": 11285,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11285,
+      "target_id": 11286,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11286,
+      "target_id": 11287,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11287,
+      "target_id": 11288,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11288,
+      "target_id": 9560,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11284,
+      "target_id": 9560,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Özne"
+      }
+    },
+    {
+      "source_id": 11285,
+      "target_id": 9560,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11286,
+      "target_id": 9560,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11287,
+      "target_id": 9560,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11277,
+      "target_id": 11282,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11286,
+      "target_id": 11291,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11291,
+      "target_id": 11292,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11292,
+      "target_id": 9813,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11293,
+      "target_id": 11294,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11294,
+      "target_id": 11295,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11291,
+      "target_id": 9560,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11292,
+      "target_id": 9560,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11293,
+      "target_id": 9560,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11294,
+      "target_id": 9560,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11295,
+      "target_id": 9560,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11282,
+      "target_id": 11289,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11297,
+      "target_id": 9834,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11289,
+      "target_id": 11296,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11301,
+      "target_id": 10142,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11302,
+      "target_id": 11303,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11296,
+      "target_id": 11299,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11306,
+      "target_id": 11307,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11307,
+      "target_id": 11308,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11308,
+      "target_id": 10280,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11309,
+      "target_id": 11310,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11310,
+      "target_id": 11311,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11311,
+      "target_id": 9901,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11306,
+      "target_id": 9901,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Özne"
+      }
+    },
+    {
+      "source_id": 11307,
+      "target_id": 9901,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11308,
+      "target_id": 9901,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11309,
+      "target_id": 9901,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11310,
+      "target_id": 9901,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11312,
+      "target_id": 9901,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11299,
+      "target_id": 11304,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11315,
+      "target_id": 719,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11316,
+      "target_id": 11317,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11317,
+      "target_id": 11318,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11318,
+      "target_id": 11286,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11286,
+      "target_id": 1521,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11315,
+      "target_id": 9665,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11316,
+      "target_id": 9665,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11317,
+      "target_id": 9665,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11318,
+      "target_id": 9665,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11286,
+      "target_id": 9665,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11304,
+      "target_id": 11313,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11320,
+      "target_id": 10971,
+      "target_lobe": "vm_3_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11313,
+      "target_id": 11319,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11323,
+      "target_id": 11324,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11324,
+      "target_id": 10157,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11319,
+      "target_id": 11321,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11327,
+      "target_id": 9732,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11328,
+      "target_id": 11329,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11329,
+      "target_id": 9980,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11330,
+      "target_id": 11331,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11331,
+      "target_id": 11332,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11321,
+      "target_id": 11326,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11326,
+      "target_id": 11333,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11335,
+      "target_id": 11336,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11333,
+      "target_id": 11334,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11338,
+      "target_id": 10767,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11334,
+      "target_id": 11337,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11338,
+      "target_id": 11288,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11288,
+      "target_id": 11341,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11341,
+      "target_id": 9810,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11337,
+      "target_id": 11340,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11345,
+      "target_id": 9810,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11346,
+      "target_id": 9426,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11340,
+      "target_id": 11343,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11338,
+      "target_id": 11345,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11346,
+      "target_id": 10543,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11349,
+      "target_id": 9813,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11350,
+      "target_id": 11351,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11351,
+      "target_id": 11352,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11352,
+      "target_id": 9814,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11343,
+      "target_id": 11347,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11355,
+      "target_id": 11356,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11356,
+      "target_id": 11357,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11357,
+      "target_id": 11358,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11358,
+      "target_id": 770,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11359,
+      "target_id": 11360,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11360,
+      "target_id": 10847,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11347,
+      "target_id": 11353,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11363,
+      "target_id": 9812,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11364,
+      "target_id": 502,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11363,
+      "target_id": 502,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11353,
+      "target_id": 11361,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11361,
+      "target_id": 11365,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11369,
+      "target_id": 11370,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11370,
+      "target_id": 11371,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11371,
+      "target_id": 9840,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11372,
+      "target_id": 2786,
+      "target_lobe": "cargo",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11373,
+      "target_id": 11374,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11374,
+      "target_id": 1044,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11369,
+      "target_id": 2786,
+      "target_lobe": "cargo",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11370,
+      "target_id": 2786,
+      "target_lobe": "cargo",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11371,
+      "target_id": 2786,
+      "target_lobe": "cargo",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11373,
+      "target_id": 2786,
+      "target_lobe": "cargo",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11374,
+      "target_id": 2786,
+      "target_lobe": "cargo",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11375,
+      "target_id": 2786,
+      "target_lobe": "cargo",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11365,
+      "target_id": 11367,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11378,
+      "target_id": 582,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11379,
+      "target_id": 11380,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11380,
+      "target_id": 9458,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11378,
+      "target_id": 9901,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Özne"
+      }
+    },
+    {
+      "source_id": 11379,
+      "target_id": 9901,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11380,
+      "target_id": 9901,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11367,
+      "target_id": 11376,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11383,
+      "target_id": 5472,
+      "target_lobe": "rust",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11384,
+      "target_id": 9482,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11385,
+      "target_id": 11386,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11386,
+      "target_id": 3032,
+      "target_lobe": "cargo",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11387,
+      "target_id": 11388,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11376,
+      "target_id": 11381,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11391,
+      "target_id": 7449,
+      "target_lobe": "rust",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11392,
+      "target_id": 11393,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11393,
+      "target_id": 11394,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11381,
+      "target_id": 11389,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11338,
+      "target_id": 9426,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11397,
+      "target_id": 9491,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11338,
+      "target_id": 9901,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Özne"
+      }
+    },
+    {
+      "source_id": 11397,
+      "target_id": 9901,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11372,
+      "target_id": 9901,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11398,
+      "target_id": 9901,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11389,
+      "target_id": 11395,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11401,
+      "target_id": 11402,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11402,
+      "target_id": 9687,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11401,
+      "target_id": 9687,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Özne"
+      }
+    },
+    {
+      "source_id": 11395,
+      "target_id": 11399,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11405,
+      "target_id": 499,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11345,
+      "target_id": 11286,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11286,
+      "target_id": 9687,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11405,
+      "target_id": 9687,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11345,
+      "target_id": 9687,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11399,
+      "target_id": 11403,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11408,
+      "target_id": 9509,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11409,
+      "target_id": 11410,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11410,
+      "target_id": 11059,
+      "target_lobe": "vm_3_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11411,
+      "target_id": 9800,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11408,
+      "target_id": 9800,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Özne"
+      }
+    },
+    {
+      "source_id": 11409,
+      "target_id": 9800,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11410,
+      "target_id": 9800,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11403,
+      "target_id": 11406,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11414,
+      "target_id": 11411,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11411,
+      "target_id": 11398,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11398,
+      "target_id": 9810,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11415,
+      "target_id": 11416,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11416,
+      "target_id": 11417,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11417,
+      "target_id": 11418,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11418,
+      "target_id": 11419,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11406,
+      "target_id": 11412,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11421,
+      "target_id": 11422,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11422,
+      "target_id": 9482,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11412,
+      "target_id": 11420,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11392,
+      "target_id": 859,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11420,
+      "target_id": 11423,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11423,
+      "target_id": 11423,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11394,
+      "target_id": 859,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11423,
+      "target_id": 11424,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11424,
+      "target_id": 11425,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11428,
+      "target_id": 10706,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11425,
+      "target_id": 11426,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11426,
+      "target_id": 9727,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11349,
+      "target_id": 9732,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11349,
+      "target_id": 9901,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11414,
+      "target_id": 11409,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11409,
+      "target_id": 11537,
+      "target_lobe": "vm_4_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11414,
+      "target_id": 9901,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11409,
+      "target_id": 9901,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11409,
+      "target_id": 11677,
+      "target_lobe": "vm_4_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11409,
+      "target_id": 486,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11310,
+      "target_id": 2786,
+      "target_lobe": "cargo",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11298,
+      "target_id": 11700,
+      "target_lobe": "vm_4_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11359,
+      "target_id": 9632,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11417,
+      "target_id": 11374,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11374,
+      "target_id": 11790,
+      "target_lobe": "vm_5_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11414,
+      "target_id": 9706,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11380,
+      "target_id": 9994,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11380,
+      "target_id": 11873,
+      "target_lobe": "vm_5_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11380,
+      "target_id": 476,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11380,
+      "target_id": 9706,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11380,
+      "target_id": 502,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Özne"
+      }
+    },
+    {
+      "source_id": 11417,
+      "target_id": 9717,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11349,
+      "target_id": 9951,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11417,
+      "target_id": 11885,
+      "target_lobe": "vm_5_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11405,
+      "target_id": 11609,
+      "target_lobe": "vm_4_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11414,
+      "target_id": 9458,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11286,
+      "target_id": 11359,
+      "target_lobe": "vm_4_5_hafta_weka_ek_sunum",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11359,
+      "target_id": 12280,
+      "target_lobe": "vm_6_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11414,
+      "target_id": 12279,
+      "target_lobe": "vm_6_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11286,
+      "target_id": 12279,
+      "target_lobe": "vm_6_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11359,
+      "target_id": 12279,
+      "target_lobe": "vm_6_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11405,
+      "target_id": 9509,
+      "target_lobe": "vm_10_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11359,
+      "target_id": 11907,
+      "target_lobe": "vm_5_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11419,
+      "target_id": 11549,
+      "target_lobe": "vm_4_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11419,
+      "target_id": 2786,
+      "target_lobe": "cargo",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11374,
+      "target_id": 11796,
+      "target_lobe": "vm_5_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11374,
+      "target_id": 498,
+      "target_lobe": "quantum",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 11356,
+      "target_id": 12463,
+      "target_lobe": "vm_7_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11339,
+      "target_id": 11831,
+      "target_lobe": "vm_5_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11372,
+      "target_id": 10212,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 11302,
+      "target_id": 12483,
+      "target_lobe": "vm_7_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    }
+  ]
+}

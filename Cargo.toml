@@ -1,0 +1,17 @@
+[package]
+name = "cortex_engine"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+petgraph = "0.8.3"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.37", features = ["full"] }
+rand = "0.8.5"
+anyhow = "1.0"
+rayon = "1.10"
+pdf-extract = "0.7"
+lopdf = "0.34"
+
+

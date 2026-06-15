@@ -1,0 +1,5491 @@
+{
+  "lobe_name": "variables_and_mutability",
+  "nodes": [
+    {
+      "id": 9181,
+      "content": "Variables and Mutability",
+      "tags": {
+        "variables": 1.0,
+        "mutability": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9182,
+      "content": "Mutability",
+      "tags": {
+        "mutability": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9183,
+      "content": "As mentioned in the “Storing Values with Variables” section, by default, variables are immutable",
+      "tags": {
+        "storing": 1.0,
+        "immutable": 1.0,
+        "variables": 2.0,
+        "mentioned": 1.0,
+        "default": 1.0,
+        "values": 1.0,
+        "section": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9184,
+      "content": "Variables”",
+      "tags": {
+        "variables”": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9185,
+      "content": "This is one of many nudges Rust gives you to write your code in a way that takes advantage of the safety and easy concurrency that Rust offers",
+      "tags": {
+        "one": 1.0,
+        "way": 1.0,
+        "nudges": 1.0,
+        "rust": 2.0,
+        "easy": 1.0,
+        "concurrency": 1.0,
+        "takes": 1.0,
+        "you": 1.0,
+        "advantage": 1.0,
+        "code": 1.0,
+        "write": 1.0,
+        "gives": 1.0,
+        "many": 1.0,
+        "safety": 1.0,
+        "offers": 1.0,
+        "your": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9187,
+      "content": "nudges",
+      "tags": {
+        "nudges": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9188,
+      "content": "offers",
+      "tags": {
+        "offers": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9189,
+      "content": "However, you still have the option to make your variables mutable",
+      "tags": {
+        "have": 1.0,
+        "option": 1.0,
+        "make": 1.0,
+        "your": 1.0,
+        "variables": 1.0,
+        "however": 1.0,
+        "mutable": 1.0,
+        "still": 1.0,
+        "you": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9191,
+      "content": "Let’s explore how and why Rust encourages you to favor immutability and why sometimes you might want to opt out",
+      "tags": {
+        "rust": 1.0,
+        "let": 1.0,
+        "why": 2.0,
+        "explore": 1.0,
+        "you": 2.0,
+        "encourages": 1.0,
+        "immutability": 1.0,
+        "how": 1.0,
+        "out": 1.0,
+        "want": 1.0,
+        "favor": 1.0,
+        "sometimes": 1.0,
+        "might": 1.0,
+        "opt": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9193,
+      "content": "encourages",
+      "tags": {
+        "encourages": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9194,
+      "content": "opt",
+      "tags": {
+        "opt": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9195,
+      "content": "When a variable is immutable, once a value is bound to a name, you can’t change that value",
+      "tags": {
+        "variable": 1.0,
+        "bound": 1.0,
+        "change": 1.0,
+        "once": 1.0,
+        "when": 1.0,
+        "you": 1.0,
+        "immutable": 1.0,
+        "value": 2.0,
+        "can": 1.0,
+        "name": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9197,
+      "content": "To illustrate this, generate a new project called variables in your projects directory by using cargo new variables",
+      "tags": {
+        "new": 2.0,
+        "generate": 1.0,
+        "directory": 1.0,
+        "called": 1.0,
+        "cargo": 1.0,
+        "your": 1.0,
+        "project": 1.0,
+        "variables": 2.0,
+        "projects": 1.0,
+        "using": 1.0,
+        "illustrate": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9199,
+      "content": "Then, in your new variables directory, open src/main",
+      "tags": {
+        "variables": 1.0,
+        "then": 1.0,
+        "new": 1.0,
+        "open": 1.0,
+        "main": 1.0,
+        "your": 1.0,
+        "directory": 1.0,
+        "src": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9200,
+      "content": "rs and replace its code with the following code, which won’t compile just yet:",
+      "tags": {
+        "replace": 1.0,
+        "compile": 1.0,
+        "rs": 1.0,
+        "which": 1.0,
+        "just": 1.0,
+        "code": 2.0,
+        "won": 1.0,
+        "following": 1.0,
+        "yet": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9202,
+      "content": "replaç",
+      "tags": {
+        "replaç": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9203,
+      "content": "x = 6",
+      "tags": {},
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Equation"
+    },
+    {
+      "id": 9204,
+      "content": "Save and run the program using cargo run",
+      "tags": {
+        "program": 1.0,
+        "cargo": 1.0,
+        "save": 1.0,
+        "using": 1.0,
+        "run": 2.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9205,
+      "content": "You should receive an error message regarding an immutability error, as shown in this output:",
+      "tags": {
+        "output": 1.0,
+        "receive": 1.0,
+        "immutability": 1.0,
+        "should": 1.0,
+        "shown": 1.0,
+        "regarding": 1.0,
+        "error": 2.0,
+        "you": 1.0,
+        "message": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9207,
+      "content": "receiv",
+      "tags": {
+        "receiv": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9208,
+      "content": "regarding",
+      "tags": {
+        "regarding": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9209,
+      "content": "Compiling variables v0",
+      "tags": {
+        "compiling": 1.0,
+        "variables": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9210,
+      "content": "0 (file:///projects/variables)",
+      "tags": {
+        "projects": 1.0,
+        "file": 1.0,
+        "variables": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Equation"
+    },
+    {
+      "id": 9211,
+      "content": "error[E0384]: cannot assign twice to immutable variable `x`",
+      "tags": {
+        "cannot": 1.0,
+        "assign": 1.0,
+        "error": 1.0,
+        "twice": 1.0,
+        "immutable": 1.0,
+        "variable": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9212,
+      "content": "error[E0384]",
+      "tags": {
+        "error[e0384": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9213,
+      "content": "rs:4:5",
+      "tags": {
+        "rs": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9214,
+      "content": "2 |     let x = 5",
+      "tags": {
+        "let": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Equation"
+    },
+    {
+      "id": 9215,
+      "content": "|         - first assignment to `x`",
+      "tags": {
+        "first": 1.0,
+        "assignment": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9216,
+      "content": "3 |     println",
+      "tags": {
+        "println": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9217,
+      "content": "4 |     x = 6",
+      "tags": {},
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Equation"
+    },
+    {
+      "id": 9218,
+      "content": "|     ^^^^^ cannot assign twice to immutable variable",
+      "tags": {
+        "assign": 1.0,
+        "immutable": 1.0,
+        "variable": 1.0,
+        "twice": 1.0,
+        "cannot": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9220,
+      "content": "help: consider making this binding mutable",
+      "tags": {
+        "making": 1.0,
+        "mutable": 1.0,
+        "help": 1.0,
+        "consider": 1.0,
+        "binding": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9221,
+      "content": "binding",
+      "tags": {
+        "binding": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9222,
+      "content": "2 |     let mut x = 5",
+      "tags": {
+        "mut": 1.0,
+        "let": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Equation"
+    },
+    {
+      "id": 9223,
+      "content": "|         +++",
+      "tags": {},
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9224,
+      "content": "For more information about this error, try `rustc --explain E0384`",
+      "tags": {
+        "information": 1.0,
+        "try": 1.0,
+        "rustc": 1.0,
+        "--explain": 1.0,
+        "error": 1.0,
+        "about": 1.0,
+        "more": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Equation"
+    },
+    {
+      "id": 9225,
+      "content": "error: could not compile `variables` (bin \"variables\") due to 1 previous error",
+      "tags": {
+        "variables": 2.0,
+        "bin": 1.0,
+        "error": 2.0,
+        "due": 1.0,
+        "previous": 1.0,
+        "compile": 1.0,
+        "could": 1.0,
+        "not": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9226,
+      "content": "This example shows how the compiler helps you find errors in your programs",
+      "tags": {
+        "compiler": 1.0,
+        "you": 1.0,
+        "helps": 1.0,
+        "errors": 1.0,
+        "find": 1.0,
+        "shows": 1.0,
+        "programs": 1.0,
+        "your": 1.0,
+        "example": 1.0,
+        "how": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9228,
+      "content": "Compiler errors can be frustrating, but really they only mean your program isn’t safely doing what you want it to do yet",
+      "tags": {
+        "want": 1.0,
+        "what": 1.0,
+        "you": 1.0,
+        "program": 1.0,
+        "only": 1.0,
+        "compiler": 1.0,
+        "your": 1.0,
+        "frustrating": 1.0,
+        "can": 1.0,
+        "really": 1.0,
+        "isn": 1.0,
+        "mean": 1.0,
+        "errors": 1.0,
+        "safely": 1.0,
+        "doing": 1.0,
+        "do": 1.0,
+        "yet": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9230,
+      "content": "they do not mean that you’re not a good programmer",
+      "tags": {
+        "do": 1.0,
+        "you": 1.0,
+        "mean": 1.0,
+        "not": 2.0,
+        "re": 1.0,
+        "good": 1.0,
+        "programmer": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9231,
+      "content": "Experienced Rustaceans still get compiler errors",
+      "tags": {
+        "errors": 1.0,
+        "still": 1.0,
+        "compiler": 1.0,
+        "experienced": 1.0,
+        "rustaceans": 1.0,
+        "get": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9233,
+      "content": "Experienced",
+      "tags": {
+        "experienced": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9234,
+      "content": "You received the error message cannot assign twice to immutable variable `x` because you tried to assign a second value to the immutable x variable",
+      "tags": {
+        "error": 1.0,
+        "received": 1.0,
+        "second": 1.0,
+        "value": 1.0,
+        "you": 2.0,
+        "twice": 1.0,
+        "because": 1.0,
+        "assign": 2.0,
+        "immutable": 2.0,
+        "cannot": 1.0,
+        "variable": 2.0,
+        "tried": 1.0,
+        "message": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9236,
+      "content": "It’s important that we get compile-time errors when we attempt to change a value that’s designated as immutable, because this very situation can",
+      "tags": {
+        "attempt": 1.0,
+        "we": 2.0,
+        "get": 1.0,
+        "because": 1.0,
+        "situation": 1.0,
+        "errors": 1.0,
+        "very": 1.0,
+        "value": 1.0,
+        "change": 1.0,
+        "compile-time": 1.0,
+        "when": 1.0,
+        "important": 1.0,
+        "can": 1.0,
+        "immutable": 1.0,
+        "designated": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9238,
+      "content": "designated",
+      "tags": {
+        "designated": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9239,
+      "content": "lead to bugs",
+      "tags": {
+        "lead": 1.0,
+        "bugs": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9240,
+      "content": "If one part of our code operates on the assumption that a value will never change and another part of our code changes that value, it’s possible",
+      "tags": {
+        "operates": 1.0,
+        "assumption": 1.0,
+        "change": 1.0,
+        "another": 1.0,
+        "value": 2.0,
+        "part": 2.0,
+        "never": 1.0,
+        "one": 1.0,
+        "changes": 1.0,
+        "possible": 1.0,
+        "if": 1.0,
+        "our": 2.0,
+        "code": 2.0,
+        "will": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9242,
+      "content": "operates",
+      "tags": {
+        "operates": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9243,
+      "content": "assumption",
+      "tags": {
+        "assumption": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9244,
+      "content": "that the first part of the code won’t do what it was designed to do",
+      "tags": {
+        "designed": 1.0,
+        "code": 1.0,
+        "part": 1.0,
+        "first": 1.0,
+        "won": 1.0,
+        "do": 2.0,
+        "what": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9245,
+      "content": "designed",
+      "tags": {
+        "designed": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9246,
+      "content": "The cause of this kind of bug can be difficult to track down after the fact, especially when the second piece of code changes the value only sometimes",
+      "tags": {
+        "sometimes": 1.0,
+        "when": 1.0,
+        "down": 1.0,
+        "kind": 1.0,
+        "after": 1.0,
+        "especially": 1.0,
+        "can": 1.0,
+        "difficult": 1.0,
+        "track": 1.0,
+        "second": 1.0,
+        "changes": 1.0,
+        "piece": 1.0,
+        "value": 1.0,
+        "bug": 1.0,
+        "code": 1.0,
+        "cause": 1.0,
+        "fact": 1.0,
+        "only": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9248,
+      "content": "The Rust compiler guarantees that when you state that a value won’t change, it really won’t change, so you don’t have to keep track of it",
+      "tags": {
+        "so": 1.0,
+        "when": 1.0,
+        "value": 1.0,
+        "change": 2.0,
+        "don": 1.0,
+        "have": 1.0,
+        "keep": 1.0,
+        "you": 2.0,
+        "really": 1.0,
+        "rust": 1.0,
+        "compiler": 1.0,
+        "state": 1.0,
+        "track": 1.0,
+        "won": 2.0,
+        "guarantees": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9250,
+      "content": "yourself",
+      "tags": {
+        "yourself": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9251,
+      "content": "Your code is thus easier to reason through",
+      "tags": {
+        "thus": 1.0,
+        "through": 1.0,
+        "code": 1.0,
+        "easier": 1.0,
+        "reason": 1.0,
+        "your": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9252,
+      "content": "But mutability can be very useful and can make code more convenient to write",
+      "tags": {
+        "can": 2.0,
+        "useful": 1.0,
+        "write": 1.0,
+        "make": 1.0,
+        "code": 1.0,
+        "mutability": 1.0,
+        "very": 1.0,
+        "more": 1.0,
+        "convenient": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9254,
+      "content": "mutability",
+      "tags": {
+        "mutability": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9255,
+      "content": "Although variables are immutable by default, you can make them mutable by adding mut in front of the variable name as you did in Chapter 2",
+      "tags": {
+        "can": 1.0,
+        "adding": 1.0,
+        "although": 1.0,
+        "variables": 1.0,
+        "immutable": 1.0,
+        "default": 1.0,
+        "make": 1.0,
+        "front": 1.0,
+        "mutable": 1.0,
+        "name": 1.0,
+        "mut": 1.0,
+        "variable": 1.0,
+        "chapter": 1.0,
+        "did": 1.0,
+        "you": 2.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9257,
+      "content": "Although",
+      "tags": {
+        "although": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9258,
+      "content": "front",
+      "tags": {
+        "front": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9259,
+      "content": "Adding mut also conveys intent to future readers of the code by indicating that other parts of the code will be changing this variable’s value",
+      "tags": {
+        "code": 2.0,
+        "mut": 1.0,
+        "indicating": 1.0,
+        "readers": 1.0,
+        "other": 1.0,
+        "will": 1.0,
+        "future": 1.0,
+        "value": 1.0,
+        "adding": 1.0,
+        "conveys": 1.0,
+        "parts": 1.0,
+        "variable": 1.0,
+        "also": 1.0,
+        "changing": 1.0,
+        "intent": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9261,
+      "content": "conveys",
+      "tags": {
+        "conveys": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9262,
+      "content": "intent",
+      "tags": {
+        "intent": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9263,
+      "content": "readers",
+      "tags": {
+        "readers": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9264,
+      "content": "For example, let’s change src/main",
+      "tags": {
+        "change": 1.0,
+        "example": 1.0,
+        "let": 1.0,
+        "main": 1.0,
+        "src": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9266,
+      "content": "rs to the following:",
+      "tags": {
+        "rs": 1.0,
+        "following": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9267,
+      "content": "When we run the program now, we get this:",
+      "tags": {
+        "we": 2.0,
+        "now": 1.0,
+        "get": 1.0,
+        "program": 1.0,
+        "when": 1.0,
+        "run": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9268,
+      "content": "Running `target/debug/variables`",
+      "tags": {
+        "variables": 1.0,
+        "target": 1.0,
+        "debug": 1.0,
+        "running": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9269,
+      "content": "target/debug/variables",
+      "tags": {
+        "target/debug/variables": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9270,
+      "content": "The value of x is: 6",
+      "tags": {
+        "value": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9271,
+      "content": "We’re allowed to change the value bound to x from 5 to 6 when mut is used",
+      "tags": {
+        "mut": 1.0,
+        "value": 1.0,
+        "re": 1.0,
+        "we": 1.0,
+        "bound": 1.0,
+        "change": 1.0,
+        "when": 1.0,
+        "allowed": 1.0,
+        "used": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9273,
+      "content": "Ultimately, deciding whether to use mutability or not is up to you and depends on what you think is clearest in that particular situation",
+      "tags": {
+        "not": 1.0,
+        "mutability": 1.0,
+        "ultimately": 1.0,
+        "use": 1.0,
+        "you": 2.0,
+        "what": 1.0,
+        "up": 1.0,
+        "deciding": 1.0,
+        "depends": 1.0,
+        "think": 1.0,
+        "whether": 1.0,
+        "particular": 1.0,
+        "situation": 1.0,
+        "clearest": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9275,
+      "content": "deciding",
+      "tags": {
+        "deciding": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9276,
+      "content": "clearest",
+      "tags": {
+        "clearest": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9277,
+      "content": "Declaring Constants",
+      "tags": {
+        "constants": 1.0,
+        "declaring": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9278,
+      "content": "Declaring",
+      "tags": {
+        "declaring": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9279,
+      "content": "Constants",
+      "tags": {
+        "constants": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9280,
+      "content": "Like immutable variables, constants are values that are bound to a name and are not allowed to change, but there are a few differences between",
+      "tags": {
+        "like": 1.0,
+        "variables": 1.0,
+        "bound": 1.0,
+        "values": 1.0,
+        "name": 1.0,
+        "there": 1.0,
+        "few": 1.0,
+        "immutable": 1.0,
+        "differences": 1.0,
+        "change": 1.0,
+        "between": 1.0,
+        "constants": 1.0,
+        "allowed": 1.0,
+        "not": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9282,
+      "content": "constants",
+      "tags": {
+        "constants": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9283,
+      "content": "constants and variables",
+      "tags": {
+        "constants": 1.0,
+        "variables": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9284,
+      "content": "First, you aren’t allowed to use mut with constants",
+      "tags": {
+        "constants": 1.0,
+        "first": 1.0,
+        "aren": 1.0,
+        "you": 1.0,
+        "allowed": 1.0,
+        "use": 1.0,
+        "mut": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9285,
+      "content": "Constants aren’t just immutable by default—they’re always immutable",
+      "tags": {
+        "immutable": 2.0,
+        "aren": 1.0,
+        "default": 1.0,
+        "re": 1.0,
+        "constants": 1.0,
+        "just": 1.0,
+        "always": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9287,
+      "content": "default—they’r",
+      "tags": {
+        "default—they’r": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9288,
+      "content": "You declare constants using the const keyword instead of the let keyword, and the type of the value must be annotated",
+      "tags": {
+        "let": 1.0,
+        "type": 1.0,
+        "value": 1.0,
+        "must": 1.0,
+        "keyword": 2.0,
+        "instead": 1.0,
+        "const": 1.0,
+        "using": 1.0,
+        "annotated": 1.0,
+        "you": 1.0,
+        "constants": 1.0,
+        "declare": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9290,
+      "content": "We’ll cover types and type annotations in the next section, “Data Types”, so don’t worry about the details right now",
+      "tags": {
+        "type": 1.0,
+        "cover": 1.0,
+        "ll": 1.0,
+        "about": 1.0,
+        "details": 1.0,
+        "annotations": 1.0,
+        "now": 1.0,
+        "we": 1.0,
+        "data": 1.0,
+        "types": 2.0,
+        "so": 1.0,
+        "don": 1.0,
+        "right": 1.0,
+        "next": 1.0,
+        "section": 1.0,
+        "worry": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9292,
+      "content": "Just know that you must always annotate the type",
+      "tags": {
+        "annotate": 1.0,
+        "know": 1.0,
+        "you": 1.0,
+        "just": 1.0,
+        "must": 1.0,
+        "type": 1.0,
+        "always": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9293,
+      "content": "Constants can be declared in any scope, including the global scope, which makes them useful for values that many parts of code need to know about",
+      "tags": {
+        "know": 1.0,
+        "which": 1.0,
+        "constants": 1.0,
+        "scope": 2.0,
+        "parts": 1.0,
+        "code": 1.0,
+        "global": 1.0,
+        "many": 1.0,
+        "useful": 1.0,
+        "need": 1.0,
+        "can": 1.0,
+        "about": 1.0,
+        "including": 1.0,
+        "declared": 1.0,
+        "makes": 1.0,
+        "values": 1.0,
+        "any": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9295,
+      "content": "global",
+      "tags": {
+        "global": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9296,
+      "content": "The last difference is that constants may be set only to a constant expression, not the result of a value that could only be computed at runtime",
+      "tags": {
+        "set": 1.0,
+        "not": 1.0,
+        "computed": 1.0,
+        "runtime": 1.0,
+        "value": 1.0,
+        "may": 1.0,
+        "only": 2.0,
+        "expression": 1.0,
+        "last": 1.0,
+        "constants": 1.0,
+        "difference": 1.0,
+        "result": 1.0,
+        "could": 1.0,
+        "constant": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9298,
+      "content": "constant",
+      "tags": {
+        "constant": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9299,
+      "content": "Here’s an example of a constant declaration:",
+      "tags": {
+        "here": 1.0,
+        "constant": 1.0,
+        "declaration": 1.0,
+        "example": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9300,
+      "content": "const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3",
+      "tags": {
+        "three_hours_in_seconds": 1.0,
+        "const": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Equation"
+    },
+    {
+      "id": 9301,
+      "content": "The constant’s name is THREE_HOURS_IN_SECONDS, and its value is set to the result of multiplying 60 (the number of seconds in a minute) by 60 (the",
+      "tags": {
+        "constant": 1.0,
+        "three_hours_in_seconds": 1.0,
+        "value": 1.0,
+        "set": 1.0,
+        "multiplying": 1.0,
+        "name": 1.0,
+        "result": 1.0,
+        "number": 1.0,
+        "seconds": 1.0,
+        "minute": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9303,
+      "content": "constant’s",
+      "tags": {
+        "constant’s": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9304,
+      "content": "THREE_HOURS_IN_SECONDS",
+      "tags": {
+        "three_hours_in_seconds": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9305,
+      "content": "multiplying",
+      "tags": {
+        "multiplying": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9306,
+      "content": "seconds",
+      "tags": {
+        "seconds": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9307,
+      "content": "minut",
+      "tags": {
+        "minut": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9308,
+      "content": "number of minutes in an hour) by 3 (the number of hours we want to count in this program)",
+      "tags": {
+        "count": 1.0,
+        "hours": 1.0,
+        "program": 1.0,
+        "minutes": 1.0,
+        "want": 1.0,
+        "hour": 1.0,
+        "number": 2.0,
+        "we": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9309,
+      "content": "minutes",
+      "tags": {
+        "minutes": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9310,
+      "content": "hour",
+      "tags": {
+        "hour": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9311,
+      "content": "hours",
+      "tags": {
+        "hours": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9312,
+      "content": "Rust’s naming convention for constants is to use all uppercase with underscores between words",
+      "tags": {
+        "rust": 1.0,
+        "use": 1.0,
+        "underscores": 1.0,
+        "uppercase": 1.0,
+        "convention": 1.0,
+        "words": 1.0,
+        "all": 1.0,
+        "between": 1.0,
+        "constants": 1.0,
+        "naming": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9313,
+      "content": "naming",
+      "tags": {
+        "naming": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9314,
+      "content": "uppercas",
+      "tags": {
+        "uppercas": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9315,
+      "content": "The compiler is able to evaluate a limited set of operations at compile time, which lets us choose to write out this value in a way that’s easier to",
+      "tags": {
+        "time": 1.0,
+        "set": 1.0,
+        "us": 1.0,
+        "compiler": 1.0,
+        "out": 1.0,
+        "evaluate": 1.0,
+        "able": 1.0,
+        "limited": 1.0,
+        "which": 1.0,
+        "lets": 1.0,
+        "write": 1.0,
+        "compile": 1.0,
+        "operations": 1.0,
+        "value": 1.0,
+        "way": 1.0,
+        "easier": 1.0,
+        "choose": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9317,
+      "content": "understand and verify, rather than setting this constant to the value 10,800",
+      "tags": {
+        "value": 1.0,
+        "constant": 1.0,
+        "understand": 1.0,
+        "rather": 1.0,
+        "than": 1.0,
+        "setting": 1.0,
+        "verify": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9318,
+      "content": "setting",
+      "tags": {
+        "setting": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9319,
+      "content": "10,800",
+      "tags": {
+        "10,800": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9320,
+      "content": "See the Rust Reference’s section on constant evaluation for more information on what operations can be used when declaring constants",
+      "tags": {
+        "information": 1.0,
+        "what": 1.0,
+        "see": 1.0,
+        "constant": 1.0,
+        "declaring": 1.0,
+        "constants": 1.0,
+        "rust": 1.0,
+        "used": 1.0,
+        "when": 1.0,
+        "operations": 1.0,
+        "can": 1.0,
+        "section": 1.0,
+        "evaluation": 1.0,
+        "more": 1.0,
+        "reference": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9321,
+      "content": "Reference’s",
+      "tags": {
+        "reference’s": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9322,
+      "content": "evaluation",
+      "tags": {
+        "evaluation": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9323,
+      "content": "Constants are valid for the entire time a program runs, within the scope in which they were declared",
+      "tags": {
+        "time": 1.0,
+        "which": 1.0,
+        "declared": 1.0,
+        "valid": 1.0,
+        "scope": 1.0,
+        "constants": 1.0,
+        "runs": 1.0,
+        "entire": 1.0,
+        "within": 1.0,
+        "program": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9325,
+      "content": "This property makes constants useful for values in your application domain that multiple parts of the program might need to know about, such as the",
+      "tags": {
+        "know": 1.0,
+        "might": 1.0,
+        "useful": 1.0,
+        "such": 1.0,
+        "makes": 1.0,
+        "domain": 1.0,
+        "property": 1.0,
+        "values": 1.0,
+        "constants": 1.0,
+        "need": 1.0,
+        "parts": 1.0,
+        "your": 1.0,
+        "application": 1.0,
+        "about": 1.0,
+        "multiple": 1.0,
+        "program": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9327,
+      "content": "property",
+      "tags": {
+        "property": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9328,
+      "content": "application",
+      "tags": {
+        "application": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9329,
+      "content": "maximum number of points any player of a game is allowed to earn, or the speed of light",
+      "tags": {
+        "number": 1.0,
+        "any": 1.0,
+        "maximum": 1.0,
+        "allowed": 1.0,
+        "points": 1.0,
+        "player": 1.0,
+        "earn": 1.0,
+        "light": 1.0,
+        "speed": 1.0,
+        "game": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9330,
+      "content": "earn",
+      "tags": {
+        "earn": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9331,
+      "content": "light",
+      "tags": {
+        "light": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9332,
+      "content": "Naming hardcoded values used throughout your program as constants is useful in conveying the meaning of that value to future maintainers of the code",
+      "tags": {
+        "useful": 1.0,
+        "maintainers": 1.0,
+        "meaning": 1.0,
+        "constants": 1.0,
+        "your": 1.0,
+        "program": 1.0,
+        "values": 1.0,
+        "code": 1.0,
+        "throughout": 1.0,
+        "hardcoded": 1.0,
+        "value": 1.0,
+        "future": 1.0,
+        "naming": 1.0,
+        "used": 1.0,
+        "conveying": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9334,
+      "content": "Naming",
+      "tags": {
+        "naming": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9335,
+      "content": "conveying",
+      "tags": {
+        "conveying": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9336,
+      "content": "maintainers",
+      "tags": {
+        "maintainers": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9337,
+      "content": "It also helps to have only one place in your code that you would need to change if the hardcoded value needed to be updated in the future",
+      "tags": {
+        "only": 1.0,
+        "have": 1.0,
+        "code": 1.0,
+        "your": 1.0,
+        "one": 1.0,
+        "would": 1.0,
+        "hardcoded": 1.0,
+        "needed": 1.0,
+        "change": 1.0,
+        "if": 1.0,
+        "value": 1.0,
+        "place": 1.0,
+        "future": 1.0,
+        "also": 1.0,
+        "helps": 1.0,
+        "need": 1.0,
+        "updated": 1.0,
+        "you": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9339,
+      "content": "As you saw in the guessing game tutorial in Chapter 2, you can declare a new variable with the same name as a previous variable",
+      "tags": {
+        "can": 1.0,
+        "guessing": 1.0,
+        "tutorial": 1.0,
+        "new": 1.0,
+        "game": 1.0,
+        "declare": 1.0,
+        "saw": 1.0,
+        "chapter": 1.0,
+        "you": 2.0,
+        "variable": 2.0,
+        "same": 1.0,
+        "name": 1.0,
+        "previous": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9341,
+      "content": "Rustaceans say that the first variable is shadowed by the second, which means that the second variable is what the compiler will see when you use the",
+      "tags": {
+        "see": 1.0,
+        "what": 1.0,
+        "when": 1.0,
+        "use": 1.0,
+        "will": 1.0,
+        "shadowed": 1.0,
+        "which": 1.0,
+        "variable": 2.0,
+        "say": 1.0,
+        "means": 1.0,
+        "you": 1.0,
+        "second": 2.0,
+        "first": 1.0,
+        "compiler": 1.0,
+        "rustaceans": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9343,
+      "content": "shadowed",
+      "tags": {
+        "shadowed": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9344,
+      "content": "name of the variable",
+      "tags": {
+        "name": 1.0,
+        "variable": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9345,
+      "content": "In effect, the second variable overshadows the first, taking any uses of the variable name to itself until either it itself is shadowed or the scope",
+      "tags": {
+        "uses": 1.0,
+        "shadowed": 1.0,
+        "variable": 2.0,
+        "effect": 1.0,
+        "overshadows": 1.0,
+        "until": 1.0,
+        "any": 1.0,
+        "first": 1.0,
+        "name": 1.0,
+        "itself": 2.0,
+        "either": 1.0,
+        "taking": 1.0,
+        "second": 1.0,
+        "scope": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9347,
+      "content": "effect",
+      "tags": {
+        "effect": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9348,
+      "content": "overshadows",
+      "tags": {
+        "overshadows": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9349,
+      "content": "We can shadow a variable by using the same variable’s name and repeating the use of the let keyword as follows:",
+      "tags": {
+        "shadow": 1.0,
+        "using": 1.0,
+        "same": 1.0,
+        "use": 1.0,
+        "we": 1.0,
+        "name": 1.0,
+        "keyword": 1.0,
+        "follows": 1.0,
+        "can": 1.0,
+        "let": 1.0,
+        "repeating": 1.0,
+        "variable": 2.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9351,
+      "content": "let x = x + 1",
+      "tags": {
+        "let": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Code"
+    },
+    {
+      "id": 9352,
+      "content": "let x = x * 2",
+      "tags": {
+        "let": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Code"
+    },
+    {
+      "id": 9353,
+      "content": "(\"The value of x in the inner scope is: {x}\")",
+      "tags": {
+        "inner": 1.0,
+        "scope": 1.0,
+        "value": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9355,
+      "content": "This program first binds x to a value of 5",
+      "tags": {
+        "first": 1.0,
+        "binds": 1.0,
+        "program": 1.0,
+        "value": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9356,
+      "content": "Then, it creates a new variable x by repeating let x =, taking the original value and adding 1 so that the value of x is 6",
+      "tags": {
+        "variable": 1.0,
+        "creates": 1.0,
+        "new": 1.0,
+        "adding": 1.0,
+        "taking": 1.0,
+        "value": 2.0,
+        "original": 1.0,
+        "so": 1.0,
+        "repeating": 1.0,
+        "then": 1.0,
+        "let": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Equation"
+    },
+    {
+      "id": 9357,
+      "content": "Then, within an inner scope created with the curly brackets, the third let statement also shadows x and creates a new variable, multiplying the",
+      "tags": {
+        "let": 1.0,
+        "third": 1.0,
+        "inner": 1.0,
+        "statement": 1.0,
+        "scope": 1.0,
+        "shadows": 1.0,
+        "also": 1.0,
+        "creates": 1.0,
+        "brackets": 1.0,
+        "curly": 1.0,
+        "within": 1.0,
+        "new": 1.0,
+        "created": 1.0,
+        "then": 1.0,
+        "multiplying": 1.0,
+        "variable": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9359,
+      "content": "shadows",
+      "tags": {
+        "shadows": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9360,
+      "content": "previous value by 2 to give x a value of 12",
+      "tags": {
+        "value": 2.0,
+        "give": 1.0,
+        "previous": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9362,
+      "content": "When that scope is over, the inner shadowing ends and x returns to being 6",
+      "tags": {
+        "ends": 1.0,
+        "scope": 1.0,
+        "when": 1.0,
+        "over": 1.0,
+        "inner": 1.0,
+        "returns": 1.0,
+        "being": 1.0,
+        "shadowing": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9363,
+      "content": "When we run this program, it will output the following:",
+      "tags": {
+        "we": 1.0,
+        "run": 1.0,
+        "will": 1.0,
+        "following": 1.0,
+        "output": 1.0,
+        "program": 1.0,
+        "when": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9364,
+      "content": "The value of x in the inner scope is: 12",
+      "tags": {
+        "scope": 1.0,
+        "value": 1.0,
+        "inner": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9365,
+      "content": "Shadowing is different from marking a variable as mut because we’ll get a compile-time error if we accidentally try to reassign to this variable",
+      "tags": {
+        "reassign": 1.0,
+        "because": 1.0,
+        "mut": 1.0,
+        "marking": 1.0,
+        "error": 1.0,
+        "get": 1.0,
+        "variable": 2.0,
+        "we": 2.0,
+        "shadowing": 1.0,
+        "if": 1.0,
+        "try": 1.0,
+        "accidentally": 1.0,
+        "compile-time": 1.0,
+        "different": 1.0,
+        "ll": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9367,
+      "content": "marking",
+      "tags": {
+        "marking": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9368,
+      "content": "accidentally",
+      "tags": {
+        "accidentally": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9369,
+      "content": "reassign",
+      "tags": {
+        "reassign": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9370,
+      "content": "without using the let keyword",
+      "tags": {
+        "without": 1.0,
+        "let": 1.0,
+        "using": 1.0,
+        "keyword": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9371,
+      "content": "By using let, we can perform a few transformations on a value but have the variable be immutable after those transformations have completed",
+      "tags": {
+        "can": 1.0,
+        "variable": 1.0,
+        "immutable": 1.0,
+        "after": 1.0,
+        "completed": 1.0,
+        "value": 1.0,
+        "few": 1.0,
+        "using": 1.0,
+        "perform": 1.0,
+        "let": 1.0,
+        "have": 2.0,
+        "transformations": 2.0,
+        "we": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9373,
+      "content": "transformations",
+      "tags": {
+        "transformations": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9374,
+      "content": "The other difference between mut and shadowing is that because we’re effectively creating a new variable when we use the let keyword again, we can",
+      "tags": {
+        "other": 1.0,
+        "effectively": 1.0,
+        "keyword": 1.0,
+        "creating": 1.0,
+        "let": 1.0,
+        "between": 1.0,
+        "we": 3.0,
+        "mut": 1.0,
+        "because": 1.0,
+        "shadowing": 1.0,
+        "difference": 1.0,
+        "variable": 1.0,
+        "re": 1.0,
+        "new": 1.0,
+        "when": 1.0,
+        "use": 1.0,
+        "can": 1.0,
+        "again": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9376,
+      "content": "change the type of the value but reuse the same name",
+      "tags": {
+        "type": 1.0,
+        "reuse": 1.0,
+        "same": 1.0,
+        "name": 1.0,
+        "value": 1.0,
+        "change": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9378,
+      "content": "For example, say our program asks a user to show how many spaces they want between some text by inputting space characters, and then we want to store",
+      "tags": {
+        "asks": 1.0,
+        "user": 1.0,
+        "program": 1.0,
+        "spaces": 1.0,
+        "inputting": 1.0,
+        "how": 1.0,
+        "example": 1.0,
+        "we": 1.0,
+        "text": 1.0,
+        "many": 1.0,
+        "space": 1.0,
+        "between": 1.0,
+        "characters": 1.0,
+        "want": 2.0,
+        "then": 1.0,
+        "store": 1.0,
+        "say": 1.0,
+        "some": 1.0,
+        "our": 1.0,
+        "show": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9380,
+      "content": "asks",
+      "tags": {
+        "asks": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9381,
+      "content": "inputting",
+      "tags": {
+        "inputting": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9382,
+      "content": "that input as a number:",
+      "tags": {
+        "number": 1.0,
+        "input": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9383,
+      "content": "let spaces = \"   \"",
+      "tags": {
+        "let": 1.0,
+        "spaces": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Code"
+    },
+    {
+      "id": 9384,
+      "content": "let spaces = spaces",
+      "tags": {
+        "let": 1.0,
+        "spaces": 2.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Code"
+    },
+    {
+      "id": 9385,
+      "content": "The first spaces variable is a string type, and the second spaces variable is a number type",
+      "tags": {
+        "second": 1.0,
+        "number": 1.0,
+        "first": 1.0,
+        "spaces": 2.0,
+        "string": 1.0,
+        "type": 2.0,
+        "variable": 2.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9387,
+      "content": "Shadowing thus spares us from having to come up with different names, such as spaces_str and spaces_num",
+      "tags": {
+        "names": 1.0,
+        "having": 1.0,
+        "shadowing": 1.0,
+        "thus": 1.0,
+        "up": 1.0,
+        "spaces_str": 1.0,
+        "come": 1.0,
+        "different": 1.0,
+        "such": 1.0,
+        "spaces_num": 1.0,
+        "us": 1.0,
+        "spares": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9388,
+      "content": "spares",
+      "tags": {
+        "spares": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9389,
+      "content": "spaces_str",
+      "tags": {
+        "spaces_str": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9390,
+      "content": "spaces_num",
+      "tags": {
+        "spaces_num": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9391,
+      "content": "instead, we can reuse the simpler spaces name",
+      "tags": {
+        "instead": 1.0,
+        "we": 1.0,
+        "can": 1.0,
+        "spaces": 1.0,
+        "name": 1.0,
+        "reuse": 1.0,
+        "simpler": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9393,
+      "content": "simp",
+      "tags": {
+        "simp": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9394,
+      "content": "However, if we try to use mut for this, as shown here, we’ll get a compile-time error:",
+      "tags": {
+        "use": 1.0,
+        "if": 1.0,
+        "however": 1.0,
+        "shown": 1.0,
+        "get": 1.0,
+        "compile-time": 1.0,
+        "ll": 1.0,
+        "try": 1.0,
+        "error": 1.0,
+        "mut": 1.0,
+        "here": 1.0,
+        "we": 2.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9396,
+      "content": "let mut spaces = \"   \"",
+      "tags": {
+        "mut": 1.0,
+        "spaces": 1.0,
+        "let": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Code"
+    },
+    {
+      "id": 9397,
+      "content": "spaces = spaces",
+      "tags": {
+        "spaces": 2.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Equation"
+    },
+    {
+      "id": 9398,
+      "content": "The error says we’re not allowed to mutate a variable’s type:",
+      "tags": {
+        "says": 1.0,
+        "type": 1.0,
+        "re": 1.0,
+        "mutate": 1.0,
+        "not": 1.0,
+        "we": 1.0,
+        "error": 1.0,
+        "allowed": 1.0,
+        "variable": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9399,
+      "content": "rs:3:14",
+      "tags": {
+        "rs": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9400,
+      "content": "2 |     let mut spaces = \"   \"",
+      "tags": {
+        "let": 1.0,
+        "spaces": 1.0,
+        "mut": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Equation"
+    },
+    {
+      "id": 9401,
+      "content": "|                      ----- expected due to this value",
+      "tags": {
+        "-----": 1.0,
+        "due": 1.0,
+        "value": 1.0,
+        "expected": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9402,
+      "content": "3 |     spaces = spaces",
+      "tags": {
+        "spaces": 2.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Equation"
+    },
+    {
+      "id": 9403,
+      "content": "|              ^^^^^^^^^^^^ expected `&str`, found `usize`",
+      "tags": {
+        "str": 1.0,
+        "expected": 1.0,
+        "found": 1.0,
+        "usize": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9404,
+      "content": "Now that we’ve explored how variables work, let’s look at more data types they can have",
+      "tags": {
+        "variables": 1.0,
+        "let": 1.0,
+        "how": 1.0,
+        "have": 1.0,
+        "explored": 1.0,
+        "work": 1.0,
+        "more": 1.0,
+        "look": 1.0,
+        "types": 1.0,
+        "now": 1.0,
+        "we": 1.0,
+        "can": 1.0,
+        "data": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    },
+    {
+      "id": 9406,
+      "content": "explored",
+      "tags": {
+        "explored": 1.0
+      },
+      "activation_level": 0.0,
+      "lobe_name": "variables_and_mutability",
+      "is_proxy": false,
+      "proxy_target": null,
+      "node_type": "Concept"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": 9184,
+      "target_id": 644,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9181,
+      "target_id": 9183,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9187,
+      "target_id": 549,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9183,
+      "target_id": 9185,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9185,
+      "target_id": 9189,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9193,
+      "target_id": 675,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9194,
+      "target_id": 1161,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9189,
+      "target_id": 9191,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9191,
+      "target_id": 9195,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9195,
+      "target_id": 9197,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9197,
+      "target_id": 9199,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9202,
+      "target_id": 888,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9199,
+      "target_id": 9200,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9200,
+      "target_id": 606,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9203,
+      "target_id": 726,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9207,
+      "target_id": 774,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9208,
+      "target_id": 4463,
+      "target_lobe": "rust",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9204,
+      "target_id": 9205,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9205,
+      "target_id": 793,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9209,
+      "target_id": 9210,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9212,
+      "target_id": 2063,
+      "target_lobe": "data_types",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9210,
+      "target_id": 9211,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9211,
+      "target_id": 855,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9213,
+      "target_id": 9214,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9214,
+      "target_id": 9215,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9215,
+      "target_id": 9216,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9216,
+      "target_id": 2411,
+      "target_lobe": "functions",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9217,
+      "target_id": 9218,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9221,
+      "target_id": 3497,
+      "target_lobe": "guessing_game",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9218,
+      "target_id": 9220,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9220,
+      "target_id": 9222,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9222,
+      "target_id": 9223,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9223,
+      "target_id": 9224,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9224,
+      "target_id": 9225,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9225,
+      "target_id": 9226,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9226,
+      "target_id": 9228,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9228,
+      "target_id": 9230,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9233,
+      "target_id": 1487,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9230,
+      "target_id": 9231,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9231,
+      "target_id": 9234,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9238,
+      "target_id": 878,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9234,
+      "target_id": 9236,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9236,
+      "target_id": 9239,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9242,
+      "target_id": 571,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9243,
+      "target_id": 529,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9239,
+      "target_id": 9240,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9245,
+      "target_id": 508,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9240,
+      "target_id": 9244,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9244,
+      "target_id": 9246,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9246,
+      "target_id": 9248,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9248,
+      "target_id": 9250,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9250,
+      "target_id": 9251,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9254,
+      "target_id": 600,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9251,
+      "target_id": 9252,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9257,
+      "target_id": 1049,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9258,
+      "target_id": 560,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9252,
+      "target_id": 9255,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9261,
+      "target_id": 9262,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9262,
+      "target_id": 508,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9263,
+      "target_id": 560,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9255,
+      "target_id": 9259,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9259,
+      "target_id": 9264,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9264,
+      "target_id": 9266,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9266,
+      "target_id": 606,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9267,
+      "target_id": 793,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9210,
+      "target_id": 798,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9268,
+      "target_id": 2415,
+      "target_lobe": "functions",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9270,
+      "target_id": 9271,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9275,
+      "target_id": 657,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9254,
+      "target_id": 742,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9276,
+      "target_id": 527,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9271,
+      "target_id": 9273,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9278,
+      "target_id": 9279,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9273,
+      "target_id": 9277,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9282,
+      "target_id": 662,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9277,
+      "target_id": 9280,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9282,
+      "target_id": 556,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9280,
+      "target_id": 9283,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9283,
+      "target_id": 9284,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9279,
+      "target_id": 3870,
+      "target_lobe": "guessing_game",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9287,
+      "target_id": 887,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9284,
+      "target_id": 9285,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9282,
+      "target_id": 1162,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9285,
+      "target_id": 9288,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9288,
+      "target_id": 9290,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9290,
+      "target_id": 9292,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9279,
+      "target_id": 600,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9295,
+      "target_id": 636,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9292,
+      "target_id": 9293,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9282,
+      "target_id": 536,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9298,
+      "target_id": 687,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9293,
+      "target_id": 9296,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9298,
+      "target_id": 1658,
+      "target_lobe": "data_types",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9296,
+      "target_id": 9299,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9299,
+      "target_id": 9300,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9303,
+      "target_id": 2126,
+      "target_lobe": "data_types",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9304,
+      "target_id": 556,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9305,
+      "target_id": 4341,
+      "target_lobe": "guessing_game",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9306,
+      "target_id": 527,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9307,
+      "target_id": 737,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9300,
+      "target_id": 9301,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9309,
+      "target_id": 527,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9310,
+      "target_id": 737,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9311,
+      "target_id": 585,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9301,
+      "target_id": 9308,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9313,
+      "target_id": 3154,
+      "target_lobe": "hello_world",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9282,
+      "target_id": 518,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9314,
+      "target_id": 553,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9308,
+      "target_id": 9312,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9312,
+      "target_id": 9315,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9318,
+      "target_id": 574,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9298,
+      "target_id": 508,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9315,
+      "target_id": 9317,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9321,
+      "target_id": 644,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9298,
+      "target_id": 9322,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9322,
+      "target_id": 895,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9317,
+      "target_id": 9320,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9279,
+      "target_id": 662,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9320,
+      "target_id": 9323,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9327,
+      "target_id": 815,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9282,
+      "target_id": 538,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9328,
+      "target_id": 4936,
+      "target_lobe": "rust",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9323,
+      "target_id": 9325,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9330,
+      "target_id": 742,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9325,
+      "target_id": 9329,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9334,
+      "target_id": 8666,
+      "target_lobe": "ownership",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9335,
+      "target_id": 530,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9336,
+      "target_id": 511,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9329,
+      "target_id": 9332,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9332,
+      "target_id": 9337,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9337,
+      "target_id": 4216,
+      "target_lobe": "guessing_game",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9343,
+      "target_id": 737,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9339,
+      "target_id": 9341,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9341,
+      "target_id": 9344,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9347,
+      "target_id": 530,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9348,
+      "target_id": 938,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9343,
+      "target_id": 742,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9344,
+      "target_id": 9345,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9345,
+      "target_id": 2344,
+      "target_lobe": "functions",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9349,
+      "target_id": 606,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9351,
+      "target_id": 9352,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9352,
+      "target_id": 726,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9353,
+      "target_id": 726,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9355,
+      "target_id": 9356,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9359,
+      "target_id": 2100,
+      "target_lobe": "data_types",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9356,
+      "target_id": 9357,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9357,
+      "target_id": 9360,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9360,
+      "target_id": 9362,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9362,
+      "target_id": 9363,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9363,
+      "target_id": 793,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9268,
+      "target_id": 9364,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9364,
+      "target_id": 9270,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9367,
+      "target_id": 541,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9368,
+      "target_id": 813,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9369,
+      "target_id": 574,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9270,
+      "target_id": 9365,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9365,
+      "target_id": 9370,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9373,
+      "target_id": 571,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9370,
+      "target_id": 9371,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9371,
+      "target_id": 9374,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9374,
+      "target_id": 9376,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9380,
+      "target_id": 541,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9381,
+      "target_id": 1667,
+      "target_lobe": "data_types",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9376,
+      "target_id": 9378,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9378,
+      "target_id": 9382,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9382,
+      "target_id": 9383,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9383,
+      "target_id": 9384,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9384,
+      "target_id": 5041,
+      "target_lobe": "rust",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9388,
+      "target_id": 1604,
+      "target_lobe": "data_types",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9389,
+      "target_id": 556,
+      "target_lobe": "comments",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9385,
+      "target_id": 9387,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9393,
+      "target_id": 2023,
+      "target_lobe": "data_types",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9387,
+      "target_id": 9391,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9391,
+      "target_id": 9394,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9394,
+      "target_id": 839,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9396,
+      "target_id": 9397,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9397,
+      "target_id": 5041,
+      "target_lobe": "rust",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9398,
+      "target_id": 793,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9210,
+      "target_id": 851,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9399,
+      "target_id": 9400,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9400,
+      "target_id": 9401,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9401,
+      "target_id": 9402,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9402,
+      "target_id": 5041,
+      "target_lobe": "rust",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9403,
+      "target_id": 864,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9406,
+      "target_id": 1569,
+      "target_lobe": "data_types",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9225,
+      "target_id": 9404,
+      "target_lobe": "variables_and_mutability",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9311,
+      "target_id": 12327,
+      "target_lobe": "vm_7_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9311,
+      "target_id": 10015,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9311,
+      "target_id": 12742,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 9188,
+      "target_id": 12595,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9275,
+      "target_id": 1767,
+      "target_lobe": "data_types",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9275,
+      "target_id": 4568,
+      "target_lobe": "rust",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 9306,
+      "target_id": 12327,
+      "target_lobe": "vm_7_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9306,
+      "target_id": 13027,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 9245,
+      "target_id": 12601,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9245,
+      "target_id": 13169,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 9311,
+      "target_id": 1021,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9307,
+      "target_id": 4684,
+      "target_lobe": "rust",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9311,
+      "target_id": 13176,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 9307,
+      "target_id": 13176,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 9311,
+      "target_id": 12746,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9311,
+      "target_id": 13336,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 9307,
+      "target_id": 13336,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 9238,
+      "target_id": 13403,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 9245,
+      "target_id": 12733,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9245,
+      "target_id": 13412,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 9188,
+      "target_id": 1630,
+      "target_lobe": "data_types",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9188,
+      "target_id": 9901,
+      "target_lobe": "vm_2_hafta",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 9309,
+      "target_id": 2167,
+      "target_lobe": "data_types",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9309,
+      "target_id": 12601,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9310,
+      "target_id": 1230,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9310,
+      "target_id": 13800,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 9188,
+      "target_id": 14242,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9202,
+      "target_id": 12333,
+      "target_lobe": "vm_7_hafta",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9188,
+      "target_id": 12769,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9188,
+      "target_id": 2167,
+      "target_lobe": "data_types",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9207,
+      "target_id": 13260,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9307,
+      "target_id": 13504,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9295,
+      "target_id": 5986,
+      "target_lobe": "rust",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9295,
+      "target_id": 14542,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 9309,
+      "target_id": 14544,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 9208,
+      "target_id": 3566,
+      "target_lobe": "guessing_game",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9327,
+      "target_id": 14746,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9295,
+      "target_id": 14857,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9311,
+      "target_id": 878,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9295,
+      "target_id": 14855,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 9311,
+      "target_id": 14855,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 9330,
+      "target_id": 12601,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9330,
+      "target_id": 15070,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 9347,
+      "target_id": 12594,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9188,
+      "target_id": 1106,
+      "target_lobe": "control_flow",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9188,
+      "target_id": 15604,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 9311,
+      "target_id": 15730,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.8,
+        "co_firings": 0,
+        "synapse_type": "Semantic",
+        "role": "Nesne"
+      }
+    },
+    {
+      "source_id": 9262,
+      "target_id": 12600,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9330,
+      "target_id": 12781,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9188,
+      "target_id": 13260,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9250,
+      "target_id": 12328,
+      "target_lobe": "core_language",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    },
+    {
+      "source_id": 9295,
+      "target_id": 17931,
+      "target_lobe": "youtubewiki",
+      "synapse": {
+        "weight": 0.85,
+        "co_firings": 0,
+        "synapse_type": "Sequential",
+        "role": null
+      }
+    }
+  ]
+}
