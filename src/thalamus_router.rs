@@ -132,17 +132,30 @@ impl ThalamusRouter {
             }
         }
 
-        // Kelimeler ile karşılaştır (Component-based matching: components must start with the query word)
+        // Kelimeler ile karşılaştır (Component-based matching with stemming and length-based strictness)
         for word in &words {
             let norm_word = normalize_for_match(word);
+            let (query_stem, _) = crate::morphology::parse_noun_suffix(&norm_word);
+            let query_stem_norm = normalize_for_match(&query_stem);
+
+            if query_stem_norm.is_empty() {
+                continue;
+            }
+
             for lobe in &all_lobes {
                 let norm_lobe = normalize_for_match(lobe);
-                
-                // Lobe adını bileşenlerine ayır
                 let components: Vec<&str> = norm_lobe.split('_').collect();
                 
-                // Eğer herhangi bir bileşen sorgu kelimesi ile başlıyorsa
-                let is_match = components.iter().any(|comp| comp.starts_with(&norm_word));
+                let is_match = components.iter().any(|comp| {
+                    let (comp_stem, _) = crate::morphology::parse_noun_suffix(comp);
+                    let comp_stem_norm = normalize_for_match(&comp_stem);
+                    
+                    if query_stem_norm.len() <= 4 {
+                        comp_stem_norm == query_stem_norm
+                    } else {
+                        comp_stem_norm == query_stem_norm || comp_stem_norm.starts_with(&query_stem_norm)
+                    }
+                });
                 
                 if is_match {
                     if !matched_lobes.contains(lobe) {
