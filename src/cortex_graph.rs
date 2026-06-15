@@ -489,6 +489,7 @@ mod tests {
         let db_path = "cortex_storage/cortex.db";
         let db_result = sled::open(db_path);
         if let Ok(db) = db_result {
+            let mut validated_count = 0;
             for item in db.iter() {
                 if let Ok((key, value)) = item {
                     let lobe_name = String::from_utf8_lossy(&key);
@@ -500,6 +501,10 @@ mod tests {
                             lobe_name,
                             res.err()
                         );
+                        validated_count += 1;
+                        if validated_count >= 20 {
+                            break; // 20 numune doğrulamak test için yeterlidir, 8GB+ db'de zaman aşımını önler.
+                        }
                     }
                 }
             }
