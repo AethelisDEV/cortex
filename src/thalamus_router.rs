@@ -3,17 +3,30 @@ use std::collections::HashMap;
 pub struct ThalamusRouter {
     #[allow(dead_code)]
     pub lobe_keywords: HashMap<String, Vec<String>>, // keyword -> list of lobe_names (Geriye uyumluluk için boş tutulur)
+    pub all_lobes: std::collections::HashSet<String>, // Veritabanındaki tüm lob isimlerinin RAM cache'i
 }
 
 impl ThalamusRouter {
     pub fn new() -> Self {
         Self {
             lobe_keywords: HashMap::new(),
+            all_lobes: std::collections::HashSet::new(),
         }
     }
 
-    /// Geriye uyumluluk için arayüzde kalan ama artık bir işlev yapmayan fonksiyon.
-    pub fn reload_mappings(&mut self, _db: &sled::Db) -> anyhow::Result<()> {
+    /// Veritabanındaki tüm lob isimlerini RAM cache'ine yükler (Performans optimizasyonu).
+    pub fn reload_mappings(&mut self, db: &sled::Db) -> anyhow::Result<()> {
+        let mut lobes = std::collections::HashSet::new();
+        for item in db.iter() {
+            if let Ok((key, _)) = item {
+                if let Ok(lobe_name) = std::str::from_utf8(&key) {
+                    if lobe_name != "core_language" && lobe_name != "general" && lobe_name != "__registry__" {
+                        lobes.insert(lobe_name.to_string());
+                    }
+                }
+            }
+        }
+        self.all_lobes = lobes;
         Ok(())
     }
 
@@ -98,7 +111,7 @@ impl ThalamusRouter {
     }
 
     /// Sorgudaki kelimelerle mevcut lob isimlerini dinamik olarak karşılaştırıp eşleşen lob adlarını döner.
-    pub fn find_dynamic_matching_lobes(&self, query: &str, db: &sled::Db) -> Vec<String> {
+    pub fn find_dynamic_matching_lobes(&self, query: &str, _db: &sled::Db) -> Vec<String> {
         // Soru ve Bağlaç Filtresi (Stop-Words Exclusion)
         let stopwords = [
             "the", "a", "an", "and", "or", "but", "in", "on", "at", "to", "for", "with", "by", "from",
@@ -120,19 +133,7 @@ impl ThalamusRouter {
             return matched_lobes;
         }
 
-        // Mevcut tüm lob isimlerini veritabanından toplayalım
-        let mut all_lobes = std::collections::HashSet::new();
-        for item in db.iter() {
-            if let Ok((key, _)) = item {
-                if let Ok(lobe_name) = std::str::from_utf8(&key) {
-                    if lobe_name != "core_language" && lobe_name != "general" && lobe_name != "__registry__" {
-                        all_lobes.insert(lobe_name.to_string());
-                    }
-                }
-            }
-        }
-
-        // Kelimeler ile karşılaştır (Component-based matching with stemming and length-based strictness)
+        // Kelimeler ile karşılaştır (Component-based matching with stemming on query and length-based strictness)
         for word in &words {
             let norm_word = normalize_for_match(word);
             let (query_stem, _) = crate::morphology::parse_noun_suffix(&norm_word);
@@ -142,18 +143,15 @@ impl ThalamusRouter {
                 continue;
             }
 
-            for lobe in &all_lobes {
+            for lobe in &self.all_lobes {
                 let norm_lobe = normalize_for_match(lobe);
                 let components: Vec<&str> = norm_lobe.split('_').collect();
                 
                 let is_match = components.iter().any(|comp| {
-                    let (comp_stem, _) = crate::morphology::parse_noun_suffix(comp);
-                    let comp_stem_norm = normalize_for_match(&comp_stem);
-                    
                     if query_stem_norm.len() <= 4 {
-                        comp_stem_norm == query_stem_norm
+                        comp == &query_stem_norm
                     } else {
-                        comp_stem_norm == query_stem_norm || comp_stem_norm.starts_with(&query_stem_norm)
+                        comp == &query_stem_norm || comp.starts_with(&query_stem_norm)
                     }
                 });
                 
