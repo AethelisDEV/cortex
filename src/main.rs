@@ -305,6 +305,10 @@ fn main() -> anyhow::Result<()> {
                     println!("[Hata] Belirtilen dosya bulunamadı: {:?}", path);
                     continue;
                 }
+                if !path.is_file() {
+                    println!("[Hata] Belirtilen yol bir dosya değil (klasör olamaz): {:?}", path);
+                    continue;
+                }
 
                 println!("[WikiParser] İşlem başlatılıyor, tüm çekirdekler aktif...");
                 let start_time = std::time::Instant::now();
