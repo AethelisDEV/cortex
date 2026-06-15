@@ -57,11 +57,11 @@ impl Synthesizer {
 
         // B. Türkçe Morfolojik Şablon Sentez Adayları
         let mut active_verbs: Vec<&ConceptNode> = active_nodes.iter()
-            .filter(|n| n.content.starts_with('[') && n.content.ends_with(']'))
+            .filter(|n| n.content.starts_with('[') && n.content.ends_with(']') && !n.activation_level.is_nan())
             .collect();
 
         // En yüksek uyarılmış ilk 5 eylemi seç
-        active_verbs.sort_by(|a, b| b.activation_level.partial_cmp(&a.activation_level).unwrap_or(std::cmp::Ordering::Equal));
+        active_verbs.sort_by(|a, b| b.activation_level.total_cmp(&a.activation_level));
         active_verbs.truncate(5);
 
         let active_nouns: Vec<&ConceptNode> = active_nodes.iter()
@@ -139,8 +139,10 @@ impl Synthesizer {
                 }
             }
 
-            subjects.sort_by(|a, b| b.1.partial_cmp(&a.1).unwrap_or(std::cmp::Ordering::Equal));
-            objects.sort_by(|a, b| b.1.partial_cmp(&a.1).unwrap_or(std::cmp::Ordering::Equal));
+            subjects.retain(|x| !x.1.is_nan());
+            objects.retain(|x| !x.1.is_nan());
+            subjects.sort_by(|a, b| b.1.total_cmp(&a.1));
+            objects.sort_by(|a, b| b.1.total_cmp(&a.1));
 
             for template in &templates {
                 let text = crate::morphology::MorphologicalSynthesizer::generative_synthesis(
@@ -163,7 +165,8 @@ impl Synthesizer {
         }
 
         // Skorlara göre sırala
-        candidates.sort_by(|a, b| b.1.partial_cmp(&a.1).unwrap_or(std::cmp::Ordering::Equal));
+        candidates.retain(|x| !x.1.is_nan());
+        candidates.sort_by(|a, b| b.1.total_cmp(&a.1));
 
         if candidates.is_empty() {
             println!("[Synthesizer] Aday üretilemedi. Deterministik yola dönülüyor.");
@@ -238,6 +241,8 @@ fn run_deterministic_walk(
     mut active_nodes: Vec<ConceptNode>,
     graph: &StableDiGraph<ConceptNode, Synapse>,
 ) -> Vec<ConceptNode> {
+    active_nodes.retain(|n| !n.activation_level.is_nan());
+    
     let mut id_to_index = HashMap::with_capacity(graph.node_count());
     for idx in graph.node_indices() {
         id_to_index.insert(graph[idx].id, idx);
@@ -259,7 +264,7 @@ fn run_deterministic_walk(
                 }
             }
         }
-        b.activation_level.partial_cmp(&a.activation_level).unwrap_or(std::cmp::Ordering::Equal)
+        b.activation_level.total_cmp(&a.activation_level)
     });
     active_nodes
 }
@@ -270,7 +275,10 @@ fn run_speculative_walk(
     graph: &StableDiGraph<ConceptNode, Synapse>,
     seed_offset: usize,
 ) -> Option<Vec<ConceptNode>> {
-    if active_nodes.is_empty() {
+    let mut active_nodes_filtered = active_nodes.to_vec();
+    active_nodes_filtered.retain(|n| !n.activation_level.is_nan());
+
+    if active_nodes_filtered.is_empty() {
         return None;
     }
 
@@ -284,8 +292,8 @@ fn run_speculative_walk(
     let mut visited = HashSet::new();
 
     // Seed düğümü seç (En uyarık 3 düğümden biri)
-    let mut sorted_active = active_nodes.to_vec();
-    sorted_active.sort_by(|a, b| b.activation_level.partial_cmp(&a.activation_level).unwrap_or(std::cmp::Ordering::Equal));
+    let mut sorted_active = active_nodes_filtered.clone();
+    sorted_active.sort_by(|a, b| b.activation_level.total_cmp(&a.activation_level));
     
     let seed_index = seed_offset % sorted_active.len().min(3);
     let mut current = sorted_active[seed_index].clone();
@@ -300,7 +308,7 @@ fn run_speculative_walk(
         // Aday seçimi (Doğrudan komşular + 2/3 adım dolaylılar + benzer etiketliler)
         let mut candidates = Vec::new();
 
-        for candidate_node in active_nodes {
+        for candidate_node in &active_nodes_filtered {
             if visited.contains(&candidate_node.id) {
                 continue;
             }
@@ -333,7 +341,8 @@ fn run_speculative_walk(
         }
 
         // Adaylar arasından skora göre ağırlıklı rastgele veya en iyisini seç
-        candidates.sort_by(|a, b| b.1.partial_cmp(&a.1).unwrap_or(std::cmp::Ordering::Equal));
+        candidates.retain(|x| !x.1.is_nan());
+        candidates.sort_by(|a, b| b.1.total_cmp(&a.1));
         
         // Rastgele spekülatif sapma olasılığı (%40)
         let next_node = if rng.gen_bool(0.4) && candidates.len() > 1 {

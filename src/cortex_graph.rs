@@ -220,10 +220,11 @@ impl CortexGraph {
             .collect();
 
         // Aktivasyon seviyesine göre azalan sırada sırala
+        active_nodes_indices.retain(|&idx| !self.graph[idx].activation_level.is_nan());
         active_nodes_indices.sort_by(|&a, &b| {
             let act_a = self.graph[a].activation_level;
             let act_b = self.graph[b].activation_level;
-            act_b.partial_cmp(&act_a).unwrap_or(std::cmp::Ordering::Equal)
+            act_b.total_cmp(&act_a)
         });
 
         // Top 20'yi seç

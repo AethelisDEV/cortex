@@ -60,10 +60,14 @@ impl GlialSystem {
                 }
 
                 // Aktivasyon seviyesine göre sırala (en düşük olan en başta)
+                eviction_candidates.retain(|l| {
+                    let act = lobe_activations.get(l).cloned().unwrap_or(0.0);
+                    !act.is_nan()
+                });
                 eviction_candidates.sort_by(|a, b| {
                     let act_a = lobe_activations.get(a).cloned().unwrap_or(0.0);
                     let act_b = lobe_activations.get(b).cloned().unwrap_or(0.0);
-                    act_a.partial_cmp(&act_b).unwrap_or(std::cmp::Ordering::Equal)
+                    act_a.total_cmp(&act_b)
                 });
 
                 // En düşük aktivasyonlu lobu RAM'den tahliye et

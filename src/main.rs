@@ -201,7 +201,8 @@ fn main() -> anyhow::Result<()> {
 
                 // Uyarım derecelerine göre sırala
                 let mut sorted_active = active_nodes.clone();
-                sorted_active.sort_by(|a, b| b.activation_level.partial_cmp(&a.activation_level).unwrap_or(std::cmp::Ordering::Equal));
+                sorted_active.retain(|n| !n.activation_level.is_nan());
+                sorted_active.sort_by(|a, b| b.activation_level.total_cmp(&a.activation_level));
 
                 println!("  -> Aktif Bellek Nöronları: {}", active_nodes.len());
                 let print_limit = 50;
