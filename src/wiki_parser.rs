@@ -142,7 +142,7 @@ fn process_batch(batch: &[WikiPage], db: &sled::Db) -> anyhow::Result<(usize, us
     let mut batch_write = sled::Batch::default();
     for (lobe_name, serialized_opt) in results {
         if let Some(serialized) = serialized_opt {
-            match serde_json::to_vec(&serialized) {
+            match bincode::serialize(&serialized) {
                 Ok(bytes) => {
                     batch_write.insert(lobe_name.as_bytes(), bytes);
                     processed += 1;

@@ -331,7 +331,7 @@ impl CortexGraph {
         };
 
         // Serileştir ve veritabanına kaydet
-        let serialized_bytes = serde_json::to_vec(&serialized)?;
+        let serialized_bytes = bincode::serialize(&serialized)?;
         self.db.insert(lobe_name, serialized_bytes)?;
         self.db.flush()?;
         Ok(())
@@ -345,7 +345,7 @@ impl CortexGraph {
 
         let opt_bytes = self.db.get(lobe_name)?;
         let serialized: SerializedLobe = match opt_bytes {
-            Some(bytes) => serde_json::from_slice(&bytes)?,
+            Some(bytes) => bincode::deserialize(&bytes)?,
             None => {
                 // Lob veritabanında yoksa yüklenmiş gibi kabul et
                 self.loaded_lobes.insert(lobe_name.to_string());
@@ -476,7 +476,7 @@ mod tests {
     use crate::thalamus_router::ThalamusRouter;
 
     #[test]
-    fn test_all_lobes_valid_json() {
+    fn test_all_lobes_valid_binary() {
         let db_path = "cortex_storage/cortex.db";
         let db_result = sled::open(db_path);
         if let Ok(db) = db_result {
@@ -484,8 +484,13 @@ mod tests {
                 if let Ok((key, value)) = item {
                     let lobe_name = String::from_utf8_lossy(&key);
                     if lobe_name != "__registry__" {
-                        let res: serde_json::Result<SerializedLobe> = serde_json::from_slice(&value);
-                        assert!(res.is_ok(), "Failed to deserialize lobe '{}', error: {:?}", lobe_name, res.err());
+                        let res: Result<SerializedLobe, _> = bincode::deserialize(&value);
+                        assert!(
+                            res.is_ok(),
+                            "Lobe '{}' binary (bincode) formatında çözümlenemedi! Eski JSON verileri kalmış olabilir. Lütfen 'cortex_storage/cortex.db' klasörünü tamamen silip sistemi baştan çalıştırın. Hata: {:?}",
+                            lobe_name,
+                            res.err()
+                        );
                     }
                 }
             }

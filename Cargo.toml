@@ -16,5 +16,6 @@ lopdf = "0.34"
 quick-xml = "0.36"
 bzip2 = "0.4"
 sled = "0.34"
+bincode = "1.3"
 
 

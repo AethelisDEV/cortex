@@ -236,7 +236,7 @@ impl<C: TextChunker> IngestionPipeline<C> {
         // Kayıt defterini yükle (cortex.db üzerinden "__registry__" key'inden)
         let registry_bytes = cortex.db.get("__registry__")?;
         let mut registry: HashMap<String, String> = if let Some(bytes) = registry_bytes {
-            serde_json::from_slice(&bytes).unwrap_or_default()
+            bincode::deserialize(&bytes).unwrap_or_default()
         } else {
             HashMap::new()
         };
@@ -296,7 +296,7 @@ impl<C: TextChunker> IngestionPipeline<C> {
             registry.insert(relative_path, current_hash);
             processed += 1;
 
-            let serialized_registry = serde_json::to_vec(&registry)?;
+            let serialized_registry = bincode::serialize(&registry)?;
             cortex.db.insert("__registry__", serialized_registry)?;
             cortex.db.flush()?;
         }
