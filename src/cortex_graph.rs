@@ -334,6 +334,18 @@ impl CortexGraph {
         // Serileştir ve veritabanına kaydet
         let serialized_bytes = bincode::serialize(&serialized)?;
         self.db.insert(lobe_name, serialized_bytes)?;
+
+        // Ayrıca lobi adını "__lobes__" listesine ekle
+        let mut lobes: HashSet<String> = if let Some(bytes) = self.db.get("__lobes__")? {
+            bincode::deserialize(&bytes).unwrap_or_default()
+        } else {
+            HashSet::new()
+        };
+        if lobes.insert(lobe_name.to_string()) {
+            let lobes_bytes = bincode::serialize(&lobes)?;
+            self.db.insert("__lobes__", lobes_bytes)?;
+        }
+
         self.db.flush()?;
         Ok(())
     }

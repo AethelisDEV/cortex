@@ -16,16 +16,29 @@ impl ThalamusRouter {
 
     /// Veritabanındaki tüm lob isimlerini RAM cache'ine yükler (Performans optimizasyonu).
     pub fn reload_mappings(&mut self, db: &sled::Db) -> anyhow::Result<()> {
-        let mut lobes = std::collections::HashSet::new();
-        for item in db.iter() {
-            if let Ok((key, _)) = item {
-                if let Ok(lobe_name) = std::str::from_utf8(&key) {
-                    if lobe_name != "core_language" && lobe_name != "general" && lobe_name != "__registry__" {
-                        lobes.insert(lobe_name.to_string());
+        let mut lobes: std::collections::HashSet<String> = if let Some(bytes) = db.get("__lobes__")? {
+            bincode::deserialize(&bytes).unwrap_or_default()
+        } else {
+            std::collections::HashSet::new()
+        };
+
+        if lobes.is_empty() {
+            println!("[Talamus] Lobe dizini oluşturuluyor (Bir defaya mahsus tarama, lütfen bekleyin)...");
+            for item in db.iter() {
+                if let Ok((key, _)) = item {
+                    if let Ok(lobe_name) = std::str::from_utf8(&key) {
+                        if lobe_name != "core_language" && lobe_name != "general" && lobe_name != "__registry__" && lobe_name != "__lobes__" {
+                            lobes.insert(lobe_name.to_string());
+                        }
                     }
                 }
             }
+            let lobes_bytes = bincode::serialize(&lobes)?;
+            db.insert("__lobes__", lobes_bytes)?;
+            db.flush()?;
+            println!("[Talamus] Lobe dizini başarıyla kaydedildi: {} adet lob.", lobes.len());
         }
+
         self.all_lobes = lobes;
         Ok(())
     }

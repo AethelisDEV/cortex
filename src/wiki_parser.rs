@@ -140,11 +140,13 @@ fn process_batch(batch: &[WikiPage], db: &sled::Db) -> anyhow::Result<(usize, us
 
     // 2. Toplu Disk Yazma Optimizasyonu (sled::Batch)
     let mut batch_write = sled::Batch::default();
+    let mut new_lobes = Vec::new();
     for (lobe_name, serialized_opt) in results {
         if let Some(serialized) = serialized_opt {
             match bincode::serialize(&serialized) {
                 Ok(bytes) => {
                     batch_write.insert(lobe_name.as_bytes(), bytes);
+                    new_lobes.push(lobe_name);
                     processed += 1;
                 }
                 Err(e) => {
@@ -158,6 +160,26 @@ fn process_batch(batch: &[WikiPage], db: &sled::Db) -> anyhow::Result<(usize, us
     }
 
     db.apply_batch(batch_write)?;
+
+    // "__lobes__" listesini güncelle
+    if !new_lobes.is_empty() {
+        let mut lobes: std::collections::HashSet<String> = if let Some(bytes) = db.get("__lobes__")? {
+            bincode::deserialize(&bytes).unwrap_or_default()
+        } else {
+            std::collections::HashSet::new()
+        };
+        let mut changed = false;
+        for l in new_lobes {
+            if lobes.insert(l) {
+                changed = true;
+            }
+        }
+        if changed {
+            let lobes_bytes = bincode::serialize(&lobes)?;
+            db.insert("__lobes__", lobes_bytes)?;
+        }
+    }
+
     db.flush()?;
 
     Ok((processed, skipped))
