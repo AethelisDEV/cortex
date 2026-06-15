@@ -132,14 +132,19 @@ impl ThalamusRouter {
             }
         }
 
-        // Kelimeler ile karşılaştır (Contains-based auto matching with normalization)
+        // Kelimeler ile karşılaştır (Component-based matching: components must start with the query word)
         for word in &words {
             let norm_word = normalize_for_match(word);
             for lobe in &all_lobes {
                 let norm_lobe = normalize_for_match(lobe);
                 
-                // Eğer dosya adı sorgudaki bir kelimeyi içeriyorsa (contains)
-                if norm_lobe.contains(&norm_word) {
+                // Lobe adını bileşenlerine ayır
+                let components: Vec<&str> = norm_lobe.split('_').collect();
+                
+                // Eğer herhangi bir bileşen sorgu kelimesi ile başlıyorsa
+                let is_match = components.iter().any(|comp| comp.starts_with(&norm_word));
+                
+                if is_match {
                     if !matched_lobes.contains(lobe) {
                         matched_lobes.push(lobe.clone());
                     }
