@@ -3,5 +3,5 @@ target/
 # Runtime hafızası - AI nöron/lob veritabanı (kaynak kod değil, üretilen veri)
 cortex_storage/
 
-# Büyük/telif hakkı olan input dosyaları - sadece PDF'leri ignore et
-cortex_inputs/*.pdf
+# Büyük/telif hakkı olan input dosyaları - tüm içerik
+cortex_inputs/

@@ -153,6 +153,14 @@ impl CortexGraph {
 
     /// Talamus uyarımı ile aktivasyonu grafikte yayar.
     pub fn propagate_activation(&mut self, query_tags: &HashMap<String, f32>, decay: f32, steps: usize) {
+        // Reset all activation levels to 0.0 to avoid residual activation from previous queries
+        let node_indices: Vec<_> = self.graph.node_indices().collect();
+        for node_idx in node_indices {
+            if let Some(node) = self.graph.node_weight_mut(node_idx) {
+                node.activation_level = 0.0;
+            }
+        }
+
         // 1. Adım: Anahtar kelime eşleşmelerine göre başlangıç uyarım seviyelerini belirle
         let mut initial_activations = HashMap::new();
         for node_idx in self.graph.node_indices() {
@@ -298,7 +306,9 @@ impl CortexGraph {
         for node_idx in self.graph.node_indices() {
             let node = &self.graph[node_idx];
             if node.lobe_name == lobe_name && !node.is_proxy {
-                nodes_to_save.push(node.clone());
+                let mut saved_node = node.clone();
+                saved_node.activation_level = 0.0; // Do not persist working memory activation on disk
+                nodes_to_save.push(saved_node);
                 node_ids.insert(node.id);
             }
         }
@@ -360,33 +370,30 @@ impl CortexGraph {
         let serialized: SerializedLobe = match opt_bytes {
             Some(bytes) => bincode::deserialize(&bytes)?,
             None => {
-                // Lob veritabanında yoksa yüklenmiş gibi kabul et
                 self.loaded_lobes.insert(lobe_name.to_string());
                 return Ok(());
             }
         };
 
-        println!("[LobeManager] Lob veritabanından RAM'e yükleniyor: {}", lobe_name);
-
         // 1. Adım: Düğümleri yükle
-        for loaded_node in serialized.nodes {
+        for mut loaded_node in serialized.nodes {
             let id = loaded_node.id;
             let content = loaded_node.content.clone();
             
+            loaded_node.activation_level = 0.0; // Ensure loaded node starts with 0.0 activation
+            
             if let Some(&node_idx) = self.id_to_index.get(&id) {
-                // Eğer grafikte bu düğüm bir Proxy olarak bulunuyorsa, onu gerçek verilerle yükselt (Upgrade)
                 if self.graph[node_idx].is_proxy {
                     let node_mut = &mut self.graph[node_idx];
                     node_mut.content = loaded_node.content;
                     node_mut.tags = loaded_node.tags;
-                    node_mut.activation_level = loaded_node.activation_level;
+                    node_mut.activation_level = 0.0;
                     node_mut.lobe_name = loaded_node.lobe_name;
                     node_mut.is_proxy = false;
                     node_mut.proxy_target = None;
                     self.content_to_id.insert(content, id);
                 }
             } else {
-                // Düğüm grafikte yoksa yeni ekle
                 self.content_to_id.insert(content, id);
                 let node_idx = self.graph.add_node(loaded_node);
                 self.id_to_index.insert(id, node_idx);
@@ -399,9 +406,7 @@ impl CortexGraph {
             let target_id = ser_edge.target_id;
             let target_lobe = ser_edge.target_lobe;
 
-            // Target grafikte var mı?
             if !self.id_to_index.contains_key(&target_id) {
-                // Hedef düğüm yüklü değilse, onun yerine geçici bir Proxy/Stub düğüm oluştur
                 let proxy_node = ConceptNode {
                     id: target_id,
                     content: format!("[Proxy Node: {} ID {}]", target_lobe, target_id),
@@ -416,10 +421,13 @@ impl CortexGraph {
                 self.id_to_index.insert(target_id, proxy_idx);
             }
 
-            self.add_synapse(source_id, target_id, ser_edge.synapse.weight, ser_edge.synapse.synapse_type);
+            if let (Some(&u), Some(&v)) = (self.id_to_index.get(&source_id), self.id_to_index.get(&target_id)) {
+                self.graph.add_edge(u, v, ser_edge.synapse);
+            }
         }
 
         self.loaded_lobes.insert(lobe_name.to_string());
+        crate::morphology::update_stats_from_graph(&self.graph);
         Ok(())
     }
 
@@ -431,7 +439,7 @@ impl CortexGraph {
 
         // 1. Önce diske kaydet
         self.save_lobe(lobe_name)?;
-        println!("[LobeManager] Lob diske kaydedildi ve RAM'den temizleniyor: {}", lobe_name);
+
 
         // 2. Düğümleri ve kenarları temizle
         let node_indices: Vec<_> = self.graph.node_indices().collect();
@@ -479,6 +487,7 @@ impl CortexGraph {
         }
 
         self.loaded_lobes.remove(lobe_name);
+        crate::morphology::update_stats_from_graph(&self.graph);
         Ok(())
     }
 }
@@ -487,6 +496,26 @@ impl CortexGraph {
 mod tests {
     use super::*;
     use crate::thalamus_router::ThalamusRouter;
+
+    #[test]
+    fn test_inspect_db_lobes() {
+        let db_path = "cortex_storage/cortex.db";
+        let start_open = std::time::Instant::now();
+        if let Ok(db) = sled::open(db_path) {
+            println!("Sled open took: {:?}", start_open.elapsed());
+            let mut cortex = CortexGraph::new(db.clone());
+            
+            let start_load1 = std::time::Instant::now();
+            cortex.load_lobe("core_language").unwrap();
+            println!("First load_lobe took: {:?}", start_load1.elapsed());
+            
+            cortex.unload_lobe("core_language").unwrap();
+            
+            let start_load2 = std::time::Instant::now();
+            cortex.load_lobe("core_language").unwrap();
+            println!("Second load_lobe took: {:?}", start_load2.elapsed());
+        }
+    }
 
     #[test]
     fn test_all_lobes_valid_binary() {
@@ -586,6 +615,45 @@ mod tests {
         assert_eq!(derive_lobe_name_from_filename("rust_what_is_ownership.txt"), "ownership");
         assert_eq!(derive_lobe_name_from_filename("rust_references_and_borrowing.txt"), "borrowing");
         assert_eq!(derive_lobe_name_from_filename("Variables and Mutability.txt"), "variables_and_mutability");
+    }
+
+    #[test]
+    fn test_query_residual_activation_reset() {
+        let db = sled::Config::new().temporary(true).open().unwrap();
+        let mut cortex = CortexGraph::new(db.clone());
+        
+        cortex.load_lobe("lobe_a").unwrap();
+        let mut tags_a = HashMap::new();
+        tags_a.insert("apple".to_string(), 1.0);
+        let a1 = cortex.add_node("Apple is a fruit.", tags_a, "lobe_a");
+        cortex.save_lobe("lobe_a").unwrap();
+        
+        // Let's propagate with "apple" query
+        let mut query_tags = HashMap::new();
+        query_tags.insert("apple".to_string(), 1.0);
+        cortex.propagate_activation(&query_tags, 0.05, 2);
+        
+        let node_idx = *cortex.id_to_index.get(&a1).unwrap();
+        assert!(cortex.graph[node_idx].activation_level > 0.0, "Apple node should be active");
+        
+        // Save and reload to ensure disk persistence has 0.0 activation
+        cortex.save_lobe("lobe_a").unwrap();
+        cortex.unload_lobe("lobe_a").unwrap();
+        cortex.load_lobe("lobe_a").unwrap();
+        
+        let reloaded_node_idx = *cortex.id_to_index.get(&a1).unwrap();
+        assert_eq!(cortex.graph[reloaded_node_idx].activation_level, 0.0, "Saved and reloaded node should have 0.0 activation");
+        
+        // Propagate again but with a query that does NOT match "apple"
+        // (e.g. "banana")
+        // First artificially set activation level to 1.0 to simulate it being active
+        cortex.graph[reloaded_node_idx].activation_level = 1.0;
+        
+        let mut query_tags_2 = HashMap::new();
+        query_tags_2.insert("banana".to_string(), 1.0);
+        cortex.propagate_activation(&query_tags_2, 0.05, 2);
+        
+        assert_eq!(cortex.graph[reloaded_node_idx].activation_level, 0.0, "Activation should be reset to 0.0 on new query");
     }
 }
 

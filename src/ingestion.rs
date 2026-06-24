@@ -219,6 +219,7 @@ impl<C: TextChunker> IngestionPipeline<C> {
             cortex.save_lobe(&lobe)?;
         }
 
+        crate::morphology::update_stats_from_graph(&cortex.graph);
         println!("\n[Ingestion] Veri girişi ve lob güncellemeleri tamamlandı.");
         Ok(ingested_ids)
     }

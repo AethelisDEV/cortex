@@ -68,11 +68,20 @@ impl ThalamusRouter {
             return tag_map;
         }
 
+        let total_lobes = self.all_lobes.len();
+
         for word in &words {
-            *tag_map.entry(word.clone()).or_insert(0.0) += 1.0;
+            let match_count = self.count_matching_lobes(word);
+
+            let ratio = match_count as f32 / total_lobes.max(1) as f32;
+            // Güvenli Logaritma Kalkanı:
+            let activation = 1.0 / (1.0 + ratio + ((match_count + 1) as f32).ln());
+
+            *tag_map.entry(word.clone()).or_insert(0.0) += activation;
+            
             // Eş-Anlamlı Kavram Köprüleri (Concept Synonyms)
             for syn in Self::get_synonyms(word) {
-                tag_map.entry(syn).or_insert(0.8);
+                tag_map.entry(syn).or_insert(activation * 0.8);
             }
         }
 
@@ -123,58 +132,119 @@ impl ThalamusRouter {
         }
     }
 
-    /// Sorgudaki kelimelerle mevcut lob isimlerini dinamik olarak karşılaştırıp eşleşen lob adlarını döner.
-    pub fn find_dynamic_matching_lobes(&self, query: &str, _db: &sled::Db) -> Vec<String> {
-        // Soru ve Bağlaç Filtresi (Stop-Words Exclusion)
-        let stopwords = [
-            "the", "a", "an", "and", "or", "but", "in", "on", "at", "to", "for", "with", "by", "from",
-            "is", "was", "were", "are", "be", "been", "this", "that", "these", "those", "it", "its", "they",
-            "their", "them", "he", "she", "his", "her", "as", "what", "how", "why", "where", "when", "who", "which",
-            "ve", "veya", "ile", "için", "göre", "tarafından", "bir", "bu", "o", "şu", "da", "de", "ki", "en",
-            "daha", "çok", "her", "ise", "gibi", "kadar", "olan", "olarak", "nedir", "nasil", "nasıl", "ne"
-        ];
+    /// Kelimenin kaç adet lob ile eşleştiğini dinamik olarak hesaplar.
+    pub fn count_matching_lobes(&self, word: &str) -> usize {
+        let norm_word = normalize_for_match(word);
+        let (query_stem, _) = crate::morphology::parse_noun_suffix(&norm_word);
+        let query_stem_norm = normalize_for_match(&query_stem);
+        if query_stem_norm.is_empty() {
+            return 0;
+        }
 
+        let mut match_count = 0;
+        for lobe in &self.all_lobes {
+            let norm_lobe = normalize_for_match(lobe);
+            let components: Vec<&str> = norm_lobe.split('_').collect();
+            let is_match = components.iter().any(|comp| {
+                if query_stem_norm.len() <= 4 {
+                    comp == &query_stem_norm
+                } else {
+                    comp == &query_stem_norm || comp.starts_with(&query_stem_norm)
+                }
+            });
+            if is_match {
+                match_count += 1;
+            }
+        }
+        match_count
+    }
+
+    pub fn find_dynamic_matching_lobes(&self, query: &str, _db: &sled::Db) -> Vec<String> {
         let query_lower = query.to_lowercase();
         // Boşluklar ve temel noktalama işaretlerine göre bölüp temizle
         let words: Vec<&str> = query_lower.split(|c: char| c.is_whitespace() || c == '?' || c == '!' || c == '.' || c == ',')
             .map(|w| w.trim())
-            .filter(|w| !w.is_empty() && w.len() > 1 && !stopwords.contains(w))
+            .filter(|w| !w.is_empty() && w.len() > 1)
             .collect();
 
-        let mut matched_lobes = Vec::new();
         if words.is_empty() {
-            return matched_lobes;
+            return Vec::new();
         }
 
-        // Kelimeler ile karşılaştır (Component-based matching with stemming on query and length-based strictness)
+        // 1. Sorgudaki kelimelerin normalize edilmiş köklerini hesapla
+        let mut query_stems = Vec::new();
         for word in &words {
             let norm_word = normalize_for_match(word);
             let (query_stem, _) = crate::morphology::parse_noun_suffix(&norm_word);
             let query_stem_norm = normalize_for_match(&query_stem);
-
-            if query_stem_norm.is_empty() {
-                continue;
-            }
-
-            for lobe in &self.all_lobes {
-                let norm_lobe = normalize_for_match(lobe);
-                let components: Vec<&str> = norm_lobe.split('_').collect();
-                
-                let is_match = components.iter().any(|comp| {
-                    if query_stem_norm.len() <= 4 {
-                        comp == &query_stem_norm
-                    } else {
-                        comp == &query_stem_norm || comp.starts_with(&query_stem_norm)
-                    }
-                });
-                
-                if is_match {
-                    if !matched_lobes.contains(lobe) {
-                        matched_lobes.push(lobe.clone());
-                    }
-                }
+            if !query_stem_norm.is_empty() && !query_stems.contains(&query_stem_norm) {
+                query_stems.push(query_stem_norm);
             }
         }
+
+        if query_stems.is_empty() {
+            return Vec::new();
+        }
+
+        // 2. Tek geçişte:
+        // - Kelimelerin kaç farklı lobda geçtiğini say (TF-IDF Paydası)
+        // - Lobların hangi kelimelerle eşleştiğini kaydet
+        let mut match_counts = vec![0usize; query_stems.len()];
+        let mut lobe_matches = HashMap::new();
+
+        for lobe in &self.all_lobes {
+            let norm_lobe = normalize_for_match(lobe);
+            let components: Vec<&str> = norm_lobe.split('_').collect();
+            
+            let mut matched_indices = Vec::new();
+            for (idx, query_stem_norm) in query_stems.iter().enumerate() {
+                let is_match = components.iter().any(|comp| {
+                    if query_stem_norm.len() <= 4 {
+                        comp == query_stem_norm
+                    } else {
+                        comp == query_stem_norm || comp.starts_with(query_stem_norm)
+                    }
+                });
+                if is_match {
+                    matched_indices.push(idx);
+                }
+            }
+            
+            if !matched_indices.is_empty() {
+                for &idx in &matched_indices {
+                    match_counts[idx] += 1;
+                }
+                lobe_matches.insert(lobe.clone(), matched_indices);
+            }
+        }
+
+        // 3. Her bir kelime için TF-IDF (Logaritmik Sönümleme) aktivasyonunu hesapla
+        let total_lobes = self.all_lobes.len();
+        let mut stem_activations = vec![0.0f32; query_stems.len()];
+        for idx in 0..query_stems.len() {
+            let match_count = match_counts[idx];
+            let ratio = match_count as f32 / total_lobes.max(1) as f32;
+            let activation = 1.0 / (1.0 + ratio + ((match_count + 1) as f32).ln());
+            stem_activations[idx] = activation;
+        }
+
+        // 4. Eşleşen lobları, eşleşen kelimelerin toplam TF-IDF ağırlığına göre puanla
+        let mut lobe_scores = Vec::with_capacity(lobe_matches.len());
+        for (lobe, matched_indices) in lobe_matches {
+            let mut score = 0.0f32;
+            for idx in matched_indices {
+                score += stem_activations[idx];
+            }
+            lobe_scores.push((lobe, score));
+        }
+
+        // 5. Puanlara göre azalan sırada sırala ve en alakalı ilk 15 lobu dön
+        lobe_scores.sort_by(|a, b| b.1.total_cmp(&a.1));
+        
+        let matched_lobes: Vec<String> = lobe_scores.into_iter()
+            .take(15)
+            .map(|(lobe, _)| lobe)
+            .collect();
 
         matched_lobes
     }
@@ -182,10 +252,10 @@ impl ThalamusRouter {
 
 /// Türkçe/İngilizce karakter esnekliğini sağlamak için normalizasyon köprüsü
 pub fn normalize_for_match(s: &str) -> String {
-    s.to_lowercase()
+    crate::morphology::lowercase_tr(s)
         .chars()
         .map(|c| match c {
-            'ı' | 'İ' => 'i',
+            'ı' => 'i',
             'ğ' | 'Ğ' => 'g',
             'ü' | 'Ü' => 'u',
             'ş' | 'Ş' => 's',
@@ -198,17 +268,61 @@ pub fn normalize_for_match(s: &str) -> String {
 
 /// Metni temizleyip küçük harfli kelime dizisine çeviren yardımcı fonksiyon.
 pub fn clean_text_to_words(text: &str) -> Vec<String> {
-    let stopwords = [
-        "the", "a", "an", "and", "or", "but", "in", "on", "at", "to", "for", "of", "with", "by", "from",
-        "is", "was", "were", "are", "be", "been", "this", "that", "these", "those", "it", "its", "they",
-        "their", "them", "he", "she", "his", "her", "as",
-        "ve", "veya", "ile", "için", "göre", "tarafından", "bir", "bu", "o", "şu", "da", "de", "ki", "en",
-        "daha", "çok", "her", "ise", "gibi", "kadar", "olan", "olarak"
-    ];
-    text.to_lowercase()
+    crate::morphology::lowercase_tr(text)
         .split(|c: char| !c.is_alphabetic() && c != '_' && c != '$' && c != '-')
         .map(|w| w.trim())
-        .filter(|w| !w.is_empty() && w.len() > 1 && !stopwords.contains(w))
+        .filter(|w| !w.is_empty() && w.len() > 1)
         .map(|w| w.to_string())
         .collect()
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_dynamic_stopword_filtering() {
+        let mut router = ThalamusRouter::new();
+        // Insert 200 lobes
+        for i in 0..200 {
+            router.all_lobes.insert(format!("lobe_{}", i));
+        }
+
+        // Add a common word to more than 0.5% of lobes
+        router.all_lobes.insert("lobe_ortak_1".to_string());
+        router.all_lobes.insert("lobe_ortak_2".to_string());
+        router.all_lobes.insert("lobe_ortak_3".to_string());
+        router.all_lobes.insert("lobe_ortak_4".to_string());
+        router.all_lobes.insert("lobe_ortak_5".to_string());
+
+        // A rare word
+        router.all_lobes.insert("lobe_nadir".to_string());
+
+        // Tokenize query with a dummy database
+        let tag_map = router.tokenize_query("ortak nadir");
+
+        // Common word 'ortak' is not completely discarded, but has significantly decayed weight
+        let ortak_weight = tag_map.get("ortak").cloned().unwrap_or(0.0);
+        let nadir_weight = tag_map.get("nadir").cloned().unwrap_or(0.0);
+        assert!(ortak_weight < nadir_weight, "Common word 'ortak' should have lower weight than rare word 'nadir'.");
+        assert!(tag_map.contains_key("nadir"), "Rare word 'nadir' should be kept.");
+    }
+
+    #[test]
+    fn test_safe_logarithm_weight_shield() {
+        let mut router = ThalamusRouter::new();
+        router.all_lobes.insert("lobe_gta_6".to_string());
+        router.all_lobes.insert("lobe_zaman".to_string());
+        router.all_lobes.insert("other_zaman".to_string());
+
+        // Total lobes <= 100, so no stop-word filtering activates.
+        // But activation values should differ based on match count (rarity).
+        let tag_map = router.tokenize_query("gta zaman");
+
+        let gta_weight = tag_map.get("gta").cloned().unwrap_or(0.0);
+        let zaman_weight = tag_map.get("zaman").cloned().unwrap_or(0.0);
+
+        assert_eq!(gta_weight, 1.0);
+        assert!(zaman_weight < 1.0, "Common word 'zaman' should have lower weight than rare word 'gta'");
+    }
 }

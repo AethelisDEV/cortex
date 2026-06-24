@@ -1,3 +1,105 @@
+use std::collections::HashMap;
+use std::sync::RwLock;
+use petgraph::visit::IntoEdgeReferences;
+
+pub static STATS_CACHE: RwLock<Option<HashMap<String, (f32, f32)>>> = RwLock::new(None);
+
+pub fn lowercase_tr(s: &str) -> String {
+    let mut result = String::with_capacity(s.len());
+    for c in s.chars() {
+        match c {
+            'İ' => result.push('i'),
+            'I' => result.push('ı'),
+            other => {
+                for lower_c in other.to_lowercase() {
+                    result.push(lower_c);
+                }
+            }
+        }
+    }
+    result
+}
+
+pub fn update_stats_from_graph(graph: &petgraph::stable_graph::StableDiGraph<crate::cortex_graph::ConceptNode, crate::cortex_graph::Synapse>) {
+    let mut cache = HashMap::new();
+    let mut idx_to_info = HashMap::with_capacity(graph.node_count());
+    
+    for idx in graph.node_indices() {
+        let node = &graph[idx];
+        let norm = lowercase_tr(&node.content);
+        idx_to_info.insert(idx, (node.content.clone(), norm.clone()));
+        
+        let entry = cache.entry(norm.clone()).or_insert((0.0, 0.0));
+        entry.0 += 1.0;
+        if node.content != norm {
+            let entry_exact = cache.entry(node.content.clone()).or_insert((0.0, 0.0));
+            entry_exact.0 += 1.0;
+        }
+    }
+    
+    use petgraph::visit::EdgeRef;
+    for edge in graph.edge_references() {
+        if let Some((source_content, norm_src)) = idx_to_info.get(&edge.source()) {
+            let entry = cache.entry(norm_src.clone()).or_insert((0.0, 0.0));
+            entry.1 += edge.weight().weight;
+            if source_content != norm_src {
+                let entry_exact = cache.entry(source_content.clone()).or_insert((0.0, 0.0));
+                entry_exact.1 += edge.weight().weight;
+            }
+        }
+        if let Some((target_content, norm_tgt)) = idx_to_info.get(&edge.target()) {
+            let entry = cache.entry(norm_tgt.clone()).or_insert((0.0, 0.0));
+            entry.1 += edge.weight().weight;
+            if target_content != norm_tgt {
+                let entry_exact = cache.entry(target_content.clone()).or_insert((0.0, 0.0));
+                entry_exact.1 += edge.weight().weight;
+            }
+        }
+    }
+    
+    if let Ok(mut write_guard) = STATS_CACHE.write() {
+        *write_guard = Some(cache);
+    }
+}
+
+pub fn get_word_stats(word: &str) -> (f32, f32) {
+    if let Ok(read_guard) = STATS_CACHE.read() {
+        if let Some(ref cache) = *read_guard {
+            let norm = lowercase_tr(word);
+            if let Some(&(freq, syn)) = cache.get(&norm) {
+                return (freq, syn);
+            }
+            if let Some(&(freq, syn)) = cache.get(word) {
+                return (freq, syn);
+            }
+        }
+    }
+    (0.0, 0.0)
+}
+
+pub fn is_cache_populated() -> bool {
+    if let Ok(read_guard) = STATS_CACHE.read() {
+        if let Some(ref cache) = *read_guard {
+            return !cache.is_empty();
+        }
+    }
+    false
+}
+
+pub fn is_stemming_valid(original: &str, stem: &str) -> bool {
+    let (freq_orig, syn_orig) = get_word_stats(original);
+    let (freq_stem, syn_stem) = get_word_stats(stem);
+    if freq_orig > 0.0 && freq_stem == 0.0 {
+        return false;
+    }
+    if freq_orig > 0.0 && freq_stem > 0.0 {
+        if syn_orig > 2.0 * syn_stem {
+            return false;
+        }
+    }
+    true
+}
+
 pub const VERB_STEMS: &[&str] = &[
     "sağla", "et", "engelle", "önle", "kullan", "incele", "hesapla", "bulun", "çalış",
     "tanımla", "oluştur", "yönet", "yaz", "oku", "çöz", "geliştir", "destekle", "göster",
@@ -42,8 +144,9 @@ impl ConceptSplitter {
             }
 
             // Bağlaç veya edat ise şablona doğrudan sabit kelime olarak ekle
-            if conj_preps.contains(&cleaned.to_lowercase().as_str()) {
-                template_parts.push(cleaned.to_lowercase());
+            let cleaned_lower = lowercase_tr(&cleaned);
+            if conj_preps.contains(&cleaned_lower.as_str()) {
+                template_parts.push(cleaned_lower);
                 continue;
             }
 
@@ -391,7 +494,7 @@ fn clean_punctuation(word: &str) -> String {
 }
 
 pub fn get_last_vowel(word: &str) -> Option<char> {
-    let lower = word.to_lowercase();
+    let lower = lowercase_tr(word);
     if lower == "rust" {
         return Some('a'); // pronounced "rast"
     }
@@ -459,21 +562,24 @@ fn apply_voicing(word: &str) -> String {
 }
 
 pub fn parse_noun_suffix(word: &str) -> (String, String) {
-    let mut current_word = word.to_string();
-    let mut current_lower = word.to_lowercase();
-    let mut final_suffix = "".to_string();
-    
-    let protected_nouns = [
-        "hafıza", "dalga", "sızıntı", "yapı", "veri", "kedi", "kutu", "doku", "koşul",
-        "hata", "parçacık", "matris", "algoritma", "mimar", "bellek", "güvenlik",
-        "weka", "java", "kümeleme", "birliktelik", "indirme", "yükleme", "şekil", "şekildeki", 
-        "grafik", "nöron", "sinaps", "talamus", "glia"
-    ];
-    
-    if protected_nouns.contains(&current_lower.as_str()) {
-        return (word.to_string(), "".to_string());
+    if let Some(pos) = word.find('\'') {
+        let stem = word[..pos].to_string();
+        let suffix_part = &word[pos + 1..];
+        let suffix_type = match suffix_part {
+            s if s.contains("da") || s.contains("de") || s.contains("ta") || s.contains("te") => "-de".to_string(),
+            s if s.contains("dan") || s.contains("den") || s.contains("tan") || s.contains("ten") => "-den".to_string(),
+            s if s.contains("in") || s.contains("ın") || s.contains("un") || s.contains("ün") => "-in".to_string(),
+            s if s.contains("i") || s.contains("ı") || s.contains("u") || s.contains("ü") => "-i".to_string(),
+            s if s.contains("e") || s.contains("a") => "-e".to_string(),
+            _ => "".to_string(),
+        };
+        return (stem, suffix_type);
     }
 
+    let mut current_word = word.to_string();
+    let mut current_lower = lowercase_tr(word);
+    let mut final_suffix = "".to_string();
+    
     let suffix_rules = [
         ("-i", vec!["lerini", "larını"]),
         ("-e", vec!["lerine", "larına"]),
@@ -496,38 +602,47 @@ pub fn parse_noun_suffix(word: &str) -> (String, String) {
 
     let mut stripped_any = true;
     while stripped_any {
+        let (freq_curr, _) = get_word_stats(&current_lower);
         stripped_any = false;
         
         for (suffix_type, endings) in &suffix_rules {
             let mut matched = false;
             for ending in endings {
                 if current_lower.ends_with(ending) {
-                    // Dinamik Döngü İçi Koruma (Iterative Suffix Protection):
-                    // Eğer tek sesli harf düşürme kuralı uygulayacaksak ve kelime isim-fiil/yapım eki formundaysa es geç
                     let is_single_vowel = (suffix_type == &"-i" && (ending == &"i" || ending == &"ı" || ending == &"u" || ending == &"ü"))
                         || (suffix_type == &"-e" && (ending == &"e" || ending == &"a"));
+
+                    if is_single_vowel && !is_cache_populated() {
+                        continue;
+                    }
 
                     if is_single_vowel {
                         let char_count = current_lower.chars().count();
                         if char_count >= 2 {
                             let last_two: String = current_lower.chars().skip(char_count - 2).collect();
                             if matches!(last_two.as_str(), "me" | "ma" | "ki" | "si" | "sı" | "su" | "sü" | "ci" | "cı" | "cu" | "cü" | "çi" | "çı" | "çu" | "çü" | "li" | "lı" | "lu" | "lü" | "gi" | "gı" | "gu" | "gü" | "ti" | "tı" | "tu" | "tü" | "ri" | "rı" | "ru" | "rü" | "di" | "dı" | "du" | "dü") {
-                                continue; // Tek sesli düşürmeyi yapma, kelimeyi koru
+                                continue;
                             }
                         }
                     }
 
-                    let stem_len = current_word.len() - ending.len();
-                    if stem_len >= 3 {
-                        let stem_raw = &current_word[..stem_len];
-                        current_word = restore_voicing(stem_raw);
-                        current_lower = current_word.to_lowercase();
-                        if final_suffix.is_empty() {
-                            final_suffix = suffix_type.to_string();
+                    let ending_char_count = ending.chars().count();
+                    let word_char_count = current_word.chars().count();
+                    if word_char_count >= ending_char_count + 3 {
+                        let stem_raw: String = current_word.chars().take(word_char_count - ending_char_count).collect();
+                        let candidate = restore_voicing(&stem_raw);
+                        let candidate_lower = lowercase_tr(&candidate);
+                        
+                        if is_stemming_valid(&current_lower, &candidate_lower) {
+                            current_word = candidate;
+                            current_lower = candidate_lower;
+                            if final_suffix.is_empty() {
+                                final_suffix = suffix_type.to_string();
+                            }
+                            matched = true;
+                            stripped_any = true;
+                            break;
                         }
-                        matched = true;
-                        stripped_any = true;
-                        break;
                     }
                 }
             }
@@ -535,9 +650,7 @@ pub fn parse_noun_suffix(word: &str) -> (String, String) {
                 break;
             }
         }
-        
-        // Eğer kelime koruma listesine girdiyse daha fazla parçalama
-        if protected_nouns.contains(&current_lower.as_str()) {
+        if freq_curr > 0.0 {
             break;
         }
     }
@@ -546,7 +659,7 @@ pub fn parse_noun_suffix(word: &str) -> (String, String) {
 }
 
 pub fn detect_verb(word: &str) -> Option<(String, String)> {
-    let lower = word.to_lowercase();
+    let lower = lowercase_tr(word);
     for &stem in VERB_STEMS {
         let match_stem = if stem == "et" && lower.starts_with("ed") {
             "ed"
@@ -557,20 +670,41 @@ pub fn detect_verb(word: &str) -> Option<(String, String)> {
         };
         
         let suffix = &lower[match_stem.len()..];
+        let mut detected_suffix_type = None;
         if suffix.is_empty() {
-            return Some((stem.to_string(), "-r".to_string()));
-        }
-        
-        if suffix.contains("meli") || suffix.contains("malı") {
-            return Some((stem.to_string(), "-meli".to_string()));
+            detected_suffix_type = Some("-r".to_string());
+        } else if suffix.contains("meli") || suffix.contains("malı") {
+            detected_suffix_type = Some("-meli".to_string());
         } else if suffix.contains("di") || suffix.contains("dı") || suffix.contains("du") || suffix.contains("dü") ||
                   suffix.contains("ti") || suffix.contains("tı") || suffix.contains("tu") || suffix.contains("tü") {
-            return Some((stem.to_string(), "-di".to_string()));
+            detected_suffix_type = Some("-di".to_string());
         } else if suffix.contains("mek") || suffix.contains("mak") {
-            return Some((stem.to_string(), "-mek".to_string()));
+            detected_suffix_type = Some("-mek".to_string());
         } else if suffix.contains('r') || suffix.contains("ar") || suffix.contains("er") ||
                   suffix.contains("ır") || suffix.contains("ir") || suffix.contains("ur") || suffix.contains("ür") {
-            return Some((stem.to_string(), "-r".to_string()));
+            detected_suffix_type = Some("-r".to_string());
+        }
+
+        if let Some(suf_type) = detected_suffix_type {
+            let mut has_longer_db_prefix = false;
+            for (byte_idx, ch) in lower.char_indices() {
+                let len = byte_idx + ch.len_utf8();
+                if len > match_stem.len() && len <= lower.len() {
+                    let prefix = &lower[..len];
+                    let (freq, _) = get_word_stats(prefix);
+                    if freq > 0.0 {
+                        has_longer_db_prefix = true;
+                        break;
+                    }
+                }
+            }
+            if has_longer_db_prefix {
+                continue;
+            }
+
+            if is_stemming_valid(&lower, match_stem) {
+                return Some((stem.to_string(), suf_type));
+            }
         }
     }
     None
@@ -610,8 +744,24 @@ mod tests {
         assert_eq!(MorphologicalSynthesizer::conjugate_verb("çalış", "-di"), "çalıştı");
     }
 
+    fn seed_all() {
+        let mut cache = HashMap::new();
+        let words = vec![
+            "hafıza", "güvenlik", "sağla", "işletim", "isletim", "sistem", "sistemi",
+            "indirme", "şekildeki", "kümeleme", "mekanik", "davranış"
+        ];
+        for word in words {
+            cache.insert(word.to_string(), (1.0, 1.0));
+            cache.insert(lowercase_tr(word), (1.0, 1.0));
+        }
+        if let Ok(mut write_guard) = STATS_CACHE.write() {
+            *write_guard = Some(cache);
+        }
+    }
+
     #[test]
     fn test_split_to_concepts() {
+        seed_all();
         let text = "Rust hafıza güvenliğini sağlar.";
         let (concepts, template) = ConceptSplitter::split_to_concepts(text);
         assert!(concepts.contains(&"Rust".to_string()));
@@ -623,13 +773,12 @@ mod tests {
 
     #[test]
     fn test_math_and_formula_shield() {
-        // Equation test
+        seed_all();
         let eq = "E = mc^2";
         let (concepts, template) = ConceptSplitter::split_to_concepts(eq);
         assert_eq!(concepts, vec!["E = mc^2".to_string()]);
         assert_eq!(template, "");
 
-        // Operator test
         let op = "+";
         let (concepts, template) = ConceptSplitter::split_to_concepts(op);
         assert_eq!(concepts, vec!["+".to_string()]);
@@ -649,7 +798,7 @@ mod tests {
 
     #[test]
     fn test_split_to_concepts_edge_cases() {
-        // Test verbal nouns ending in -me/-ma and relative pronouns ending in -ki
+        seed_all();
         let (stem1, suffix1) = parse_noun_suffix("indirme");
         assert_eq!(stem1, "indirme");
         assert_eq!(suffix1, "");
@@ -677,5 +826,40 @@ mod tests {
         let (stem7, suffix7) = parse_noun_suffix("davranışını");
         assert_eq!(stem7, "davranış");
         assert_eq!(suffix7, "-i");
+
+        let (stem8, suffix8) = parse_noun_suffix("Hamburg'daki");
+        assert_eq!(stem8, "Hamburg");
+        assert_eq!(suffix8, "-de");
+
+        let (stem9, suffix9) = parse_noun_suffix("proton'larla");
+        assert_eq!(stem9, "proton");
+        assert_eq!(suffix9, "-e");
+    }
+
+    #[test]
+    fn test_isletim_behavior() {
+        seed_all();
+        let (stem, suffix) = parse_noun_suffix("işletim");
+        assert_eq!(stem, "işletim");
+        assert_eq!(suffix, "");
+        let (stem_norm, suffix_norm) = parse_noun_suffix("isletim");
+        assert_eq!(stem_norm, "isletim");
+        assert_eq!(suffix_norm, "");
+        let verb = detect_verb("işletim");
+        assert_eq!(verb, None);
+    }
+
+    #[test]
+    fn test_unicode_slicing_safety() {
+        seed_all();
+        // These inputs would previously trigger char boundary panics in detect_verb
+        let _ = detect_verb("işleşti");
+        let _ = detect_verb("çalışı");
+        let _ = detect_verb("engellediğ");
+        
+        // This input tests parse_noun_suffix with Turkish unicode characters
+        let (_stem, suffix) = parse_noun_suffix("çalışacağı");
+        assert_eq!(suffix, "-i");
     }
 }
+

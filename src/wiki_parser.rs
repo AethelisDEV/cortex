@@ -344,8 +344,21 @@ pub fn derive_lobe_name_from_title(title: &str) -> String {
     }
 }
 
+fn find_target_idx(text: &str, target: &str) -> Option<usize> {
+    let target_char_count = target.chars().count();
+    let mut search_pos = 0;
+    while let Some(relative_idx) = text[search_pos..].find("==") {
+        let abs_idx = search_pos + relative_idx;
+        let candidate: String = text[abs_idx..].chars().take(target_char_count).collect();
+        if crate::morphology::lowercase_tr(&candidate) == target {
+            return Some(abs_idx);
+        }
+        search_pos = abs_idx + 2;
+    }
+    None
+}
+
 fn truncate_references(text: &str) -> &str {
-    let lower = text.to_lowercase();
     let targets = [
         "==kaynakça==", "== kaynakça ==",
         "==references==", "== references ==",
@@ -359,7 +372,7 @@ fn truncate_references(text: &str) -> &str {
 
     let mut min_idx = text.len();
     for target in &targets {
-        if let Some(idx) = lower.find(target) {
+        if let Some(idx) = find_target_idx(text, target) {
             if idx < min_idx {
                 min_idx = idx;
             }
@@ -367,6 +380,7 @@ fn truncate_references(text: &str) -> &str {
     }
     &text[..min_idx]
 }
+
 
 /// MediaWiki biçimlendirmelerini, bilgi kutularını, bağlantıları ve HTML'leri temizleyen fonksiyon.
 pub fn clean_mediawiki_syntax(text: &str) -> String {
@@ -480,19 +494,53 @@ fn clean_wiki_links(s: &str) -> String {
     let mut chars = s.chars().peekable();
     while let Some(c) = chars.next() {
         if c == '[' && chars.peek() == Some(&'[') {
-            chars.next(); // ikinci '[' karakterini tüket
+            chars.next(); // ikinci '['
             let mut inside = String::new();
             while let Some(inner_c) = chars.next() {
                 if inner_c == ']' && chars.peek() == Some(&']') {
-                    chars.next(); // ikinci ']' karakterini tüket
+                    chars.next(); // ikinci ']'
                     break;
                 }
                 inside.push(inner_c);
             }
-            if let Some(pipe_pos) = inside.find('|') {
-                result.push_str(&inside[pipe_pos + 1..]);
+            
+            let lower_inside = inside.to_lowercase();
+            let is_media_or_meta = lower_inside.starts_with("dosya:")
+                || lower_inside.starts_with("file:")
+                || lower_inside.starts_with("resim:")
+                || lower_inside.starts_with("image:")
+                || lower_inside.starts_with("kategori:")
+                || lower_inside.starts_with("category:");
+                
+            if is_media_or_meta {
+                let parts: Vec<&str> = inside.split('|').map(|p| p.trim()).collect();
+                if parts.len() > 1 {
+                    let last_part = parts.last().unwrap();
+                    let last_lower = last_part.to_lowercase();
+                    
+                    let is_layout_option = last_lower == "thumb"
+                        || last_lower == "thumbnail"
+                        || last_lower == "küçükresim"
+                        || last_lower == "right"
+                        || last_lower == "left"
+                        || last_lower == "center"
+                        || last_lower == "none"
+                        || last_lower == "sağ"
+                        || last_lower == "sol"
+                        || last_lower == "orta"
+                        || last_lower.contains("px")
+                        || last_lower.is_empty();
+                        
+                    if !is_layout_option {
+                        result.push_str(last_part);
+                    }
+                }
             } else {
-                result.push_str(&inside);
+                if let Some(pipe_pos) = inside.rfind('|') {
+                    result.push_str(&inside[pipe_pos + 1..]);
+                } else {
+                    result.push_str(&inside);
+                }
             }
         } else {
             result.push(c);
@@ -556,4 +604,31 @@ mod tests {
         assert!(cleaned.contains("Giriş"));
         assert!(cleaned.contains("Kuantum kuramı"));
     }
+
+    #[test]
+    fn test_clean_wiki_links_media() {
+        let text1 = "[[Dosya:küçükresim|sağ|HERA]]";
+        assert_eq!(clean_wiki_links(text1), "HERA");
+
+        let text2 = "[[Dosya:Hera.jpg|küçükresim|sağ]]";
+        assert_eq!(clean_wiki_links(text2), "");
+
+        let text3 = "[[Kategori:Fizik]]";
+        assert_eq!(clean_wiki_links(text3), "");
+
+        let text4 = "[[Kuantum mekaniği|Kuantum]]";
+        assert_eq!(clean_wiki_links(text4), "Kuantum");
+    }
+
+    #[test]
+    fn test_truncate_references_unicode() {
+        let raw_wiki = "Fizik alanında çalışmalar yürütülmüştür. == KAYNAKÇA ==\n* Test kaynak.";
+        let truncated = truncate_references(raw_wiki);
+        assert_eq!(truncated, "Fizik alanında çalışmalar yürütülmüştür. ");
+        
+        let raw_wiki2 = "Dış bağlantılar hakkında. ==Dış Bağlantılar==\n* Link 1";
+        let truncated2 = truncate_references(raw_wiki2);
+        assert_eq!(truncated2, "Dış bağlantılar hakkında. ");
+    }
 }
+

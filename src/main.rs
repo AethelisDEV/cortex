@@ -31,11 +31,18 @@ fn main() -> anyhow::Result<()> {
     println!("[Sistem] Bellek Deposu: {}", db_path);
     println!("[Sistem] Giriş Klasörü: {:?}", inputs_dir);
 
+    // Sled veritabanının kilit durumunu kontrol et (Windows/zombi süreci çakışmasını önlemek için)
+    if check_db_lock(db_path) {
+        println!("\n[HATA] Veritabanı ({}) başka bir süreç (cortex_engine) tarafından kilitlenmiş!", db_path);
+        println!("[SİSTEM] Lütfen çalışan diğer cortex_engine pencerelerini veya arka plandaki zombi süreçleri kapatın.");
+        println!("[SİSTEM] Süreç sonlandırılıyor.\n");
+        return Ok(());
+    }
+
     // Sled veritabanını başlat
     let db = sled::open(db_path)?;
 
     // 1. Çekirdek Sistemlerin Başlatılması
-    // Saf Grafik Motoru
     let mut cortex = CortexGraph::new(db.clone());
 
     // Talamus Kelime Yönlendiricisi
@@ -345,4 +352,17 @@ fn create_tag_map(words: &[&str]) -> HashMap<String, f32> {
         map.insert(w.to_string(), 1.0f32);
     }
     map
+}
+
+fn check_db_lock(db_path: &str) -> bool {
+    let path = Path::new(db_path);
+    if path.exists() {
+        let lock_file = path.join("db");
+        if lock_file.exists() {
+            if std::fs::OpenOptions::new().write(true).open(&lock_file).is_err() {
+                return true;
+            }
+        }
+    }
+    false
 }
